@@ -5,7 +5,6 @@
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : exercice1_2.pl
 
-#mkdir('LCI_EXTRACT_1',0755) || die ("Err. Cr. répertoire \n");
 mkdir('LCI_EXTRACT_1',0755) || die ("Err. Cr. répertoire \n");
 
 @files = `ls LCI/`;
