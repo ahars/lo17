@@ -13,7 +13,7 @@ Unicode::String->stringify_as('utf8');
 $fichier = $ARGV[0];
 
 open(FICHIN, "LCI/$fichier") or die "Cannot open fichier: $!";
-chdir("LCI_EXTRACT_1");
+chdir("LCI_EXTRACT_1/");
 open(FICHOUT, ">$fichier") or die "Cannot open fichier: $!";
 
 while ($_=<FICHIN>) {

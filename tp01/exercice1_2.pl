@@ -5,18 +5,19 @@
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : exercice1_2.pl
 
+#mkdir('LCI_EXTRACT_1',0755) || die ("Err. Cr. répertoire \n");
 mkdir('LCI_EXTRACT_1',0755) || die ("Err. Cr. répertoire \n");
 
-@files = `ls LCI`;
+@files = `ls LCI/`;
 
 $nbFiles = 0;
 
 # Exécution du script exercice1_1.pl sur tous les fichiers du dossier LCI.
 foreach $elt (@files) {
 
-	print "$elt \n";
+	print "$elt\n";
 	$nbFiles++;
-	$commande = "exercice1_1.pl $elt";
+	$commande = "./exercice1_1.pl $elt";
 	system($commande) == 0 or die "Erreur de la commande : $commande\n";
 }
 
