@@ -23,13 +23,13 @@ while($a = <FICHIN>) {
 			print FICHOUT "<RAPPEL>\n";
 			print FICHOUT "\t<dateArticle>$1</dateArticle>\n";
 
-#			$a =~/<span class="S301">(.*?)<\/span>/;
+			# $a =~/<span class="S301">(.*?)<\/span>/;
 			print FICHOUT "\t<themeArticle>$2</themeArticle>\n";
 		
-#			$a =~/<a\shre=(.*?)\sclass="S63">/;
+			# $a =~/<a\shre=(.*?)\sclass="S63">/;
 			print FICHOUT "\t<urlArticle>$3</urlArticle>\n";
 
-#			$a =~/"[^>]*class="S63">(.*?)<\/a>/;
+			# $a =~/"[^>]*class="S63">(.*?)<\/a>/;
 			print FICHOUT "\t<titreArticle>$4</titreArticle>\n";
 			print FICHOUT "</RAPPEL>\n";
 		}

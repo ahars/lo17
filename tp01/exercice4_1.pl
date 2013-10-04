@@ -8,7 +8,7 @@
 $fichier = $ARGV[0];
 
 open(FICHIN, "LCI_EXTRACT_3/$fichier") or die "Cannot open fichier: $!";
-#chdir("LCI_EXTRACT_4/");
+chdir("LCI_EXTRACT_4/");
 open(FICHOUT, ">$fichier") or die "Cannot open fichier: $!";
 
 print FICHOUT "<CORPUS>\n<PAGE_LCI>\n<FICHIER>$fichier</FICHIER>\n";
@@ -28,7 +28,7 @@ while($a = <FICHIN>) {
 		$a =~/">(.*?)<\/a>/;
 		print FICHOUT "\t<titreArticle>$1</titreArticle>\n";
 
-		#On suppose que la date de l'article est la date de la page
+		# On suppose que la date de l'article est la date de la page
 		$fichier =~ /(\d\d\d\d)-(\d\d)-(\d\d)/;
 		print FICHOUT "\t<dateArticle>$3/$2/$1</dateArticle>\n";
 		
@@ -43,8 +43,8 @@ while($a = <FICHIN>) {
 				print FICHOUT "\t<urlImage>$elt</urlImage>\n";
 			}
 		}
-		#$a =~/<a[^>]class="S48"><img[^>]>(.*)<\/a>/;
-		#$a =~/<a [^>] class="S48">(.+?)<\/a>/g;
+		# $a =~/<a[^>]class="S48"><img[^>]>(.*)<\/a>/;
+		# $a =~/<a [^>] class="S48">(.+?)<\/a>/g;
 
 		print FICHOUT "\t<resumeArticle>";
 		

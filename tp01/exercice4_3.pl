@@ -25,7 +25,7 @@ while($a = <FICHIN>) {
 		$a =~/">(.*?)<\/a>/;
 		print FICHOUT "\t<titreArticle>$1</titreArticle>\n";
 
-		#On suppose que la date de l'article est la date de la page
+		# On suppose que la date de l'article est la date de la page
 		$fichier =~ /(\d\d\d\d)-(\d\d)-(\d\d)/;
 		print FICHOUT "\t<dateArticle>$3/$2/$1</dateArticle>\n";
 		
