@@ -35,6 +35,7 @@ while($a = <FICHIN>) {
 	}
 }
 print FICHOUT "\n</LES_VOIRAUSSI>\n";
+
 close(FICHOUT);
 close(FICHIN);
 
