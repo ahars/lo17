@@ -8,7 +8,7 @@
 $fichier = $ARGV[0];
 
 open(FICHIN, "LCI_EXTRACT_3/$fichier") or die "Cannot open fichier: $!";
-#chdir("LCI_EXTRACT_4/");
+chdir("LCI_EXTRACT_4/");
 open(FICHOUT, ">>$fichier") or die "Cannot open fichier: $!";
 
 print FICHOUT "<LES_VOIRAUSSI>";
