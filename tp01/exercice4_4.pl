@@ -30,6 +30,7 @@ while($a = <FICHIN>) {
 			# $a =~ /class="S63">(.*?)<\/a>/;
 			print FICHOUT "\t\t\t\t<titreArticle>$4</titreArticle>\n";
 
+			# NE FONCTIONNE PAS PARFAITEMENT
 			# $a =~/<img\ssrc="(.*?)"/;
 			print FICHOUT "\t\t\t\t<urlImage>$1</urlImage>\n";
 

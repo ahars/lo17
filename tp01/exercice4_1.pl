@@ -61,13 +61,13 @@ while($a = <FICHIN>) {
 		}
 		
 		if ($a =~/class="S14">(.*?)<\/a>/) {
-			print FICHOUT "\t\t\t<auteur>$1</auteur>";
+			print FICHOUT "\t\t\t<auteur>$1</auteur>\n";
 		} else {
-			print FICHOUT "\t\t\t<auteur>PAS D'INFORMATIONS</auteur>";
+			print FICHOUT "\t\t\t<auteur>PAS D'INFORMATIONS</auteur>\n";
 		}
 	}
 }
-print FICHOUT "\n</UNE>\n";
+print FICHOUT "\t\t</UNE>\n";
 
 close(FICHOUT);
 close(FICHIN);
