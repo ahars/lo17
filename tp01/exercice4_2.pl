@@ -11,30 +11,29 @@ open(FICHIN, "LCI_EXTRACT_3/$fichier") or die "Cannot open fichier: $!";
 chdir("LCI_EXTRACT_4/");
 open(FICHOUT, ">>$fichier") or die "Cannot open fichier: $!";
 
-print FICHOUT "<LES_VOIRAUSSI>";
-print FICHOUT "\n";
+print FICHOUT "\t\t<LES_VOIRAUSSI>\n";
 
 # Traitement sur les VOIRAUSSI.
 while($a = <FICHIN>) {	
 
 	if($a =~/^<LES_VOIRAUSSI>/) {
 
-		while ($a =~ /<a\shre=(.*?)\s[^>]*class="S48">(.*?)\((.*?)\)/g) {
+		while ($a =~ /<a\shref=(.*?)\s[^>]*class="S48">(.*?)\((.*?)\)/g) {
 
-			# $a =~ /\((.*?)\)/;
-			print FICHOUT "<VOIRAUSSI>\n";
-			print FICHOUT "\t<dateArticle>$3</dateArticle>\n";
+			# $a =~ /\((.*?)\)/g;
+			print FICHOUT "\t\t\t<VOIRAUSSI>\n";
+			print FICHOUT "\t\t\t\t<dateArticle>$3</dateArticle>\n";
 
-			# $a =~/<a\shre=(.*?)\s/g;
-			print FICHOUT "\t<urlArticle>$1</urlArticle>\n";
+			# $a =~/<a\shref=(.*?)\s/g;
+			print FICHOUT "\t\t\t\t<urlArticle>$1</urlArticle>\n";
 
 			# $a =~ /class="S48">(.*?)\(/;
-			print FICHOUT "\t<titreArticle>$2</titreArticle>\n";
-			print FICHOUT "</VOIRAUSSI>\n";
+			print FICHOUT "\t\t\t\t<titreArticle>$2</titreArticle>\n";
+			print FICHOUT "\t\t\t</VOIRAUSSI>\n";
 		}
 	}
 }
-print FICHOUT "\n</LES_VOIRAUSSI>\n";
+print FICHOUT "\t\t</LES_VOIRAUSSI>\n";
 
 close(FICHOUT);
 close(FICHIN);
