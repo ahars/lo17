@@ -11,46 +11,54 @@ open(FICHIN, "LCI_EXTRACT_3/$fichier") or die "Cannot open fichier: $!";
 chdir("LCI_EXTRACT_4/");
 open(FICHOUT, ">>$fichier") or die "Cannot open fichier: $!";
 
-print FICHOUT "<LES_GROSTITRES>\n";
+print FICHOUT "\t\t<LES_GROSTITRES>\n";
 
 # Traitement sur les GROSTITRES.
-while($a = <FICHIN>) {	
+while($a = <FICHIN>) {
 
 	if($a =~/^<LES_GROSTITRES>/) {
-	
-		while ($a =~ /<span class="S301">(.*?)<\/span>[^>]*<a\shre=(.*?)\sclass="S63">(.*?)<\/a>/g) {
 
-			# $a =~ /<a\shre=(.*?)\sclass="S63"/;
-			print FICHOUT "<GROSTITRE>\n";
-			print FICHOUT "\t<urlArticle>$2</urlArticle>\n";
+		while ($a =~ /<img\ssrc="(.*?)[^>]*<span\sclass="S301">(.*?)<\/span>[^>]*<a\shref=(.*?)\sclass="S63">(.*?)<\/a>/g) {
+
+			# $a =~ /<a\shref="(.*?)"\sclass="S63"/;
+			print FICHOUT "\t\t\t<GROSTITRE>\n";
+			print FICHOUT "\t\t\t\t<urlArticle>$3</urlArticle>\n";
 
 			# $a =~/<span class="S301">(.*?)<\/span>/;
-			print FICHOUT "\t<themeArticle>$1</themeArticle>\n";
+			print FICHOUT "\t\t\t\t<themeArticle>$2</themeArticle>\n";
 
 			# $a =~ /class="S63">(.*?)<\/a>/;
-			print FICHOUT "\t<titreArticle>$3</titreArticle>\n";
+			print FICHOUT "\t\t\t\t<titreArticle>$4</titreArticle>\n";
 
-			# $a =~/<img\ssrc="(.*?)"/; MARCHE PAS
-			print FICHOUT "\t<urlImage></urlImage>\n";
+			# $a =~/<img\ssrc="(.*?)"/;
+			print FICHOUT "\t\t\t\t<urlImage>$1</urlImage>\n";
 
-			# $a =~ /class="S48">(.*?)<\/a>/; MARCHE PAS AVEC LE WHILE
-			print FICHOUT "\t<resumeArticle></resumeArticle>\n";
+			$a =~ /class="S48">(.*?)<\/a>/g;
+			print FICHOUT "\t\t\t\t<resumeArticle>$1</resumeArticle>\n";
 
-			# $a =~/<a hre="mailto:(.*?)"/; MARCHE PAS AVEC LE WHILE
-			print FICHOUT "\t<mailto></mailto>\n";
+			# NE FONCTIONNE PAS PARFAITEMENT
+			if ($a =~/<a href="mailto:(.*?)"/) {
+				print FICHOUT "\t\t\t\t<mailto>$1</mailto>\n";
+			} else {
+				print FICHOUT "\t\t\t\t<mailto>PAS D'INFORMATIONS</mailto>\n";
+			}
 
-			# $a =~/class="S14">(.*?)<\/a>/; MARCHE PAS AVEC LE WHILE
-			print FICHOUT "\t<auteur></auteur>\n";
+			# NE FONCTIONNE PAS PARFAITEMENT
+			if ($a =~/class="S14">(.*?)<\/a>/) {
+				print FICHOUT "\t\t\t\t<auteur>$1</auteur>\n";
+			} else {
+				print FICHOUT "\t\t\t\t<auteur>PAS D'INFORMATIONS</auteur>\n";
+			}
 
 			$fichier =~ /(\d\d\d\d)-(\d\d)-(\d\d)/;
-			print FICHOUT "\t<dateArticle>$3/$2/$1</dateArticle>\n";
+			print FICHOUT "\t\t\t\t<dateArticle>$3/$2/$1</dateArticle>\n";
 
-			print FICHOUT "</GROSTITRE>\n";
+			print FICHOUT "\t\t\t</GROSTITRE>\n";
 		}
-	
 	}
 }
-print FICHOUT "\n</LES_GROSTITRES>\n";
+print FICHOUT "\t\t</LES_GROSTITRES>\n";
+
 close(FICHOUT);
 close(FICHIN);
 
