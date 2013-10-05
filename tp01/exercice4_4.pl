@@ -5,11 +5,12 @@
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : exercice4_4.pl
 
-$fichier = $ARGV[0];
+$fichier1 = $ARGV[0];
+$fichier2 = $ARGV[1];
 
-open(FICHIN, "LCI_EXTRACT_3/$fichier") or die "Cannot open fichier: $!";
+open(FICHIN, "LCI_EXTRACT_3/$fichier1") or die "Cannot open fichier: $!";
 chdir("LCI_EXTRACT_4/");
-open(FICHOUT, ">>$fichier") or die "Cannot open fichier: $!";
+open(FICHOUT, ">>$fichier2") or die "Cannot open fichier: $!";
 
 print FICHOUT "\t\t<LES_GROSTITRES>\n";
 
@@ -51,7 +52,7 @@ while($a = <FICHIN>) {
 				print FICHOUT "\t\t\t\t<auteur>PAS D'INFORMATIONS</auteur>\n";
 			}
 
-			$fichier =~ /(\d\d\d\d)-(\d\d)-(\d\d)/;
+			$fichier1 =~ /(\d\d\d\d)-(\d\d)-(\d\d)/;
 			print FICHOUT "\t\t\t\t<dateArticle>$3/$2/$1</dateArticle>\n";
 
 			print FICHOUT "\t\t\t</GROSTITRE>\n";
