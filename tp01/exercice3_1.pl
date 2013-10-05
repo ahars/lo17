@@ -15,15 +15,14 @@ open(FICHOUT, ">$fichier") or die "Cannot open fichier: $!";
 # Mise en forme du doc avec les rubriques.
 while($a = <FICHIN>) {	
 
-	$a =~ s/class="S431"/\n<UNE>/ ;
-	$a =~ s/class="S301">A voir aussi :/<\/UNE>\n<LES_VOIRAUSSI>/ ;
-	$a =~ s/class="S401"/<\/LES_VOIRAUSSI>\n<FOCUS>class="S401"/ ;
-	$a =~ s/class="S301"/<\/FOCUS>\n<LES_GROSTITRES><span class="S301"/ ;
-	$a =~ s/27916/<\/LES_GROSTITRES>\n<LES_RAPPELS>/ ;
+	$a =~ s/class="S431"/\n<UNE>/;
+	$a =~ s/class="S301">A voir aussi :/<\/UNE>\n<LES_VOIRAUSSI>/;
+	$a =~ s/class="S401"/<\/LES_VOIRAUSSI>\n<FOCUS>class="S401"/;
+	$a =~ s/class="S301"/<\/FOCUS>\n<LES_GROSTITRES><span class="S301"/;
+	$a =~ s/27916/<\/LES_GROSTITRES>\n<LES_RAPPELS>/;
 
 	print FICHOUT $a;
 }
-
 print FICHOUT "</LES_RAPPELS>";
 
 close(FICHOUT);
