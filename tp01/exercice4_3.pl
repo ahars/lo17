@@ -49,15 +49,19 @@ while($a = <FICHIN>) {
 
 		if ($a =~/<a href="mailto:(.*?)"/) {
 			print FICHOUT "\t\t\t<mailto>$1</mailto>\n";
-		} else {
-			print FICHOUT "\t\t\t<mailto>PAS D'INFORMATIONS</mailto>\n";
 		}
+		# Possibilité de faire apparaître qu'il n'y a pas de mailto.
+		# else {
+		#	print FICHOUT "\t\t\t<mailto>PAS D'INFORMATIONS</mailto>\n";
+		# }
 
 		if ($a =~/class="S14">(.*?)<\/a>/) {
 			print FICHOUT "\t\t\t<auteur>$1</auteur>\n";
-		} else {
-			print FICHOUT "\t\t\t<auteur>PAS D'INFORMATIONS</auteur>\n";
 		}
+		# Possibilité de faire apparaître qu'il n'y a pas d'auteur.
+		# else {
+		#	print FICHOUT "\t\t\t<auteur>PAS D'INFORMATIONS</auteur>\n";
+		# }
 	}
 }
 print FICHOUT "\t\t</FOCUS>\n";

@@ -19,7 +19,10 @@ while($a = <FICHIN>) {
 
 	if($a =~/^<LES_GROSTITRES>/) {
 
-		while ($a =~ /<img\ssrc="(.*?)[^>]*<span\sclass="S301">(.*?)<\/span>[^>]*<a\shref=(.*?)\sclass="S63">(.*?)<\/a>/g) {
+		# while ($a =~ /<img\ssrc="(.*?)[^>]*<span\sclass="S301">(.*?)<\/span>[^>]*<a\shref=(.*?)\sclass="S63">(.*?)<\/a>/g) {
+		# while ($a =~ /<a\s[^>]*><img\ssrc="(.*?)"\s[^>]*><\/a>.*?<span\sclass="S301">(.*?)<\/span>[^>]*<a\shref="(.*?)"\sclass="S63">(.*?)<\/a>/g) {
+
+		while ($a =~ /<a\s[^>]*><img\ssrc="(.*?)"\s[^>]*><\/a>.*?<span\sclass="S301">(.*?)<\/span>[^>]*<a\shref="(.*?)"\sclass="S63">(.*?)<\/a>(.*?)<a\s[^>]* class="S48">(.*?)<\/a><span\sclass="S48">(.*?)<\/a>.??'<a href="mailto:(.*?)"\sclass="S14">(.*?)<\/a>'?/g) {
 
 			# $a =~ /<a\shref="(.*?)"\sclass="S63"/;
 			print FICHOUT "\t\t\t<GROSTITRE>\n";

@@ -39,7 +39,7 @@ while($a = <FICHIN>) {
 		$fichier1 =~ /(\d\d\d\d)-(\d\d)-(\d\d)/;
 		print FICHOUT "\t\t\t<dateArticle>$3/$2/$1</dateArticle>\n";
 		
-		if ($a =~/<img\ssrc="(.*?)"/) {
+		if ($a =~/<a\s[^>]*><img\ssrc="(.*?)"\s[^>]*><\/a>/) {
 			print FICHOUT "\t\t\t<urlImage>$1</urlImage>\n";
 		} else {
 			print FICHOUT "\t\t\t<urlImage>PAS D'INFORMATIONS</urlImage>\n";
@@ -55,17 +55,21 @@ while($a = <FICHIN>) {
 		}
 		print FICHOUT "</resumeArticle>\n";
 		
-		if ($a =~/<a hre="mailto:(.*?)"/) {
+		if ($a =~/<a href="mailto:(.*?)"/) {
 			print FICHOUT "\t\t\t<mailto>$1</mailto>\n";
-		} else {
-			print FICHOUT "\t\t\t<mailto>PAS D'INFORMATIONS</mailto>\n";
 		}
+		# Possibilité de faire apparaître qu'il n'y a pas de mailto.
+		# else {
+		# 	print FICHOUT "\t\t\t<mailto>PAS D'INFORMATIONS</mailto>\n";
+		# }
 		
 		if ($a =~/class="S14">(.*?)<\/a>/) {
 			print FICHOUT "\t\t\t<auteur>$1</auteur>\n";
-		} else {
-			print FICHOUT "\t\t\t<auteur>PAS D'INFORMATIONS</auteur>\n";
 		}
+		# Possibilité de faire apparaître qu'il n'y a pas d'auteur.
+		# else {
+		#	print FICHOUT "\t\t\t<auteur>PAS D'INFORMATIONS</auteur>\n";
+		# }
 	}
 }
 print FICHOUT "\t\t</UNE>\n";
