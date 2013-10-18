@@ -22,27 +22,26 @@ foreach $elt (@files) {
 	system($commande) == 0 or die "Erreur de la commande : $commande\n";
 }
 
-print "\n";
-
 # Test du nombre de lignes dans les fichiers une fois traités.
 @files = `ls LCI_EXTRACT_3/`;
 foreach $elt (@files) {
 
-	if (`wc -l LCI_EXTRACT_3/$elt` == 5) {
-		$nbLigneFiles++;
-	}
+#	if (`wc -l LCI_EXTRACT_3/$elt` == 5) {
+#		$nbLigneFiles++;
+#	}
 	
-	if (`./exercice3_2_test.pl $elt` == 1) {
-		$nbRubriquesFiles++;
-	}
+#	if (`./exercice3_2_test.pl $elt` == 1) {
+#		$nbRubriquesFiles++;
+#	}
+
+	system("wc -l LCI_EXTRACT_3/$elt") == 0 or die "Fuck 1 : $elt\n";
+	system("./exercice3_2_test.pl $elt") == 0 or die "Fuck 2 : $elt\n";
 	
 }
 
-# Test présence des éléments ajoutés.
-
 print "\n====================TESTS====================\n";
 print "\nNombre de fichiers traités : $nbFiles / $testNbFiles";
-print "\nNombre de fichiers finaux contenant 5 lignes : $nbLigneFiles / $testNbFiles";
-print "\nNombre de fichiers finaux contenant les 5 rubriques : $nbRubriquesFiles / $testNbFiles";
+print "Nombre de fichiers finaux contenant 5 lignes : $nbLigneFiles / $testNbFiles";
+print "Nombre de fichiers finaux contenant les 5 rubriques : $nbRubriquesFiles / $testNbFiles";
 print "\n====================TESTS====================\n\n";
 

@@ -23,6 +23,7 @@ while($a = <FICHIN>) {
 
 	print FICHOUT $a;
 }
+
 print FICHOUT "</LES_RAPPELS>";
 
 close(FICHOUT);

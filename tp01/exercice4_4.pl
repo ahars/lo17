@@ -34,21 +34,18 @@ while($a = <FICHIN>) {
 			# $a =~ /class="S63">(.*?)<\/a>/;
 			print FICHOUT "\t\t\t\t<titreArticle>$4</titreArticle>\n";
 
-			# NE FONCTIONNE PAS PARFAITEMENT
 			# $a =~/<img\ssrc="(.*?)"/;
 			print FICHOUT "\t\t\t\t<urlImage>$1</urlImage>\n";
 
 			$a =~ /class="S48">(.*?)<\/a>/g;
 			print FICHOUT "\t\t\t\t<resumeArticle>$1</resumeArticle>\n";
 
-			# NE FONCTIONNE PAS PARFAITEMENT
 			if ($a =~/<a href="mailto:(.*?)"/) {
 				print FICHOUT "\t\t\t\t<mailto>$1</mailto>\n";
 			} else {
 				print FICHOUT "\t\t\t\t<mailto>PAS D'INFORMATIONS</mailto>\n";
 			}
 
-			# NE FONCTIONNE PAS PARFAITEMENT
 			if ($a =~/class="S14">(.*?)<\/a>/) {
 				print FICHOUT "\t\t\t\t<auteur>$1</auteur>\n";
 			} else {

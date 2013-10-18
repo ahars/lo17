@@ -33,7 +33,8 @@ while($a = <FICHIN>) {
 	}
 }
 
-print $compt / 5;
+print "$compt rubriques\n";
+#print $compt / 5;
 
 close(FICHIN);
 
