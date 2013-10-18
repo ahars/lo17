@@ -11,7 +11,6 @@ mkdir('LCI_EXTRACT_2',0755) || die ("Err. Cr. répertoire\n");
 
 $testNbFiles = `find LCI_EXTRACT_1/ -type f | wc -l`;
 $nbFiles = 0;
-
 $nbLigneFiles = 0;
 
 foreach $elt (@files) {
@@ -22,15 +21,11 @@ foreach $elt (@files) {
 	system($commande) == 0 or die "Erreur de la commande : $commande\n";
 }
 
-print "\n";
-
 # Test du nombre de lignes dans les fichiers une fois traités.
 @files = `ls LCI_EXTRACT_2/`;
 foreach $elt (@files) {
 
-	$commande = "wc -l LCI_EXTRACT_2/$elt";
-	system($commande) == 0 or die "Erreur de la commande : $commande\n";
-
+	$commande = `wc -l LCI_EXTRACT_2/$elt`;
 	# Pour une raison inconnue, wc -l sur les fichiers renvoie un nombre de lignes = 0 alors que nous avons une ligne...
 	if ($1 < 2) {
 		$nbLigneFiles++;
@@ -39,6 +34,6 @@ foreach $elt (@files) {
 
 print "\n====================TESTS====================\n";
 print "\nNombre de fichiers traités : $nbFiles / $testNbFiles";
-print "\nNombre de fichiers finaux ne contenant qu'une ligne : $nbLigneFiles / $testNbFiles";
+print "Nombre de fichiers finaux ne contenant qu'une ligne : $nbLigneFiles / $testNbFiles";
 print "\n====================TESTS====================\n\n";
 
