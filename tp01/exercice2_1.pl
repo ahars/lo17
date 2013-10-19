@@ -21,6 +21,9 @@ while($a = <FICHIN>) {
 	#print "$a";
 	print FICHOUT $a;
 }
+# Ajout d'un \n à la fin de la ligne
+# Car le test du nombre de ligne avec wc -l compte le nombre de \n dans les fichiers
+print FICHOUT "\n";
 
 close(FICHOUT);
 close(FICHIN);
