@@ -7,19 +7,21 @@
 
 $fichier = $ARGV[0];
 
-open(FICHIN, "LCI_EXTRACT_3/$fichier") or die "Cannot open fichier: $!";
+open(FICH, "LCI_EXTRACT_3/$fichier") or die "Cannot open fichier: $!";
 
 $compt = 0;
 
 # Test du nombre de rubriques.
-while($a = <FICHIN>) {	
+while($a = <FICH>) {
 
-	if ($a =~ /<UNE>(.*?)<\/UNE>/) {
+	if ($a =~ /^<UNE>/) {
 		$compt++;
 	}
-	if ($a =~ /<LES_VOIRAUSSI>(.*?)<\/LES_VOIRAUSSI>/) {
+	
+	if($a =~/^<LES_VOIRAUSSI>/) {
 		$compt++;
 	}
+	
 	if ($a =~ /<FOCUS>(.*?)<\/FOCUS>/) {
 		$compt++;
 	}
@@ -32,9 +34,7 @@ while($a = <FICHIN>) {
 		$compt++;
 	}
 }
+print $compt;
 
-print "$compt rubriques\n";
-#print $compt / 5;
-
-close(FICHIN);
+close(FICH);
 

@@ -26,7 +26,8 @@ foreach $elt (@files) {
 foreach $elt (@files) {
 
 	$commande = `wc -l LCI_EXTRACT_2/$elt`;
-	if ($commande == 1) {
+	# wc -l retourne 0 s'il n'y a pas de \n donc si le fichier ne contient qu'une ligne.
+	if ($commande == 0) {
 		$nbLigneFiles++;
 	}
 }

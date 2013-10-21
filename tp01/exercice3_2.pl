@@ -5,14 +5,19 @@
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : exercice3_2.pl
 
+@bb = `rm -r LCI_EXTRACT_3`;
 mkdir('LCI_EXTRACT_3',0755) || die ("Err. Cr. répertoire");
 
 @files = `ls LCI_EXTRACT_2/`;
 
 $testNbFiles = `find LCI_EXTRACT_2/ -type f | wc -l`;
 $nbFiles = 0;
-$nbLigneFiles = 0;
-$nbRubriquesFiles = 0;
+$nbRubriquesFiles0 = 0;
+$nbRubriquesFiles1 = 0;
+$nbRubriquesFiles2 = 0;
+$nbRubriquesFiles3 = 0;
+$nbRubriquesFiles4 = 0;
+$nbRubriquesFiles5 = 0;
 
 foreach $elt (@files) {
 
@@ -22,26 +27,50 @@ foreach $elt (@files) {
 	system($commande) == 0 or die "Erreur de la commande : $commande\n";
 }
 
-# Test du nombre de lignes dans les fichiers une fois traités.
+# Récupération du nombre de rubriques dans les fichiers de bases.
+@files = `ls LCI_EXTRACT_2/`;
+foreach $elt (@files) {
+
+	$nb = `./exercice3_2_test1.pl $elt`;
+	if ($nb == 0) {	$nbRubriquesFiles0++; }
+
+	if ($nb == 1) {	$nbRubriquesFiles1++; }
+
+	if ($nb == 2) {	$nbRubriquesFiles2++; }
+
+	if ($nb == 3) {	$nbRubriquesFiles3++; }
+
+	if ($nb == 4) {	$nbRubriquesFiles4++; }
+
+	if ($nb == 5) {	$nbRubriquesFiles5++; }
+}
+
+
+# Test du nombre de rubriques dans les fichiers une fois traités.
 @files = `ls LCI_EXTRACT_3/`;
 foreach $elt (@files) {
 
-#	if (`wc -l LCI_EXTRACT_3/$elt` == 5) {
-#		$nbLigneFiles++;
-#	}
-	
-#	if (`./exercice3_2_test.pl $elt` == 1) {
-#		$nbRubriquesFiles++;
-#	}
+	$nb = `./exercice3_2_test2.pl $elt`;
+	if ($nb == 0) {	$nbRubriquesFiles0++; }
 
-	system("wc -l LCI_EXTRACT_3/$elt") == 0 or die "Fuck 1 : $elt\n";
-	system("./exercice3_2_test.pl $elt") == 0 or die "Fuck 2 : $elt\n";
-	
+	if ($nb == 1) {	$nbRubriquesFiles1++; }
+
+	if ($nb == 2) {	$nbRubriquesFiles2++; }
+
+	if ($nb == 3) {	$nbRubriquesFiles3++; }
+
+	if ($nb == 4) {	$nbRubriquesFiles4++; }
+
+	if ($nb == 5) {	$nbRubriquesFiles5++; }
 }
 
 print "\n====================TESTS====================\n";
 print "\nNombre de fichiers traités : $nbFiles / $testNbFiles";
-print "Nombre de fichiers finaux contenant 5 lignes : $nbLigneFiles / $testNbFiles";
-print "Nombre de fichiers finaux contenant les 5 rubriques : $nbRubriquesFiles / $testNbFiles";
+print "Nombre de fichiers finaux contenant 5 rubriques : $nbRubriquesFiles5 / $testNbFiles";
+print "Nombre de fichiers finaux contenant 4 rubriques : $nbRubriquesFiles4 / $testNbFiles";
+print "Nombre de fichiers finaux contenant 3 rubriques : $nbRubriquesFiles3 / $testNbFiles";
+print "Nombre de fichiers finaux contenant 2 rubriques : $nbRubriquesFiles2 / $testNbFiles";
+print "Nombre de fichiers finaux contenant 1 rubrique : $nbRubriquesFiles1 / $testNbFiles";
+print "Nombre de fichiers finaux contenant 0 rubrique : $nbRubriquesFiles0 / $testNbFiles";
 print "\n====================TESTS====================\n\n";
 
