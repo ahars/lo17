@@ -69,3 +69,4 @@ foreach $m (@mots)						# Pour chaque mots du corpus (= mot analysé)
 
 # $t2 = time;
 # print "Résultat retourné en ".($t2-$t1)." s\n";
+
