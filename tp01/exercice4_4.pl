@@ -7,6 +7,7 @@
 
 $fichier1 = $ARGV[0];
 $fichier2 = $ARGV[1];
+$compt = 0;
 
 open(FICHIN, "LCI_EXTRACT_3/$fichier1") or die "Cannot open fichier: $!";
 chdir("LCI_EXTRACT_4/");
@@ -56,10 +57,13 @@ while($a = <FICHIN>) {
 			print FICHOUT "\t\t\t\t<dateArticle>$3/$2/$1</dateArticle>\n";
 
 			print FICHOUT "\t\t\t</GROSTITRE>\n";
+			
+			$compt++;
 		}
 	}
 }
 print FICHOUT "\t\t</LES_GROSTITRES>\n";
+print $compt;
 
 close(FICHOUT);
 close(FICHIN);

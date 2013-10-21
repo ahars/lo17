@@ -6,14 +6,12 @@
 # Fichier : exercice4_7.pl
 
 $fichier = "corpus_lci.xml";
-
 @files = `ls LCI_EXTRACT_3/`;
 
 $testNbFiles = `find LCI_EXTRACT_2/ -type f | wc -l`;
 $nbFiles = 0;
 
-$commande = "./exercice4_0.pl $fichier";
-system($commande) == 0 or die "Erreur de la commande : $commande\n";
+$c = "./exercice4_0.pl $fichier";
 
 foreach $elt (@files) {
 
@@ -22,24 +20,18 @@ foreach $elt (@files) {
 	# Le foreach ajoute un \n à éliminer..
 	$elt =~ s/\n//g;
 
-	$commande = "./exercice4_1.pl $elt $fichier";
-	system($commande) == 0 or die "Erreur de la commande : $commande\n";
+	$c = "./exercice4_1.pl $elt $fichier";
 
-	$commande = "./exercice4_2.pl $elt $fichier";
-	system($commande) == 0 or die "Erreur de la commande : $commande\n";
+	$c = "./exercice4_2.pl $elt $fichier";
 
-	$commande = "./exercice4_3.pl $elt $fichier";
-	system($commande) == 0 or die "Erreur de la commande : $commande\n";
+	$c = "./exercice4_3.pl $elt $fichier";
 
-	$commande = "./exercice4_4.pl $elt $fichier";
-	system($commande) == 0 or die "Erreur de la commande : $commande\n";
+	$c = "./exercice4_4.pl $elt $fichier";
 
-	$commande = "./exercice4_5.pl $elt $fichier";
-	system($commande) == 0 or die "Erreur de la commande : $commande\n";
+	$c = "./exercice4_5.pl $elt $fichier";
 }
 
-$commande = "./exercice4_6.pl $fichier";
-system($commande) == 0 or die "Erreur de la commande : $commande\n";
+$c = `./exercice4_6.pl $fichier`;
 
 print "\n====================TESTS====================\n";
 print "\nNombre de fichiers traités : $nbFiles / $testNbFiles";

@@ -7,6 +7,7 @@
 
 $fichier1 = $ARGV[0];
 $fichier2 = $ARGV[1];
+$compt = 0;
 
 open(FICHIN, "LCI_EXTRACT_3/$fichier1") or die "Cannot open fichier: $!";
 chdir("LCI_EXTRACT_4/");
@@ -33,10 +34,13 @@ while($a = <FICHIN>) {
 			# $a =~/"[^>]*class="S63">(.*?)<\/a>/;
 			print FICHOUT "\t\t\t\t<titreArticle>$4</titreArticle>\n";
 			print FICHOUT "\t\t\t</RAPPEL>\n";
+			
+			$compt++;
 		}
 	}
 }
 print FICHOUT "\t\t</LES_RAPPELS>\n\t</PAGE_LCI>\n";
+print $compt;
 
 close(FICHOUT);
 close(FICHIN);
