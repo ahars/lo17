@@ -5,6 +5,7 @@
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : exercice1_2.pl
 
+$rm = `rm -r LCI_EXTRACT_1`;
 mkdir('LCI_EXTRACT_1',0755) || die ("Err. Cr. répertoire\n");
 
 @files = `ls LCI/`;
@@ -20,6 +21,7 @@ foreach $elt (@files) {
 	$commande = "./exercice1_1.pl $elt";
 	system($commande) == 0 or die "Erreur de la commande : $commande\n";
 }
+
 print "\n====================TESTS====================\n";
 print "\nNombre de fichiers traités : $nbFiles / $testNbFiles";
 print "\n====================TESTS====================\n\n";

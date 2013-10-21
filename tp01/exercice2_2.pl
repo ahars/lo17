@@ -5,6 +5,7 @@
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : exercice2_2.pl
 
+$rm = `rm -r LCI_EXTRACT_2`;
 mkdir('LCI_EXTRACT_2',0755) || die ("Err. Cr. répertoire\n");
 
 @files = `ls LCI_EXTRACT_1/`;
