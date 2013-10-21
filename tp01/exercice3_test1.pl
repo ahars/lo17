@@ -18,7 +18,7 @@ while($a = <FICH>) {
 		$compt++;
 	}
 	
-	if ($a =~/class="S301">A voir aussi :/) {
+	if ($a =~ /class="S301">A voir aussi :/) {
 		$compt++;
 	}
 	
@@ -34,7 +34,7 @@ while($a = <FICH>) {
 		$compt++;
 	}
 }
-print "$compt rubriques\n";
+print $compt;
 
 close(FICH);
 

@@ -29,15 +29,14 @@ foreach $elt (@files) {
 
 	print "Traitement de : $elt";
 	$nbFiles++;
-	$commande = "./exercice3_1.pl $elt";
-	system($commande) == 0 or die "Erreur de la commande : $commande\n";
+	$c = `./exercice3_1.pl $elt`;
 }
 
 # Récupération du nombre de rubriques dans les fichiers de bases.
 @files = `ls LCI_EXTRACT_2/`;
 foreach $elt (@files) {
 
-	$nb = `./exercice3_2_test1.pl $elt`;
+	$nb = `./exercice3_test1.pl $elt`;
 	if ($nb == 0) {	$nbFiles0++; }
 
 	if ($nb == 1) {	$nbFiles1++; }
@@ -55,7 +54,7 @@ foreach $elt (@files) {
 @files = `ls LCI_EXTRACT_3/`;
 foreach $elt (@files) {
 
-	$nb = `./exercice3_2_test2.pl $elt`;
+	$nb = `./exercice3_test2.pl $elt`;
 	if ($nb == 0) {	$nbRubriquesFiles0++; }
 
 	if ($nb == 1) {	$nbRubriquesFiles1++; }

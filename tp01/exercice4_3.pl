@@ -13,12 +13,12 @@ open(FICHIN, "LCI_EXTRACT_3/$fichier1") or die "Cannot open fichier: $!";
 chdir("LCI_EXTRACT_4/");
 open(FICHOUT, ">>$fichier2") or die "Cannot open fichier: $!";
 
-print FICHOUT "\t\t<FOCUS>\n";
-
 # Traitement sur le FOCUS.
 while($a = <FICHIN>) {
 
 	if($a =~/^<FOCUS>/) {
+	
+		print FICHOUT "\t\t<FOCUS>\n";
 
 		if ($a =~/\<a[^>]*href=(.*?)\sclass="S48">/) {
 			print FICHOUT "\t\t\t<urlArticle>$1</urlArticle>\n";
@@ -63,11 +63,12 @@ while($a = <FICHIN>) {
 		# else {
 		#	print FICHOUT "\t\t\t<auteur>PAS D'INFORMATIONS</auteur>\n";
 		# }
-		
+
+		print FICHOUT "\t\t</FOCUS>\n";
+
 		$compt++;
 	}
 }
-print FICHOUT "\t\t</FOCUS>\n";
 print $compt;
 
 close(FICHOUT);

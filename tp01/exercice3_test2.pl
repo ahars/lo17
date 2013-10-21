@@ -14,23 +14,23 @@ $compt = 0;
 # Test du nombre de rubriques.
 while($a = <FICH>) {
 
-	if ($a =~ /^<UNE>/) {
+	if ($a =~ /<UNE>/) {
 		$compt++;
 	}
 	
-	if ($a =~/^<LES_VOIRAUSSI>/) {
+	if ($a =~ /<LES_VOIRAUSSI>/) {
 		$compt++;
 	}
 	
-	if ($a =~ /^<FOCUS>/) {
+	if ($a =~ /<FOCUS>/) {
 		$compt++;
 	}
 
-	if ($a =~ /^<LES_GROSTITRES>/) {
+	if ($a =~ /<LES_GROSTITRES>/) {
 		$compt++;
 	}
 
-	if ($a =~ /^<LES_RAPPELS>/) {
+	if ($a =~ /<LES_RAPPELS>/) {
 		$compt++;
 	}
 }

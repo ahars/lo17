@@ -11,7 +11,7 @@ $fichier = "corpus_lci.xml";
 $testNbFiles = `find LCI_EXTRACT_2/ -type f | wc -l`;
 $nbFiles = 0;
 
-$c = "./exercice4_0.pl $fichier";
+$c = `./exercice4_0.pl $fichier`;
 
 foreach $elt (@files) {
 
@@ -20,15 +20,15 @@ foreach $elt (@files) {
 	# Le foreach ajoute un \n à éliminer..
 	$elt =~ s/\n//g;
 
-	$c = "./exercice4_1.pl $elt $fichier";
+	$c = `./exercice4_1.pl $elt $fichier`;
 
-	$c = "./exercice4_2.pl $elt $fichier";
+	$c = `./exercice4_2.pl $elt $fichier`;
 
-	$c = "./exercice4_3.pl $elt $fichier";
+	$c = `./exercice4_3.pl $elt $fichier`;
 
-	$c = "./exercice4_4.pl $elt $fichier";
+	$c = `./exercice4_4.pl $elt $fichier`;
 
-	$c = "./exercice4_5.pl $elt $fichier";
+	$c = `./exercice4_5.pl $elt $fichier`;
 }
 
 $c = `./exercice4_6.pl $fichier`;
