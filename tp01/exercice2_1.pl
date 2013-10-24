@@ -14,8 +14,8 @@ open(FICHOUT, ">$fichier") or die "Cannot open fichier: $!";
 while($a = <FICHIN>) {
 
 	# Mise en forme du doc sur une seule ligne.
-	while ($a =~ s/(\r|\n)//g) 
-	{
+	while ($a =~ s/(\r|\n)//g) {
+
 		#print "$1\n";
 	}	
 	#print "$a";
@@ -24,4 +24,3 @@ while($a = <FICHIN>) {
 
 close(FICHOUT);
 close(FICHIN);
-

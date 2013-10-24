@@ -68,6 +68,7 @@ foreach $elt (@files) {
 	if ($nb == 5) {	$nbRubriquesFiles5++; }
 }
 
+print "\nCréation d'une ligne par rubrique";
 print "\n====================TESTS====================\n";
 print "\nNombre de fichiers traités : $nbFiles / $testNbFiles";
 print "Nombre de fichiers finaux contenant 5 rubriques : $nbRubriquesFiles5 / $nbFiles5";
@@ -77,4 +78,3 @@ print "\nNombre de fichiers finaux contenant 2 rubriques : $nbRubriquesFiles2 / 
 print "\nNombre de fichiers finaux contenant 1 rubrique : $nbRubriquesFiles1 / $nbFiles1";
 print "\nNombre de fichiers finaux contenant 0 rubrique : $nbRubriquesFiles0 / $nbFiles0\n";
 print "\n====================TESTS====================\n\n";
-

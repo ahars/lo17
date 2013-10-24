@@ -75,9 +75,9 @@ while($a = <FICHIN>) {
 		$compt++;
 	}
 }
+
 print FICHOUT "\t\t</UNE>\n";
 print $compt;
 
 close(FICHOUT);
 close(FICHIN);
-

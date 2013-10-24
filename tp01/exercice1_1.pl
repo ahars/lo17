@@ -41,4 +41,3 @@ while ($_=<FICHIN>) {
 
 close (FICHIN);
 close (FICHOUT);
-

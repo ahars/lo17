@@ -13,4 +13,3 @@ open(FICHOUT, ">>$fichier") or die "Cannot open fichier: $!";
 print FICHOUT "</CORPUS>";
 
 close(FICHOUT);
-

@@ -39,9 +39,9 @@ while($a = <FICHIN>) {
 		}
 	}
 }
+
 print FICHOUT "\t\t</LES_RAPPELS>\n\t</PAGE_LCI>\n";
 print $compt;
 
 close(FICHOUT);
 close(FICHIN);
-

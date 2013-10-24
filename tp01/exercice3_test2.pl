@@ -34,7 +34,7 @@ while($a = <FICH>) {
 		$compt++;
 	}
 }
+
 print $compt;
 
 close(FICH);
-

@@ -37,9 +37,9 @@ while($a = <FICHIN>) {
 		}
 	}
 }
+
 print FICHOUT "\t\t</LES_VOIRAUSSI>\n";
 print $compt;
 
 close(FICHOUT);
 close(FICHIN);
-

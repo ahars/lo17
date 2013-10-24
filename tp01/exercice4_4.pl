@@ -79,9 +79,9 @@ while($a = <FICHIN>) {
 		}
 	}
 }
+
 print FICHOUT "\t\t</LES_GROSTITRES>\n";
 print $compt;
 
 close(FICHOUT);
 close(FICHIN);
-

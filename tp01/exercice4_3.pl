@@ -69,8 +69,8 @@ while($a = <FICHIN>) {
 		$compt++;
 	}
 }
+
 print $compt;
 
 close(FICHOUT);
 close(FICHIN);
-

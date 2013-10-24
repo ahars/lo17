@@ -62,6 +62,7 @@ foreach $elt (@files) {
 	print "\n";
 }
 
+print "\nCréation d'un corpus par fichier";
 print "\n====================TESTS====================\n";
 print "\nNombre de fichiers traités : $nbFiles / $testNbFiles";
 print "Nombre de fichiers dont la UNE a été correctement traitée : $nbUneFini / $testNbFiles";
@@ -70,4 +71,3 @@ print "Nombre de fichiers dont les GROSTITRES ont été correctement traités : 
 print "Nombre de fichiers dont le FOCUS a été correctement traité : $nbFocusFini / $testNbFiles";
 print "Nombre de fichiers dont les RAPPELS ont été correctement traités : $nbRappelFini / $testNbFiles";
 print "\n====================TESTS====================\n\n";
-

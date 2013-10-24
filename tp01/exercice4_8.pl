@@ -33,7 +33,7 @@ foreach $elt (@files) {
 
 $c = `./exercice4_6.pl $fichier`;
 
+print "\nCréation d'un corpus pour tous les fichiers";
 print "\n====================TESTS====================\n";
 print "\nNombre de fichiers traités : $nbFiles / $testNbFiles";
 print "\n====================TESTS====================\n\n";
-

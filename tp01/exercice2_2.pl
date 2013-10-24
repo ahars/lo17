@@ -33,8 +33,8 @@ foreach $elt (@files) {
 	}
 }
 
+print "\nMise en page des fichiers sur une ligne";
 print "\n====================TESTS====================\n";
 print "\nNombre de fichiers traités : $nbFiles / $testNbFiles";
 print "Nombre de fichiers finaux ne contenant qu'une ligne : $nbLigneFiles / $testNbFiles";
 print "\n====================TESTS====================\n\n";
-

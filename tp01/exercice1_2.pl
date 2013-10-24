@@ -22,7 +22,7 @@ foreach $elt (@files) {
 	system($commande) == 0 or die "Erreur de la commande : $commande\n";
 }
 
+print "\nNormalisation des fichiers au format iso8859-1";
 print "\n====================TESTS====================\n";
 print "\nNombre de fichiers traités : $nbFiles / $testNbFiles";
 print "\n====================TESTS====================\n\n";
-
