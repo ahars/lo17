@@ -5,7 +5,7 @@
 # Fichier : index.pl
 
 $balise = shift(@ARGV);
-print STDERR "création d'index pour la balise <$balise>...\n";
+# print STDERR "création d'index pour la balise <$balise>...\n";
 
 while (<>) {
 
