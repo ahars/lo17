@@ -11,19 +11,22 @@ while (<>) {
 
 	if (/<FICHIER>(.*)<\/FICHIER>/) {
 
-		$fichier="\t".$1;
-		$rubrique="";
-		$url="";
-		$index="";
-	} elsif (/<(UNE|VOIRAUSSI|FOCUS|GROSTITRE|RAPPEL)>/) {
+		$fichier = "\t" . $1;
+		$rubrique = "";
+		$url = "";
+		$index = "";
+	}
+	elsif (/<(UNE|VOIRAUSSI|FOCUS|GROSTITRE|RAPPEL)>/) {
 
-		$rubrique="\t".$1;
-		$url="";
-		$index="";
-	} elsif (/<urlArticle>(.+\.html).*?<\/urlArticle>/i) {
+		$rubrique = "\t" . $1;
+		$url = "";
+		$index = "";
+	}
+	elsif (/<urlArticle>(.+\.html).*?<\/urlArticle>/i) {
 
-		$url="\t".$1;
-	} elsif (/<$balise>(.*)<\/$balise>/) {
+		$url = "\t" . $1;
+	}
+	elsif (/<$balise>(.*)<\/$balise>/) {
 
 		$index = $1;
 	}
@@ -31,13 +34,13 @@ while (<>) {
 	if ($index && $fichier && $rubrique && $url) {
 
 		$tabindex{$index} .= "$fichier$rubrique$url";
-		$index="";
+		$index = "";
 	}
 }
 @cleindex = keys %tabindex ;
 
 foreach $index (@cleindex) {
 
-	print $index.$tabindex{$index}."\n";
+	print $index . $tabindex{$index} . "\n";
 }
 

@@ -21,12 +21,11 @@ while (<>) {
 		$tronc = $1.$2;
 		$limite = $2 + 1;
 	}
-	
+
 	$res = substr ($mot,0,length($tronc));
 	if ($bavard == 1) {	
 		print "$mot\t";
 	}
 	print $res."\n";
-
 }
 
