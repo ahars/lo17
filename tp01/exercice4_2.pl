@@ -16,9 +16,9 @@ open(FICHOUT, ">>$fichier2") or die "Cannot open fichier: $!";
 print FICHOUT "\t\t<LES_VOIRAUSSI>\n";
 
 # Traitement sur les VOIRAUSSI.
-while($a = <FICHIN>) {	
+while($a = <FICHIN>) {
 
-	if($a =~/^<LES_VOIRAUSSI>/) {
+	if($a =~ /^<LES_VOIRAUSSI>/) {
 
 		while ($a =~ /<a\shref=(.*?)\s[^>]*class="S48">(.*?)\((.*?)\)/g) {
 
@@ -26,7 +26,7 @@ while($a = <FICHIN>) {
 			print FICHOUT "\t\t\t<VOIRAUSSI>\n";
 			print FICHOUT "\t\t\t\t<dateArticle>$3</dateArticle>\n";
 
-			# $a =~/<a\shref=(.*?)\s/g;
+			# $a =~ /<a\shref=(.*?)\s/g;
 			print FICHOUT "\t\t\t\t<urlArticle>$1</urlArticle>\n";
 
 			# $a =~ /class="S48">(.*?)\(/;

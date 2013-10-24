@@ -20,41 +20,58 @@ while($a = <FICHIN>) {
 
 	if($a =~/^<LES_GROSTITRES>/) {
 
-		# while ($a =~ /<img\ssrc="(.*?)[^>]*<span\sclass="S301">(.*?)<\/span>[^>]*<a\shref=(.*?)\sclass="S63">(.*?)<\/a>/g) {
-		# while ($a =~ /<a\s[^>]*><img\ssrc="(.*?)"\s[^>]*><\/a>.*?<span\sclass="S301">(.*?)<\/span>[^>]*<a\shref="(.*?)"\sclass="S63">(.*?)<\/a>/g) {
-
-		while ($a =~ /<a\s[^>]*><img\ssrc="(.*?)"\s[^>]*><\/a>.*?<span\sclass="S301">(.*?)<\/span>[^>]*<a\shref="(.*?)"\sclass="S63">(.*?)<\/a>(.*?)<a\s[^>]* class="S48">(.*?)<\/a><span\sclass="S48">(.*?)<\/a>.??'<a href="mailto:(.*?)"\sclass="S14">(.*?)<\/a>'?/g) {
-
-			# $a =~ /<a\shref="(.*?)"\sclass="S63"/;
+		#while ($a =~ /<a\s[^>]*><img\ssrc="(.*?)"\s[^>]*><\/a>.*?<span\sclass="S301">(.*?)<\/span>[^>]*<a\shref="(.*?)"\sclass="S63">(.*?)<\/a>/g) {
+		
+		#while ($a =~ /<a\s[^>]*><img\ssrc="(.*?)"\s[^>]*><\/a>.*?<span\sclass="S301">(.*?)<\/span>[^>]*<a\shref="(.*?)"\sclass="S63">(.*?)<\/a>(.*?)<a\s[^>]* class="S48">(.*?)<\/a><span\sclass="S48">(.??)<\/table>/g) {
+		
+		#while ($a =~ /<a\s[^>]*><img\ssrc="(.*?)"\s[^>]*><\/a>.*?<span\sclass="S301">(.*?)<\/span>[^<]*<a\shref="(.*?)"\sclass="S63">(.*?)<\/a>.*?<a\s[^>]* class="S48">(.*?)<\/a><span\sclass="S48">(.*?)<\/span>(.*?)<\/table>/g) {
+		
+		while ($a =~ /<a\s[^>]*><img\ssrc="(.*?)"\s[^>]*><\/a>(.*?)<\/table>/g) {
+				
+			# print FICHOUT "\t\t\t\t<contenu1>$1</contenu1>\n";
+			# print FICHOUT "\t\t\t\t<contenu2>$2</contenu2>\n";
+			
+			$pictureUrl = $1;
+			$tmp = $2;
+			
+			#$2 =~/<span\sclass="48">(.)<\/span>/
+			
+			$tmp =~ /<a\shref="(.*?)"\sclass="S63"/;
 			print FICHOUT "\t\t\t<GROSTITRE>\n";
-			print FICHOUT "\t\t\t\t<urlArticle>$3</urlArticle>\n";
+			print FICHOUT "\t\t\t\t<urlArticle>$1</urlArticle>\n";
 
-			# $a =~/<span class="S301">(.*?)<\/span>/;
-			print FICHOUT "\t\t\t\t<themeArticle>$2</themeArticle>\n";
+			$tmp =~/<span class="S301">(.*?)<\/span>/;
+			print FICHOUT "\t\t\t\t<themeArticle>$1</themeArticle>\n";
 
-			# $a =~ /class="S63">(.*?)<\/a>/;
-			print FICHOUT "\t\t\t\t<titreArticle>$4</titreArticle>\n";
+			$tmp =~ /class="S63">(.*?)<\/a>/;
+			print FICHOUT "\t\t\t\t<titreArticle>$1</titreArticle>\n";
+			
+			if ($tmp =~/<span\sclass="48">\(([^)]*)\)<\/span>/)
+			#$date = $1;
+			#$date =~ /(\d\d\d\d)\/(\d\d)\/(\d\d)/;
+			{
+				print FICHOUT "\t\t\t\t<dateArticle>$1</dateArticle>\n";
+			}
+			#else : on n'affiche rien (pas de balise vide)
 
-			# $a =~/<img\ssrc="(.*?)"/;
-			print FICHOUT "\t\t\t\t<urlImage>$1</urlImage>\n";
+			print FICHOUT "\t\t\t\t<urlImage>$pictureUrl</urlImage>\n";
 
-			$a =~ /class="S48">(.*?)<\/a>/g;
+			$tmp =~ /class="S48">(.*?)<\/a>/;
 			print FICHOUT "\t\t\t\t<resumeArticle>$1</resumeArticle>\n";
 
-			if ($a =~/<a href="mailto:(.*?)"/) {
+			if ($tmp =~/<a href="mailto:(.*?)"/) {
 				print FICHOUT "\t\t\t\t<mailto>$1</mailto>\n";
-			} else {
-				print FICHOUT "\t\t\t\t<mailto>PAS D'INFORMATIONS</mailto>\n";
-			}
+			} 
+			#else : on n'affiche rien (pas de balise vide)
 
-			if ($a =~/class="S14">(.*?)<\/a>/) {
+			
+			if ($tmp =~/class="S14">(.*?)<\/a>/) {
 				print FICHOUT "\t\t\t\t<auteur>$1</auteur>\n";
-			} else {
-				print FICHOUT "\t\t\t\t<auteur>PAS D'INFORMATIONS</auteur>\n";
-			}
+			} 
+			#else : on n'affiche rien (pas de balise vide)
 
-			$fichier1 =~ /(\d\d\d\d)-(\d\d)-(\d\d)/;
-			print FICHOUT "\t\t\t\t<dateArticle>$3/$2/$1</dateArticle>\n";
+			# $fichier1 =~ /(\d\d\d\d)-(\d\d)-(\d\d)/;
+			# print FICHOUT "\t\t\t\t<dateArticle>$3/$2/$1</dateArticle>\n";
 
 			print FICHOUT "\t\t\t</GROSTITRE>\n";
 			
