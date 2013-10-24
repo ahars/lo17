@@ -32,7 +32,7 @@ $c = `./calcul_tfidf.pl | sort -k 3 > tfidf.txt`;
 
 # Création de la stoplist.
 print "5) Création de la stoplist\n";
-$c = `./stoplist_creation`;
+$c = `./stoplist_creation.pl > stoplist.txt`;
 
 # Création du script pour appliquer la stoplist sur le corpus.
 print "6) Création du script d'application de la stoplist\n";
@@ -49,27 +49,33 @@ $c = `cat $corpus1 | scripts/newsegmente.pl -f | scripts/suppChiffres.pl | sort 
 $c = `./script_lemmes.pl`;
 
 # Création du fichier de successeurs.
-print "9) Création du fichier de successeurs\n";
+print "9) Création du fichier des successeurs\n";
 $c = `scripts/successeurs_2013.pl lemmes.txt | sort -k2 > successeurs.txt`;
 
-# Association des mots avec les lemmes.
-print "10) Association des mots avec les lemmes\n";
+# Création du fichier de troncation.
+print "10) Création du fichier de troncation\n";
 $c = `./scripts/filtronc.pl -v successeurs.txt > filtronc.txt`;
 
-# 
-print "11) \n";
+# Création du script comprenant la troncation.
+print "11) Création du script de troncation\n";
 $c = `./scripts/newcreeFiltre.pl filtronc.txt > script_filtre_lemmes.pl`;
 $c = `chmod +x script_filtre_lemmes.pl`;
 
-#
-print "12) \n";
+# Lemmatisation du corpus.
+print "12) Lemmatisation du corpus\n";
 $c = `./script_filtre_lemmes.pl $corpus1 > $corpus2`;
 
-#
-print "13) \n";
-$c = `./scripts/index.pl auteur $corpus2 > inverse_auteur.txt`;
+# Création du fichier inverse pour chaque balise.
+print "13) Création du fichier inverse pour les balises du corpus\n";
+@balises = ("titreArticle", "dateArticle", "urlImage", "resumeArticle", "mailto", "auteur", "themeArticle");
+$i = 1;
+foreach $elt (@balises) {
 
-#
-# print "14) \n";
-# $c = `cat $corpus2 | scripts/newsegmente.pl -f -a -t | scripts/newindexMot.pl > inverse`;
+	print "\t$i. Création du fichier inverse pour la balise $elt\n";
+	$c = `./scripts/index.pl $elt $corpus2 > inverse_$elt.txt`;
+	$i++;
+}
 
+# Création du fichier d'inverses depuis le corpus.
+print "14) Création du fichier d'inverses depuis le corpus\n";
+$c = `cat $corpus2 | scripts/newsegmente.pl -f -a -t | scripts/newindexMot.pl > inverse.txt`;

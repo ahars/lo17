@@ -6,7 +6,6 @@
 # Fichier : stoplist_creation.pl
 
 open(FICHTFIDF, "tfidf.txt") or die "Cannot open fichier: $!";
-open(FICHOUT, ">stoplist.txt") or die "Cannot open fichier: $!";
 
 @stoplist;
 
@@ -29,10 +28,8 @@ while($a = <FICHTFIDF>) {
 # print @stoplist;
 foreach my $k (keys(%stoplist)) {
 	# print "Clef = $k Valeur = $stoplist{$k}\n";
-	print FICHOUT $k;
-	print FICHOUT "\n";
+	print $k "\n";
 }
 
 close(FICHTFIDF);
 close(FICHOUT);
-

@@ -25,4 +25,3 @@ while($a = <FICHTF>) {
 
 close(FICHIDF);
 close(FICHTF);
-
