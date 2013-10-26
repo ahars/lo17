@@ -9,7 +9,7 @@
 $fichier = "../tp01/LCI_EXTRACT_4/corpus_lci.xml";
 
 # Paramétrage de la langue française dans le système.
-# setenv LANG C;
+# $c = `setenv LANG C`;
 $c = `LANG=C`;
 
 $corpus1 = "corpus1.xml";
