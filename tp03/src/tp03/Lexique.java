@@ -6,8 +6,6 @@ package tp03;
  * Fichier : Lexique.java
  */
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -26,41 +24,29 @@ public class Lexique {
 
 	public Lexique(String f) {
 
-		this.lexiq = new Hashtable<String, String>();
-		this.fichier = new String(f);
+		lexiq = new Hashtable<String, String>();
+		fichier = new String(f);
+		Scanner scanner = null;
+		String str;
+		
+		Cat c = new Cat(fichier);
+		
+		while ((str = c.getChaine()) != null) {
 
-		try {
+			scanner = new Scanner(str).useDelimiter((Pattern.compile("[\t\n]")));
+			String champ1, champ2;
 
-			BufferedReader buff = new BufferedReader(new FileReader(fichier));
-			Scanner scanner = null;
+			while (scanner.hasNext()) {
+			    champ1 = scanner.next();
+			    champ2 = scanner.next();
 
-			try {
-
-				String line;
-
-				while ((line = buff.readLine()) != null) {
-
-					scanner = new Scanner(line).useDelimiter((Pattern.compile("[\t\n]")));
-					String champ1, champ2;
-					while (scanner.hasNext()) {
-					    champ1 = scanner.next();
-					    champ2 = scanner.next();
-					    
-					    this.lexiq.put(champ1, champ2);
-					}
-				}
-			} finally {
-				buff.close();
-				scanner.close();
+			    this.lexiq.put(champ1, champ2);
 			}
-		} catch (Exception e) {
-
-			System.out.println("Oups, y a un pb scanner Dany !!!");
+			scanner.close();
 		}
 	}
 
 	public String get(String key){
-		
 		return this.lexiq.get(key);
 	}
 	

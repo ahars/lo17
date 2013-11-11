@@ -7,33 +7,43 @@ package tp03;
  */
 
 import java.io.BufferedReader;
-import java.io.EOFException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
 public class Cat {
 
-	public static void main(String[] args) {
+	private BufferedReader br;
+	private String chaine;
 
-		BufferedReader br = null;
-		String chaine;
+	public Cat(String fichier) {
+
+		br = null;
+		chaine = null;
 
 		try {
-
-			try {
-
-				br = new BufferedReader(new FileReader(args[0]));
-				while ((chaine = br.readLine()) != null)
-					System.out.println(chaine);
-			} catch (EOFException e) {
-				br.close();
-			}
+			br = new BufferedReader(new FileReader(fichier));
 		} catch (FileNotFoundException e) {
-			System.out.println("fichier inconnu : " + args[0]);
+			System.out.println("fichier inconnu : " + fichier);
+		}
+	}
+	
+	public String getChaine() {
+
+		try {
+			if ((chaine = br.readLine()) != null)
+				return chaine;
+			else {
+				br.close();
+				chaine = null;
+			}
 		} catch (IOException e) {
 			System.out.println("IO Exception");
 		}
+		return chaine;
 	}
 
+	public BufferedReader getBF() {
+		return br;
+	}
 }
