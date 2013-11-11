@@ -16,16 +16,14 @@ import java.util.regex.Pattern;
 public class Lexique {
 
 	private Hashtable<String, String> lexiq; 
-	private String fichier;
 	private final int SEUILMIN = 3;
 	private final int SEUILMAX = 4;
 	private final int SEUILPROX = 50;
-	private final int SEUILLEVENSHTEIN = 5;
+	private final int SEUILLEVENSHTEIN = 4;
 
-	public Lexique(String f) {
+	public Lexique(String fichier) {
 
 		lexiq = new Hashtable<String, String>();
-		fichier = new String(f);
 		Scanner scanner = null;
 		String str;
 		
@@ -37,8 +35,8 @@ public class Lexique {
 			String champ1, champ2;
 
 			while (scanner.hasNext()) {
-			    champ1 = scanner.next();
-			    champ2 = scanner.next();
+			    champ1 = scanner.next().replaceAll(" ", "");
+			    champ2 = scanner.next().replaceAll(" ", "");
 
 			    this.lexiq.put(champ1, champ2);
 			}
@@ -46,14 +44,14 @@ public class Lexique {
 		}
 	}
 
-	public String get(String key){
-		return this.lexiq.get(key);
+	public String getValue(String key){
+		return lexiq.get(key);
 	}
 	
 	public Set<String> getPrefix(String mot) {
 		
 		Set<String> tableKeys = lexiq.keySet();
-		Set<String> lemmeCandidats = new HashSet<String>();;
+		Set<String> lemmeCandidats = new HashSet<String>();
 		
 		Iterator<String> it = tableKeys.iterator();
 		
@@ -69,30 +67,29 @@ public class Lexique {
 			wordSize = word.length();
 		
 			if (Math.abs(argSize) < SEUILMIN || Math.abs(wordSize) < SEUILMIN) {
-				prox = 0;
+				break;
 			} else {
 				if (Math.abs(Math.abs(argSize) - Math.abs(wordSize)) > SEUILMAX) {
-					prox = 0;
+					break;
 				} else {
-					i = 1;
 					while ((i < Math.min(Math.abs(argSize), Math.abs(wordSize))) && (mot.charAt(i) == word.charAt(i))) {
 						i++;
 					}
-					prox = (i / Math.max(Math.abs(argSize), Math.abs(wordSize))) * 100;
+					prox = i * 100 / Math.max(Math.abs(argSize), Math.abs(wordSize));
 				}
 			}
 			
-			if (prox < SEUILPROX) {
+			if (prox > SEUILPROX) {
 				lemmeCandidats.add(lexiq.get(word));
 			}
 		}
 		return lemmeCandidats;
 	}
 
-	public Set<String> levenshtein(String mot) {
+	public Set<String> getLevenshtein(String mot) {
 		
 		Set<String> tableKeys = lexiq.keySet();
-		Set<String> lemmeCandidats = new HashSet<String>();;
+		Set<String> lemmeCandidats = new HashSet<String>();
 		
 		Iterator<String> it = tableKeys.iterator();
 		
@@ -105,6 +102,8 @@ public class Lexique {
 			word = it.next().toString();
 			wordSize = word.length();
 
+			//System.out.println("mot : " + mot + " (taille : " + argSize + ") - word : " + word + " (taille : " + wordSize + ")");
+			
 			int[][] dist = new int[argSize][wordSize];
 			dist[0][0] = 0;
 			
@@ -126,15 +125,16 @@ public class Lexique {
 					d1 = dist[i -1][j - 1] + cout(mot.charAt(i), word.charAt(j));
 					d2 = dist[i -1][j] + cout(mot.charAt(i), '\0');
 					d3 = dist[i][j - 1] + cout('\0', word.charAt(j));
-					// System.out.println("d1 = " + d1 + " d2 = " + d2 + " d3 = " + d3);
+					//System.out.print("d1 = " + d1 + " d2 = " + d2 + " d3 = " + d3);
 					
 					d1 = Math.min(d1, d2);
 					dist[i][j] = Math.min(d1, d3);
+					//System.out.println(" => d = " + dist[i][j]);
 				}
 			}
 			
 			distance = dist[argSize - 1][wordSize - 1];
-			// System.out.println("Distance de " + word + " = " + distance);
+			//System.out.println("Distance entre " + mot + " et " + word + " = " + distance);
 			if (distance < SEUILLEVENSHTEIN) {
 				lemmeCandidats.add(lexiq.get(word));
 			}
@@ -151,6 +151,6 @@ public class Lexique {
 				return 0;
 			}
 		}
-		return 0;
+		return 1;
 	}
 }

@@ -15,7 +15,7 @@ public class Saisie {
 	
 	private String chaine;
 
-	public Saisie () {
+	public Saisie() {
 
 		BufferedReader br = null;
 		chaine = null;
@@ -37,7 +37,7 @@ public class Saisie {
 		}
 	}
 	
-	public Saisie (String phrase) {
+	public Saisie(String phrase) {
 		chaine = phrase;
 	}
 	
