@@ -24,7 +24,7 @@ public class Tp03 {
 		StringTokenizer st = new StringTokenizer(s.getChaine());
 
 		/* Récupération du lexique. */
-		Lexique l = new Lexique("lexicA12.txt");
+		Lexique l = new Lexique("lexiquetest.txt");
 
 		while (st.hasMoreTokens()) {
 
@@ -55,7 +55,6 @@ public class Tp03 {
 				}
 			}
 		}
-
 		System.out.println("\nRESULT : " + result);
 		System.out.println("Aucun lemme trouvé pour : " + error);
 	}
