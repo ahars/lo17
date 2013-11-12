@@ -19,7 +19,7 @@ public class Lexique {
 	private final int SEUILMIN = 3;
 	private final int SEUILMAX = 4;
 	private final int SEUILPROX = 50;
-	private final int SEUILLEVENSHTEIN = 4;
+	private final int SEUILLEVENSHTEIN = 2;
 
 	public Lexique(String fichier) {
 
