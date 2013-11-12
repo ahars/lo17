@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/jehu/Documents/git/lo17/lo17_tp04/antlr-3.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/jehu/Documents/git/lo17/lo17_tp04/antlrworks-1.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
