@@ -24,7 +24,7 @@ public class Tp03 {
 		StringTokenizer st = new StringTokenizer(s.getChaine());
 
 		/* Récupération du lexique. */
-		Lexique l = new Lexique("lexiquetest.txt");
+		Lexique l = new Lexique("lexicA12.txt");
 
 		while (st.hasMoreTokens()) {
 
