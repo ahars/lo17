@@ -2,10 +2,8 @@ package tp04;
 
 import java.io.*;
 import java.util.Scanner;
-import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.ANTLRReaderStream;
 import org.antlr.runtime.CommonTokenStream;
-
 import antlr.output.Tal_simpleLexer;
 import antlr.output.Tal_simpleParser;
 

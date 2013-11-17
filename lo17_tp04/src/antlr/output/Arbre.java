@@ -1,4 +1,4 @@
-package tp04;
+package antlr.output;
 
 public class Arbre {
 
