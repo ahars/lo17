@@ -6,7 +6,10 @@ import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.ANTLRReaderStream;
 import org.antlr.runtime.CommonTokenStream;
 
-public class TalMain3 {
+import antlr.output.Tal_simpleLexer;
+import antlr.output.Tal_simpleParser;
+
+public class Tal_simpleMain {
 
 	public static void main(String args[]) {
 

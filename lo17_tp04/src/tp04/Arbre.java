@@ -2,22 +2,22 @@ package tp04;
 
 public class Arbre {
 
-	Arbre fils = null;
-	Arbre frere = null;
-	String categorie;
-	String mot;
+	private Arbre fils = null;
+	private Arbre frere = null;
+	private String categorie;
+	private String mot;
 
-	Arbre(String categorie, String mot) {
+	public Arbre(String categorie, String mot) {
 		this.categorie = categorie ;
 		this.mot = mot ;
 	}
 
-	Arbre(String categorie) {
+	public Arbre(String categorie) {
 		this.categorie = categorie ;
 		this.mot = "" ;
 	}
 
-	void ajouteFils(Arbre a) {
+	public void ajouteFils(Arbre a) {
 		if (fils == null)
 			fils = a;
 		else
@@ -35,13 +35,13 @@ public class Arbre {
 		}
 	}
 
-	void afficheCat() {
+	public void afficheCat() {
 		// afficheCatAvecNl();
 		System.out.println(sortArbreAvecNl());
 		System.out.println();
 	}
 
-	String sortArbre() {
+	public String sortArbre() {
 		return sortArbreAvecNl();
 	}
 
