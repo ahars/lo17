@@ -1,5 +1,5 @@
 package antlr.output;
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g 2013-11-17 01:28:49
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g 2013-11-25 23:54:09
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -56,8 +56,8 @@ public class Tal_sqlLexer extends Lexer {
         try {
             int _type = ARTICLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:6:9: ( 'article' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:6:11: 'article'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:4:9: ( 'article' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:4:11: 'article'
             {
             match("article"); 
 
@@ -77,8 +77,8 @@ public class Tal_sqlLexer extends Lexer {
         try {
             int _type = PAGE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:9:6: ( 'page' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:9:8: 'page'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:5:6: ( 'page' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:5:8: 'page'
             {
             match("page"); 
 
@@ -98,7 +98,7 @@ public class Tal_sqlLexer extends Lexer {
         try {
             int _type = CONJ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:12:6: ( 'et' | 'ou' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:6:6: ( 'et' | 'ou' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -116,7 +116,7 @@ public class Tal_sqlLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:12:8: 'et'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:6:8: 'et'
                     {
                     match("et"); 
 
@@ -124,7 +124,7 @@ public class Tal_sqlLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:12:15: 'ou'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:6:15: 'ou'
                     {
                     match("ou"); 
 
@@ -146,8 +146,8 @@ public class Tal_sqlLexer extends Lexer {
         try {
             int _type = POINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:15:7: ( '.' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:15:9: '.'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:7:7: ( '.' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:7:9: '.'
             {
             match('.'); 
 
@@ -166,7 +166,7 @@ public class Tal_sqlLexer extends Lexer {
         try {
             int _type = MOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:18:5: ( 'mot' | 'contenir' | 'parler' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:8:5: ( 'mot' | 'contenir' | 'parler' )
             int alt2=3;
             switch ( input.LA(1) ) {
             case 'm':
@@ -193,7 +193,7 @@ public class Tal_sqlLexer extends Lexer {
 
             switch (alt2) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:18:7: 'mot'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:8:7: 'mot'
                     {
                     match("mot"); 
 
@@ -201,7 +201,7 @@ public class Tal_sqlLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:18:15: 'contenir'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:8:15: 'contenir'
                     {
                     match("contenir"); 
 
@@ -209,7 +209,7 @@ public class Tal_sqlLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:18:28: 'parler'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:8:28: 'parler'
                     {
                     match("parler"); 
 
@@ -231,7 +231,7 @@ public class Tal_sqlLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:21:5: ( ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' ) | '\\n' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:9:4: ( ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' ) | '\\n' )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -249,9 +249,9 @@ public class Tal_sqlLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:21:7: ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' )
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:9:6: ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' )
                     {
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:21:7: ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' )
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:9:6: ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' )
                     int alt3=6;
                     switch ( input.LA(1) ) {
                     case ' ':
@@ -293,28 +293,28 @@ public class Tal_sqlLexer extends Lexer {
 
                     switch (alt3) {
                         case 1 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:21:8: ' '
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:9:7: ' '
                             {
                             match(' '); 
 
                             }
                             break;
                         case 2 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:21:13: '\\t'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:9:12: '\\t'
                             {
                             match('\t'); 
 
                             }
                             break;
                         case 3 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:21:20: '\\r'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:9:19: '\\r'
                             {
                             match('\r'); 
 
                             }
                             break;
                         case 4 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:21:27: 'je'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:9:26: 'je'
                             {
                             match("je"); 
 
@@ -322,7 +322,7 @@ public class Tal_sqlLexer extends Lexer {
                             }
                             break;
                         case 5 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:21:34: 'qui'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:9:33: 'qui'
                             {
                             match("qui"); 
 
@@ -330,7 +330,7 @@ public class Tal_sqlLexer extends Lexer {
                             }
                             break;
                         case 6 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:21:42: 'dont'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:9:41: 'dont'
                             {
                             match("dont"); 
 
@@ -340,12 +340,12 @@ public class Tal_sqlLexer extends Lexer {
 
                     }
 
-                    skip();
+                     skip(); 
 
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:21:62: '\\n'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:9:63: '\\n'
                     {
                     match('\n'); 
 
@@ -366,8 +366,8 @@ public class Tal_sqlLexer extends Lexer {
         try {
             int _type = VAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:24:6: ( ( 'A' .. 'Z' | 'a' .. 'z' ) ( 'a' .. 'z' )+ )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:24:8: ( 'A' .. 'Z' | 'a' .. 'z' ) ( 'a' .. 'z' )+
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:10:5: ( ( 'A' .. 'Z' | 'a' .. 'z' ) ( 'a' .. 'z' )+ )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:10:7: ( 'A' .. 'Z' | 'a' .. 'z' ) ( 'a' .. 'z' )+
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -378,7 +378,7 @@ public class Tal_sqlLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:24:30: ( 'a' .. 'z' )+
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:10:29: ( 'a' .. 'z' )+
             int cnt5=0;
             loop5:
             do {
@@ -392,7 +392,7 @@ public class Tal_sqlLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:24:31: 'a' .. 'z'
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_sql.g:10:30: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); 
 
