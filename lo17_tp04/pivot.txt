@@ -1,0 +1,15 @@
+veux 	vouloir 
+voudrais 	vouloir
+donne 	vouloir
+affiche 	vouloir
+articles 	article
+rubriques 	rubrique
+titres 	titre
+auteurs  auteur
+parle 	parler
+parlent 	parler
+traite 	parler
+traitent 	parler
+contient 	parler
+en 	date
+
