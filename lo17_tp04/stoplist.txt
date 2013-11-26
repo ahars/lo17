@@ -1,0 +1,6 @@
+des	stop
+je	stop
+l'	stop
+la	stop
+le	stop
+les	stop
