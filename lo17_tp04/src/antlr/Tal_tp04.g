@@ -5,15 +5,15 @@ COMBIEN : 'combien';
 ARTICLE : 'article';
 PAGE : 'page';
 UNE : 'une';
-FOCUS :'focus';
-RAPPELS :'rappels';
-VOIRAUSSI :'voiraussi';
-GROSTITRES : 'grostitres';
+FOCUS : 'focus';
+RAPPELS : 'rappels';
+VOIRAUSSI : 'voiraussi';
+GROSTITRES : 'gros titre';
 AUTEUR : 'auteur';
 CONJ : 'et' | 'ou';
 CONTENIR : 'contenir' | 'parler';
 POINT : '.'|'?';
-WS : (' ' |'\t' | '\r' | 'je' | 'qui' | 'dont') { skip(); } | '\n';
+WS : (' ' |'\t' | '\r' | 'stop' | 'qui' | 'dont') { skip(); } | '\n';
 VAR : ('A'..'Z' | 'a'..'z') ('a'..'z')+;
 
 listerequetes returns [String sql = ""]

@@ -1,7 +1,14 @@
 package tp04;
 
+import java.io.StringReader;
 import java.util.Set;
 import java.util.StringTokenizer;
+
+import org.antlr.runtime.ANTLRReaderStream;
+import org.antlr.runtime.CommonTokenStream;
+
+import antlr.output.Tal_tp04Lexer;
+import antlr.output.Tal_tp04Parser;
 
 /* UV : LO17 - TP04
  * Analyse Syntaxique
@@ -22,9 +29,9 @@ public class Tp04 {
 		Lexique stop = new Lexique("stoplist.txt");
 		Cat q = new Cat("corpusQuestionA09Sort.txt");
 
-		while ((str = q.getChaine()) != null) {
+//		while ((str = q.getChaine()) != null) {
 
-			//str = "je voudrais des articles parlent irak?";
+			str = "je voudrais des articles parlent irak?";
 			
 			if (!str.isEmpty()) {
 				
@@ -60,21 +67,16 @@ public class Tp04 {
 						}
 					}
 				}
-				System.out.println("resultat : " + result + "\n");
-			}
-		}
+				System.out.println("resultat : " + result);
 
-/*		while (!s.equals("*")) {
-			try {
-				Tal_tp04Lexer lexer = new Tal_tp04Lexer(new ANTLRReaderStream(new StringReader(str)));
-				CommonTokenStream tokens = new CommonTokenStream(lexer);
-				Tal_tp04Parser parser = new Tal_tp04Parser(tokens);
-				String arbre = parser.listerequetes();
-				System.out.println(arbre);
-			} catch(Exception e) {  }
-			System.out.print("Texte : ");
-			//s = scanner.nextLine();
-		}
-*/
+				try {
+					Tal_tp04Lexer lexer = new Tal_tp04Lexer(new ANTLRReaderStream(new StringReader(result)));
+					CommonTokenStream tokens = new CommonTokenStream(lexer);
+					Tal_tp04Parser parser = new Tal_tp04Parser(tokens);
+					String arbre = parser.listerequetes();
+					System.out.println("arbre : " + arbre);
+				} catch(Exception e) {  }
+			}
+//		}
 	}
 }
