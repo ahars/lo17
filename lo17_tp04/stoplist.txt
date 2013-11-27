@@ -1,6 +1,17 @@
+d'	stop
+de	stop
 des	stop
+du	stop
+est	stop
+eu	stop
+font	stop
 je	stop
+Je	stop
 l'	stop
 la	stop
 le	stop
 les	stop
+qui	stop
+sont	stop
+un	stop
+Y	stop
