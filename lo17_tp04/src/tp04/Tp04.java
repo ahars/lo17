@@ -3,10 +3,8 @@ package tp04;
 import java.io.StringReader;
 import java.util.Set;
 import java.util.StringTokenizer;
-
 import org.antlr.runtime.ANTLRReaderStream;
 import org.antlr.runtime.CommonTokenStream;
-
 import antlr.output.Tal_tp04Lexer;
 import antlr.output.Tal_tp04Parser;
 
@@ -20,7 +18,7 @@ public class Tp04 {
 
 	public static void main(String[] args) {
 
-		String str, tr, result;
+		String str, tr, result, temp;
 		Set<String> resultP, resultL;
 		StringTokenizer st;
 
@@ -31,18 +29,28 @@ public class Tp04 {
 
 		while ((str = q.getChaine()) != null) {
 
-//			str = "je voudrais des articles parlent irak?";
-			
+//			str = "je voudrais d'article parlent l'irak?";
+
 			if (!str.isEmpty()) {
-				
+
 				System.out.println("question : " + str);
 				st = new StringTokenizer(str);
 				result = "";
-		
+
 				while (st.hasMoreTokens()) {
-		
+
 					tr = st.nextToken();
-		
+
+					if ((tr.charAt(0) == 'd') && (tr.charAt(1) == '\'')) {
+						temp = tr;
+						tr = temp.replaceAll("d'", "");
+					}
+
+					if ((tr.charAt(0) == 'l') && (tr.charAt(1) == '\'')) {
+						temp = tr;
+						tr = temp.replaceAll("l'", "");
+					}
+
 					if (stop.getValue(tr) != null) {
 						result = result.concat(stop.getValue(tr) + " ");
 					} else {
