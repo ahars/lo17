@@ -48,9 +48,9 @@ public class Arbre {
 	private String sortArbreAvecNl() {
 		String arbre = categorie + " " + mot +" ";
 		if (fils != null) {
-			arbre = arbre +" ( ";
+			//arbre = arbre +" ( ";
 			arbre = arbre + fils.sortArbreAvecNl();
-			arbre = arbre +" )";
+			//arbre = arbre +" )";
 		}
 		if (frere != null) {
 			arbre = arbre + frere.sortArbreAvecNl();
@@ -62,9 +62,9 @@ public class Arbre {
 		System.out.print(categorie + " ");
 		System.out.print(mot + " ");
 		if (fils != null) {
-			System.out.print(" ( ");
+			//System.out.print(" ( ");
 			fils.afficheCatAvecNl();
-			System.out.print(") ");
+			//System.out.print(") ");
 		}
 		if (frere != null) {
 			frere.afficheCatAvecNl();
@@ -74,9 +74,9 @@ public class Arbre {
 	private void afficheCatSansNl() {
 		System.out.print(categorie + " ");
 		if (fils != null) {
-			System.out.print(" ( ");
+			//System.out.print(" ( ");
 			fils.afficheCatSansNl();
-			System.out.print(") ");
+			//System.out.print(") ");
 		}
 		if (frere != null) {
 			frere.afficheCatSansNl();
