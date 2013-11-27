@@ -14,7 +14,7 @@ CONJ : 'et' | 'ou';
 CONTENIR : 'contenir' | 'parler';
 POINT : '.'|'?';
 WS : (' ' |'\t' | '\r' | 'stop' | 'qui' | 'dont') { skip(); } | '\n';
-VAR : ('A'..'Z' | 'a'..'z') ('a'..'z')+;
+VAR : ('A'..'Z' | 'a'..'z'|'\u00a0'..'\u00ff')(('a'..'z')|('0'..'9')|'-'|('\u00a0'..'\u00ff'))+;
 
 listerequetes returns [String sql = ""]
 	@init {

@@ -1,5 +1,5 @@
 package antlr.output;
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g 2013-11-27 02:22:09
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g 2013-11-27 03:37:26
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -511,10 +511,10 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = VAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:5: ( ( 'A' .. 'Z' | 'a' .. 'z' ) ( 'a' .. 'z' )+ )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:7: ( 'A' .. 'Z' | 'a' .. 'z' ) ( 'a' .. 'z' )+
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
             {
-            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z')||(input.LA(1)>='\u00A0' && input.LA(1)<='\u00FF') ) {
                 input.consume();
 
             }
@@ -523,23 +523,208 @@ public class Tal_tp04Lexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:29: ( 'a' .. 'z' )+
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:47: ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
             int cnt5=0;
             loop5:
             do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
-
-                if ( ((LA5_0>='a' && LA5_0<='z')) ) {
+                int alt5=5;
+                switch ( input.LA(1) ) {
+                case 'a':
+                case 'b':
+                case 'c':
+                case 'd':
+                case 'e':
+                case 'f':
+                case 'g':
+                case 'h':
+                case 'i':
+                case 'j':
+                case 'k':
+                case 'l':
+                case 'm':
+                case 'n':
+                case 'o':
+                case 'p':
+                case 'q':
+                case 'r':
+                case 's':
+                case 't':
+                case 'u':
+                case 'v':
+                case 'w':
+                case 'x':
+                case 'y':
+                case 'z':
+                    {
                     alt5=1;
-                }
+                    }
+                    break;
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    {
+                    alt5=2;
+                    }
+                    break;
+                case '-':
+                    {
+                    alt5=3;
+                    }
+                    break;
+                case '\u00A0':
+                case '\u00A1':
+                case '\u00A2':
+                case '\u00A3':
+                case '\u00A4':
+                case '\u00A5':
+                case '\u00A6':
+                case '\u00A7':
+                case '\u00A8':
+                case '\u00A9':
+                case '\u00AA':
+                case '\u00AB':
+                case '\u00AC':
+                case '\u00AD':
+                case '\u00AE':
+                case '\u00AF':
+                case '\u00B0':
+                case '\u00B1':
+                case '\u00B2':
+                case '\u00B3':
+                case '\u00B4':
+                case '\u00B5':
+                case '\u00B6':
+                case '\u00B7':
+                case '\u00B8':
+                case '\u00B9':
+                case '\u00BA':
+                case '\u00BB':
+                case '\u00BC':
+                case '\u00BD':
+                case '\u00BE':
+                case '\u00BF':
+                case '\u00C0':
+                case '\u00C1':
+                case '\u00C2':
+                case '\u00C3':
+                case '\u00C4':
+                case '\u00C5':
+                case '\u00C6':
+                case '\u00C7':
+                case '\u00C8':
+                case '\u00C9':
+                case '\u00CA':
+                case '\u00CB':
+                case '\u00CC':
+                case '\u00CD':
+                case '\u00CE':
+                case '\u00CF':
+                case '\u00D0':
+                case '\u00D1':
+                case '\u00D2':
+                case '\u00D3':
+                case '\u00D4':
+                case '\u00D5':
+                case '\u00D6':
+                case '\u00D7':
+                case '\u00D8':
+                case '\u00D9':
+                case '\u00DA':
+                case '\u00DB':
+                case '\u00DC':
+                case '\u00DD':
+                case '\u00DE':
+                case '\u00DF':
+                case '\u00E0':
+                case '\u00E1':
+                case '\u00E2':
+                case '\u00E3':
+                case '\u00E4':
+                case '\u00E5':
+                case '\u00E6':
+                case '\u00E7':
+                case '\u00E8':
+                case '\u00E9':
+                case '\u00EA':
+                case '\u00EB':
+                case '\u00EC':
+                case '\u00ED':
+                case '\u00EE':
+                case '\u00EF':
+                case '\u00F0':
+                case '\u00F1':
+                case '\u00F2':
+                case '\u00F3':
+                case '\u00F4':
+                case '\u00F5':
+                case '\u00F6':
+                case '\u00F7':
+                case '\u00F8':
+                case '\u00F9':
+                case '\u00FA':
+                case '\u00FB':
+                case '\u00FC':
+                case '\u00FD':
+                case '\u00FE':
+                case '\u00FF':
+                    {
+                    alt5=4;
+                    }
+                    break;
 
+                }
 
                 switch (alt5) {
             	case 1 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:30: 'a' .. 'z'
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:48: ( 'a' .. 'z' )
+            	    {
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:48: ( 'a' .. 'z' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:49: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); 
+
+            	    }
+
+
+            	    }
+            	    break;
+            	case 2 :
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:59: ( '0' .. '9' )
+            	    {
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:59: ( '0' .. '9' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:60: '0' .. '9'
+            	    {
+            	    matchRange('0','9'); 
+
+            	    }
+
+
+            	    }
+            	    break;
+            	case 3 :
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:70: '-'
+            	    {
+            	    match('-'); 
+
+            	    }
+            	    break;
+            	case 4 :
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:74: ( '\\u00a0' .. '\\u00ff' )
+            	    {
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:74: ( '\\u00a0' .. '\\u00ff' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:75: '\\u00a0' .. '\\u00ff'
+            	    {
+            	    matchRange('\u00A0','\u00FF'); 
+
+            	    }
+
 
             	    }
             	    break;
@@ -689,23 +874,24 @@ public class Tal_tp04Lexer extends Lexer {
     static final String DFA6_eofS =
         "\141\uffff";
     static final String DFA6_minS =
-        "\1\11\12\141\2\uffff\3\141\1\uffff\1\151\1\155\2\164\1\147\1\145"+
-        "\1\143\1\160\1\157\2\141\1\157\1\151\1\156\1\154\1\162\1\142\1\164"+
-        "\1\151\2\145\1\154\1\141\1\165\1\160\1\163\1\uffff\1\160\1\141\1"+
-        "\164\1\157\1\141\1\151\1\145\1\143\1\165\1\141\1\145\1\uffff\1\163"+
-        "\1\145\1\40\2\141\1\151\1\165\1\145\1\156\1\154\1\162\1\uffff\1"+
-        "\162\1\141\1\154\1\uffff\1\162\1\163\1\156\1\151\1\145\2\141\1\uffff"+
-        "\1\163\1\141\1\163\1\141\1\162\1\141\2\uffff\1\141\1\uffff\1\151"+
-        "\1\uffff\1\141\2\uffff\1\141\1\uffff";
+        "\1\11\12\55\2\uffff\3\55\1\uffff\1\151\1\155\2\164\1\147\1\145\1"+
+        "\143\1\160\1\157\2\55\1\157\1\151\1\156\1\154\1\162\1\142\1\164"+
+        "\1\151\2\145\1\154\1\55\1\165\1\160\1\163\1\uffff\1\160\1\55\1\164"+
+        "\1\157\1\141\1\151\1\145\1\143\1\165\1\55\1\145\1\uffff\1\163\1"+
+        "\145\1\40\2\55\1\151\1\165\1\145\1\156\1\154\1\162\1\uffff\1\162"+
+        "\1\55\1\154\1\uffff\1\162\1\163\1\156\1\151\1\145\2\55\1\uffff\1"+
+        "\163\1\55\1\163\1\55\1\162\1\55\2\uffff\1\55\1\uffff\1\151\1\uffff"+
+        "\1\55\2\uffff\1\55\1\uffff";
     static final String DFA6_maxS =
-        "\13\172\2\uffff\3\172\1\uffff\1\165\1\156\2\164\1\162\1\145\1\143"+
-        "\1\160\1\157\2\172\1\157\1\151\1\156\1\154\1\162\1\142\1\164\1\151"+
-        "\2\145\1\154\1\172\1\165\1\160\1\163\1\uffff\1\160\1\172\1\164\1"+
-        "\157\1\141\1\151\1\145\1\143\1\165\1\172\1\145\1\uffff\1\163\1\145"+
-        "\1\40\2\172\1\151\1\165\1\145\1\156\1\154\1\162\1\uffff\1\162\1"+
-        "\172\1\154\1\uffff\1\162\1\163\1\156\1\151\1\145\2\172\1\uffff\1"+
-        "\163\1\172\1\163\1\172\1\162\1\172\2\uffff\1\172\1\uffff\1\151\1"+
-        "\uffff\1\172\2\uffff\1\172\1\uffff";
+        "\13\u00ff\2\uffff\3\u00ff\1\uffff\1\165\1\156\2\164\1\162\1\145"+
+        "\1\143\1\160\1\157\2\u00ff\1\157\1\151\1\156\1\154\1\162\1\142\1"+
+        "\164\1\151\2\145\1\154\1\u00ff\1\165\1\160\1\163\1\uffff\1\160\1"+
+        "\u00ff\1\164\1\157\1\141\1\151\1\145\1\143\1\165\1\u00ff\1\145\1"+
+        "\uffff\1\163\1\145\1\40\2\u00ff\1\151\1\165\1\145\1\156\1\154\1"+
+        "\162\1\uffff\1\162\1\u00ff\1\154\1\uffff\1\162\1\163\1\156\1\151"+
+        "\1\145\2\u00ff\1\uffff\1\163\1\u00ff\1\163\1\u00ff\1\162\1\u00ff"+
+        "\2\uffff\1\u00ff\1\uffff\1\151\1\uffff\1\u00ff\2\uffff\1\u00ff\1"+
+        "\uffff";
     static final String DFA6_acceptS =
         "\13\uffff\1\15\1\16\3\uffff\1\17\32\uffff\1\13\13\uffff\1\5\13\uffff"+
         "\1\4\3\uffff\1\11\7\uffff\1\6\6\uffff\1\12\1\14\1\uffff\1\1\1\uffff"+
@@ -715,22 +901,29 @@ public class Tal_tp04Lexer extends Lexer {
     static final String[] DFA6_transitionS = {
             "\2\14\2\uffff\1\14\22\uffff\1\14\15\uffff\1\13\20\uffff\1\13"+
             "\1\uffff\32\20\6\uffff\1\3\1\20\1\2\1\17\1\11\1\6\1\10\7\20"+
-            "\1\12\1\4\1\16\1\7\1\15\1\20\1\5\1\1\4\20",
-            "\16\20\1\21\13\20",
-            "\16\20\1\22\13\20",
-            "\21\20\1\23\2\20\1\24\5\20",
-            "\1\25\31\20",
-            "\15\20\1\26\14\20",
-            "\16\20\1\27\13\20",
-            "\1\30\31\20",
-            "\21\20\1\31\10\20",
-            "\23\20\1\32\6\20",
-            "\24\20\1\33\5\20",
+            "\1\12\1\4\1\16\1\7\1\15\1\20\1\5\1\1\4\20\45\uffff\140\20",
+            "\1\20\2\uffff\12\20\47\uffff\16\20\1\21\13\20\45\uffff\140"+
+            "\20",
+            "\1\20\2\uffff\12\20\47\uffff\16\20\1\22\13\20\45\uffff\140"+
+            "\20",
+            "\1\20\2\uffff\12\20\47\uffff\21\20\1\23\2\20\1\24\5\20\45\uffff"+
+            "\140\20",
+            "\1\20\2\uffff\12\20\47\uffff\1\25\31\20\45\uffff\140\20",
+            "\1\20\2\uffff\12\20\47\uffff\15\20\1\26\14\20\45\uffff\140"+
+            "\20",
+            "\1\20\2\uffff\12\20\47\uffff\16\20\1\27\13\20\45\uffff\140"+
+            "\20",
+            "\1\20\2\uffff\12\20\47\uffff\1\30\31\20\45\uffff\140\20",
+            "\1\20\2\uffff\12\20\47\uffff\21\20\1\31\10\20\45\uffff\140"+
+            "\20",
+            "\1\20\2\uffff\12\20\47\uffff\23\20\1\32\6\20\45\uffff\140\20",
+            "\1\20\2\uffff\12\20\47\uffff\24\20\1\33\5\20\45\uffff\140\20",
             "",
             "",
-            "\23\20\1\34\6\20",
-            "\24\20\1\35\5\20",
-            "\16\20\1\36\13\20",
+            "\1\20\2\uffff\12\20\47\uffff\23\20\1\34\6\20\45\uffff\140\20",
+            "\1\20\2\uffff\12\20\47\uffff\24\20\1\35\5\20\45\uffff\140\20",
+            "\1\20\2\uffff\12\20\47\uffff\16\20\1\36\13\20\45\uffff\140"+
+            "\20",
             "",
             "\1\40\13\uffff\1\37",
             "\1\41\1\42",
@@ -741,8 +934,8 @@ public class Tal_tp04Lexer extends Lexer {
             "\1\50",
             "\1\51",
             "\1\52",
-            "\32\20",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "\1\54",
             "\1\55",
             "\1\56",
@@ -754,13 +947,13 @@ public class Tal_tp04Lexer extends Lexer {
             "\1\64",
             "\1\65",
             "\1\66",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "\1\70",
             "\1\71",
             "\1\72",
             "",
             "\1\73",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "\1\74",
             "\1\75",
             "\1\76",
@@ -768,14 +961,14 @@ public class Tal_tp04Lexer extends Lexer {
             "\1\100",
             "\1\101",
             "\1\102",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "\1\104",
             "",
             "\1\105",
             "\1\106",
             "\1\107",
-            "\32\20",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "\1\110",
             "\1\111",
             "\1\112",
@@ -784,7 +977,7 @@ public class Tal_tp04Lexer extends Lexer {
             "\1\115",
             "",
             "\1\116",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "\1\120",
             "",
             "\1\121",
@@ -792,25 +985,25 @@ public class Tal_tp04Lexer extends Lexer {
             "\1\123",
             "\1\124",
             "\1\125",
-            "\32\20",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "",
             "\1\130",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "\1\132",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "\1\134",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "",
             "",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "",
             "\1\137",
             "",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "",
             "",
-            "\32\20",
+            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             ""
     };
 

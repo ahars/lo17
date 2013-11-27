@@ -29,9 +29,9 @@ public class Tp04 {
 		Lexique stop = new Lexique("stoplist.txt");
 		Cat q = new Cat("corpusQuestionA09Sort.txt");
 
-//		while ((str = q.getChaine()) != null) {
+		while ((str = q.getChaine()) != null) {
 
-			str = "je voudrais des articles parlent irak?";
+//			str = "je voudrais des articles parlent irak?";
 			
 			if (!str.isEmpty()) {
 				
@@ -77,6 +77,6 @@ public class Tp04 {
 					System.out.println("arbre : " + arbre);
 				} catch(Exception e) {  }
 			}
-//		}
+		}
 	}
 }

@@ -11,6 +11,7 @@ l'	stop
 la	stop
 le	stop
 les	stop
+moi	stop
 qui	stop
 sont	stop
 un	stop
