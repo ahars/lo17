@@ -1,5 +1,8 @@
 grammar Tal_sql;
 
+@lexer::header{package antlr.output;}
+@parser::header{package antlr.output;}
+
 SELECT : 'vouloir';
 ARTICLE : 'article';
 PAGE : 'page';
