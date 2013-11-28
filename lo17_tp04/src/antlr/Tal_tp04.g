@@ -1,5 +1,8 @@
 grammar Tal_tp04;
 
+@lexer::header{package antlr.output;}
+@parser::header{package antlr.output;}
+
 SELECT : 'vouloir';
 COMBIEN : 'combien';
 ARTICLE : 'article';
@@ -56,9 +59,9 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		|COMBIEN {
 			req_arbre.ajouteFils(new Arbre("", "select count("));
 		}
-		(ARTICLE {
+		((ARTICLE {
 			req_arbre.ajouteFils(new Arbre("", "article)"));
-		}
+		})
 		| PAGE {
 			req_arbre.ajouteFils(new Arbre("", "page)"));
 		}

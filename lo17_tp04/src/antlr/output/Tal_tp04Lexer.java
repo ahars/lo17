@@ -1,5 +1,5 @@
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g 2013-11-29 00:33:36
 package antlr.output;
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g 2013-11-27 03:37:26
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -42,8 +42,8 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = SELECT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:3:8: ( 'vouloir' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:3:10: 'vouloir'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:6:8: ( 'vouloir' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:6:10: 'vouloir'
             {
             match("vouloir"); 
 
@@ -63,8 +63,8 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = COMBIEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:4:9: ( 'combien' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:4:11: 'combien'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:7:9: ( 'combien' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:7:11: 'combien'
             {
             match("combien"); 
 
@@ -84,8 +84,8 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = ARTICLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:5:9: ( 'article' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:5:11: 'article'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:8:9: ( 'article' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:8:11: 'article'
             {
             match("article"); 
 
@@ -105,8 +105,8 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = PAGE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:6:6: ( 'page' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:6:8: 'page'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:9:6: ( 'page' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:9:8: 'page'
             {
             match("page"); 
 
@@ -126,8 +126,8 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = UNE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:7:5: ( 'une' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:7:7: 'une'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:10:5: ( 'une' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:10:7: 'une'
             {
             match("une"); 
 
@@ -147,8 +147,8 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = FOCUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:8:7: ( 'focus' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:8:9: 'focus'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:11:7: ( 'focus' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:11:9: 'focus'
             {
             match("focus"); 
 
@@ -168,8 +168,8 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = RAPPELS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:9:9: ( 'rappels' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:9:11: 'rappels'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:12:9: ( 'rappels' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:12:11: 'rappels'
             {
             match("rappels"); 
 
@@ -189,8 +189,8 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = VOIRAUSSI;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:10:11: ( 'voiraussi' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:10:13: 'voiraussi'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:13:11: ( 'voiraussi' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:13:13: 'voiraussi'
             {
             match("voiraussi"); 
 
@@ -210,8 +210,8 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = GROSTITRES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:11:12: ( 'gros titre' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:11:14: 'gros titre'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:14:12: ( 'gros titre' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:14:14: 'gros titre'
             {
             match("gros titre"); 
 
@@ -231,8 +231,8 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = AUTEUR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:12:8: ( 'auteur' )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:12:10: 'auteur'
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:15:8: ( 'auteur' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:15:10: 'auteur'
             {
             match("auteur"); 
 
@@ -252,7 +252,7 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = CONJ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:13:6: ( 'et' | 'ou' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:6: ( 'et' | 'ou' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -270,7 +270,7 @@ public class Tal_tp04Lexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:13:8: 'et'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:8: 'et'
                     {
                     match("et"); 
 
@@ -278,7 +278,7 @@ public class Tal_tp04Lexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:13:15: 'ou'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:15: 'ou'
                     {
                     match("ou"); 
 
@@ -300,7 +300,7 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = CONTENIR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:14:10: ( 'contenir' | 'parler' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:10: ( 'contenir' | 'parler' )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -318,7 +318,7 @@ public class Tal_tp04Lexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:14:12: 'contenir'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:12: 'contenir'
                     {
                     match("contenir"); 
 
@@ -326,7 +326,7 @@ public class Tal_tp04Lexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:14:25: 'parler'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:25: 'parler'
                     {
                     match("parler"); 
 
@@ -348,7 +348,7 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = POINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:15:7: ( '.' | '?' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:18:7: ( '.' | '?' )
             // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:
             {
             if ( input.LA(1)=='.'||input.LA(1)=='?' ) {
@@ -376,7 +376,7 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:4: ( ( ' ' | '\\t' | '\\r' | 'stop' | 'qui' | 'dont' ) | '\\n' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:4: ( ( ' ' | '\\t' | '\\r' | 'stop' | 'qui' | 'dont' ) | '\\n' )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -394,9 +394,9 @@ public class Tal_tp04Lexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:6: ( ' ' | '\\t' | '\\r' | 'stop' | 'qui' | 'dont' )
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:6: ( ' ' | '\\t' | '\\r' | 'stop' | 'qui' | 'dont' )
                     {
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:6: ( ' ' | '\\t' | '\\r' | 'stop' | 'qui' | 'dont' )
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:6: ( ' ' | '\\t' | '\\r' | 'stop' | 'qui' | 'dont' )
                     int alt3=6;
                     switch ( input.LA(1) ) {
                     case ' ':
@@ -438,28 +438,28 @@ public class Tal_tp04Lexer extends Lexer {
 
                     switch (alt3) {
                         case 1 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:7: ' '
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:7: ' '
                             {
                             match(' '); 
 
                             }
                             break;
                         case 2 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:12: '\\t'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:12: '\\t'
                             {
                             match('\t'); 
 
                             }
                             break;
                         case 3 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:19: '\\r'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:19: '\\r'
                             {
                             match('\r'); 
 
                             }
                             break;
                         case 4 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:26: 'stop'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:26: 'stop'
                             {
                             match("stop"); 
 
@@ -467,7 +467,7 @@ public class Tal_tp04Lexer extends Lexer {
                             }
                             break;
                         case 5 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:35: 'qui'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:35: 'qui'
                             {
                             match("qui"); 
 
@@ -475,7 +475,7 @@ public class Tal_tp04Lexer extends Lexer {
                             }
                             break;
                         case 6 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:43: 'dont'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:43: 'dont'
                             {
                             match("dont"); 
 
@@ -490,7 +490,7 @@ public class Tal_tp04Lexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:65: '\\n'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:65: '\\n'
                     {
                     match('\n'); 
 
@@ -511,8 +511,8 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = VAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z')||(input.LA(1)>='\u00A0' && input.LA(1)<='\u00FF') ) {
                 input.consume();
@@ -523,7 +523,7 @@ public class Tal_tp04Lexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:47: ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:47: ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
             int cnt5=0;
             loop5:
             do {
@@ -683,10 +683,10 @@ public class Tal_tp04Lexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:48: ( 'a' .. 'z' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:48: ( 'a' .. 'z' )
             	    {
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:48: ( 'a' .. 'z' )
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:49: 'a' .. 'z'
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:48: ( 'a' .. 'z' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:49: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); 
 
@@ -696,10 +696,10 @@ public class Tal_tp04Lexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:59: ( '0' .. '9' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:59: ( '0' .. '9' )
             	    {
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:59: ( '0' .. '9' )
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:60: '0' .. '9'
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:59: ( '0' .. '9' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:60: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -709,17 +709,17 @@ public class Tal_tp04Lexer extends Lexer {
             	    }
             	    break;
             	case 3 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:70: '-'
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:70: '-'
             	    {
             	    match('-'); 
 
             	    }
             	    break;
             	case 4 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:74: ( '\\u00a0' .. '\\u00ff' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:74: ( '\\u00a0' .. '\\u00ff' )
             	    {
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:74: ( '\\u00a0' .. '\\u00ff' )
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:75: '\\u00a0' .. '\\u00ff'
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:74: ( '\\u00a0' .. '\\u00ff' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:75: '\\u00a0' .. '\\u00ff'
             	    {
             	    matchRange('\u00A0','\u00FF'); 
 
