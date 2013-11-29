@@ -1,5 +1,10 @@
 package tp04;
 
+/* UV : LO17 - TP04
+ * Analyse Syntaxique
+ * Fichier : Tal_sqlMain.java
+ */
+
 import java.io.StringReader;
 import java.util.Scanner;
 import org.antlr.runtime.ANTLRReaderStream;

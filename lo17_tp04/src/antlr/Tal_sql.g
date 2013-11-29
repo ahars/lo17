@@ -1,5 +1,10 @@
 grammar Tal_sql;
 
+/* UV : LO17 - TP04
+ * Analyse Syntaxique
+ * Fichier : Tal_sql.g
+ */
+
 @lexer::header{package antlr.output;}
 @parser::header{package antlr.output;}
 

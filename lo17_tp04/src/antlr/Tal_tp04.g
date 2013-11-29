@@ -1,5 +1,11 @@
 grammar Tal_tp04;
 
+/* UV : LO17 - TP04
+ * Analyse Syntaxique
+ * Auteurs : Dany Ferreira - Antoine Hars
+ * Fichier : Tal_tp04.g
+ */
+
 @lexer::header{package antlr.output;}
 @parser::header{package antlr.output;}
 
@@ -15,7 +21,7 @@ GROSTITRES : 'gros titre';
 AUTEUR : 'auteur';
 ET : 'et';
 OU : 'ou';
-CONTENIR : 'contenir' | 'parler';
+PARLER : 'parler';
 POINT : '.'|'?';
 WS : (' ' |'\t' | '\r' | 'stop') { skip(); } | '\n';
 VAR : ('A'..'Z' | 'a'..'z'|'\u00a0'..'\u00ff')(('a'..'z')|('0'..'9')|'-'|('\u00a0'..'\u00ff'))+;
@@ -38,56 +44,66 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		}
 		(ARTICLE {
 			req_arbre.ajouteFils(new Arbre("", "article"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		}
 		| PAGE {
 			req_arbre.ajouteFils(new Arbre("", "page"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		}
 		| UNE {
 			req_arbre.ajouteFils(new Arbre("", "une"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		}
 		| VOIRAUSSI {
 			req_arbre.ajouteFils(new Arbre("", "voiraussi"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		}
 		| FOCUS {
 			req_arbre.ajouteFils(new Arbre("", "focus"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		}
 		| RAPPELS {
 			req_arbre.ajouteFils(new Arbre("", "rappels"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		}
 		|GROSTITRES {
 			req_arbre.ajouteFils(new Arbre("", "grostitres"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		})
 		|COMBIEN {
 			req_arbre.ajouteFils(new Arbre("", "select count("));
 		}
 		((ARTICLE {
 			req_arbre.ajouteFils(new Arbre("", "article)"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		})
 		| PAGE {
 			req_arbre.ajouteFils(new Arbre("", "page)"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		}
 		| UNE {
 			req_arbre.ajouteFils(new Arbre("", "une)"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		}
 		| VOIRAUSSI {
 			req_arbre.ajouteFils(new Arbre("", "voiraussi)"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		}
 		| FOCUS {
 			req_arbre.ajouteFils(new Arbre("", "focus)"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		}
 		| RAPPELS {
 			req_arbre.ajouteFils(new Arbre("", "rappels)"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		}
 		|GROSTITRES {
 			req_arbre.ajouteFils(new Arbre("", "grostitres)"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
 		})) 
-		(CONTENIR {
-			req_arbre.ajouteFils(new Arbre("", "from titreresume"));
+		PARLER {
 			req_arbre.ajouteFils(new Arbre("", "where "));
-		}| AUTEUR {
-			req_arbre.ajouteFils(new Arbre("", "from "));
-			req_arbre.ajouteFils(new Arbre("", "where "));
-		})
+		}
 		ps = params {
 			ps_arbre = $ps.les_pars_arbre;
 			req_arbre.ajouteFils(ps_arbre);
@@ -111,6 +127,9 @@ params returns [Arbre les_pars_arbre = new Arbre("")]
 param returns [Arbre lepar_arbre = new Arbre("")] :
 	a = VAR {
 		lepar_arbre.ajouteFils(new Arbre("mot =", "'" + a.getText() + "'"));
+	}
+	| a1 = VAR a2 = VAR {
+		lepar_arbre.ajouteFils(new Arbre("mot =", "'" + a1.getText() + " " + a2.getText() + "'"));
 	};
 
 conj returns [Arbre conj_arbre = new Arbre("")] :
