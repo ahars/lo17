@@ -18,7 +18,7 @@ public class Lexique {
 	private Hashtable<String, String> lexiq; 
 	private final int SEUILMIN = 3;
 	private final int SEUILMAX = 4;
-	private final int SEUILPROX = 50;
+	private final int SEUILPROX = 60;
 	private final int SEUILLEVENSHTEIN = 2;
 
 	public Lexique(String fichier) {
@@ -58,27 +58,26 @@ public class Lexique {
 		String word = new String();
 		int argSize = mot.length();
 		int wordSize;
-		float prox = 0;
-		int i = 0;
-
-		while (it.hasNext()){
+		float prox;
+		int i;
 		
+		while (it.hasNext()){
+			
+			i = 0;
+			prox = 0;
 			word = it.next().toString();
 			wordSize = word.length();
 		
-			if (Math.abs(argSize) < SEUILMIN || Math.abs(wordSize) < SEUILMIN) {
-				break;
-			} else {
-				if (Math.abs(Math.abs(argSize) - Math.abs(wordSize)) > SEUILMAX) {
-					break;
-				} else {
+			if (Math.abs(argSize) > SEUILMIN || Math.abs(wordSize) > SEUILMIN) {
+				
+				if (Math.abs(Math.abs(argSize) - Math.abs(wordSize)) < SEUILMAX) {
+
 					while ((i < Math.min(Math.abs(argSize), Math.abs(wordSize))) && (mot.charAt(i) == word.charAt(i))) {
 						i++;
 					}
 					prox = i * 100 / Math.max(Math.abs(argSize), Math.abs(wordSize));
 				}
 			}
-			
 			if (prox > SEUILPROX) {
 				lemmeCandidats.add(lexiq.get(word));
 			}
