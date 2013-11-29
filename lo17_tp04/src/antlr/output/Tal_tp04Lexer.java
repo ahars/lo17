@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g 2013-11-29 00:33:36
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g 2013-11-29 01:02:13
 package antlr.output;
 
 import org.antlr.runtime.*;
@@ -8,15 +8,16 @@ import java.util.ArrayList;
 
 public class Tal_tp04Lexer extends Lexer {
     public static final int FOCUS=9;
+    public static final int WS=18;
     public static final int PAGE=7;
-    public static final int WS=17;
     public static final int UNE=8;
     public static final int VOIRAUSSI=11;
-    public static final int POINT=16;
+    public static final int POINT=17;
+    public static final int OU=15;
+    public static final int CONTENIR=16;
     public static final int COMBIEN=5;
-    public static final int CONTENIR=15;
-    public static final int CONJ=14;
-    public static final int VAR=18;
+    public static final int ET=14;
+    public static final int VAR=19;
     public static final int EOF=-1;
     public static final int SELECT=4;
     public static final int RAPPELS=10;
@@ -247,19 +248,61 @@ public class Tal_tp04Lexer extends Lexer {
     }
     // $ANTLR end "AUTEUR"
 
-    // $ANTLR start "CONJ"
-    public final void mCONJ() throws RecognitionException {
+    // $ANTLR start "ET"
+    public final void mET() throws RecognitionException {
         try {
-            int _type = CONJ;
+            int _type = ET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:6: ( 'et' | 'ou' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:4: ( 'et' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:6: 'et'
+            {
+            match("et"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "ET"
+
+    // $ANTLR start "OU"
+    public final void mOU() throws RecognitionException {
+        try {
+            int _type = OU;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:4: ( 'ou' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:6: 'ou'
+            {
+            match("ou"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "OU"
+
+    // $ANTLR start "CONTENIR"
+    public final void mCONTENIR() throws RecognitionException {
+        try {
+            int _type = CONTENIR;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:18:10: ( 'contenir' | 'parler' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0=='e') ) {
+            if ( (LA1_0=='c') ) {
                 alt1=1;
             }
-            else if ( (LA1_0=='o') ) {
+            else if ( (LA1_0=='p') ) {
                 alt1=2;
             }
             else {
@@ -270,55 +313,7 @@ public class Tal_tp04Lexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:8: 'et'
-                    {
-                    match("et"); 
-
-
-                    }
-                    break;
-                case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:16:15: 'ou'
-                    {
-                    match("ou"); 
-
-
-                    }
-                    break;
-
-            }
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "CONJ"
-
-    // $ANTLR start "CONTENIR"
-    public final void mCONTENIR() throws RecognitionException {
-        try {
-            int _type = CONTENIR;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:10: ( 'contenir' | 'parler' )
-            int alt2=2;
-            int LA2_0 = input.LA(1);
-
-            if ( (LA2_0=='c') ) {
-                alt2=1;
-            }
-            else if ( (LA2_0=='p') ) {
-                alt2=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 2, 0, input);
-
-                throw nvae;
-            }
-            switch (alt2) {
-                case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:12: 'contenir'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:18:12: 'contenir'
                     {
                     match("contenir"); 
 
@@ -326,7 +321,7 @@ public class Tal_tp04Lexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:17:25: 'parler'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:18:25: 'parler'
                     {
                     match("parler"); 
 
@@ -348,7 +343,7 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = POINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:18:7: ( '.' | '?' )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:7: ( '.' | '?' )
             // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:
             {
             if ( input.LA(1)=='.'||input.LA(1)=='?' ) {
@@ -376,108 +371,82 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:4: ( ( ' ' | '\\t' | '\\r' | 'stop' | 'qui' | 'dont' ) | '\\n' )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:4: ( ( ' ' | '\\t' | '\\r' | 'stop' ) | '\\n' )
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA4_0=='\t'||LA4_0=='\r'||LA4_0==' '||LA4_0=='d'||LA4_0=='q'||LA4_0=='s') ) {
-                alt4=1;
+            if ( (LA3_0=='\t'||LA3_0=='\r'||LA3_0==' '||LA3_0=='s') ) {
+                alt3=1;
             }
-            else if ( (LA4_0=='\n') ) {
-                alt4=2;
+            else if ( (LA3_0=='\n') ) {
+                alt3=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 3, 0, input);
 
                 throw nvae;
             }
-            switch (alt4) {
+            switch (alt3) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:6: ( ' ' | '\\t' | '\\r' | 'stop' | 'qui' | 'dont' )
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:6: ( ' ' | '\\t' | '\\r' | 'stop' )
                     {
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:6: ( ' ' | '\\t' | '\\r' | 'stop' | 'qui' | 'dont' )
-                    int alt3=6;
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:6: ( ' ' | '\\t' | '\\r' | 'stop' )
+                    int alt2=4;
                     switch ( input.LA(1) ) {
                     case ' ':
                         {
-                        alt3=1;
+                        alt2=1;
                         }
                         break;
                     case '\t':
                         {
-                        alt3=2;
+                        alt2=2;
                         }
                         break;
                     case '\r':
                         {
-                        alt3=3;
+                        alt2=3;
                         }
                         break;
                     case 's':
                         {
-                        alt3=4;
-                        }
-                        break;
-                    case 'q':
-                        {
-                        alt3=5;
-                        }
-                        break;
-                    case 'd':
-                        {
-                        alt3=6;
+                        alt2=4;
                         }
                         break;
                     default:
                         NoViableAltException nvae =
-                            new NoViableAltException("", 3, 0, input);
+                            new NoViableAltException("", 2, 0, input);
 
                         throw nvae;
                     }
 
-                    switch (alt3) {
+                    switch (alt2) {
                         case 1 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:7: ' '
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:7: ' '
                             {
                             match(' '); 
 
                             }
                             break;
                         case 2 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:12: '\\t'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:12: '\\t'
                             {
                             match('\t'); 
 
                             }
                             break;
                         case 3 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:19: '\\r'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:19: '\\r'
                             {
                             match('\r'); 
 
                             }
                             break;
                         case 4 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:26: 'stop'
+                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:26: 'stop'
                             {
                             match("stop"); 
-
-
-                            }
-                            break;
-                        case 5 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:35: 'qui'
-                            {
-                            match("qui"); 
-
-
-                            }
-                            break;
-                        case 6 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:43: 'dont'
-                            {
-                            match("dont"); 
 
 
                             }
@@ -490,7 +459,7 @@ public class Tal_tp04Lexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:19:65: '\\n'
+                    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:48: '\\n'
                     {
                     match('\n'); 
 
@@ -511,8 +480,8 @@ public class Tal_tp04Lexer extends Lexer {
         try {
             int _type = VAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z')||(input.LA(1)>='\u00A0' && input.LA(1)<='\u00FF') ) {
                 input.consume();
@@ -523,11 +492,11 @@ public class Tal_tp04Lexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:47: ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
-            int cnt5=0;
-            loop5:
+            // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:47: ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
+            int cnt4=0;
+            loop4:
             do {
-                int alt5=5;
+                int alt4=5;
                 switch ( input.LA(1) ) {
                 case 'a':
                 case 'b':
@@ -556,7 +525,7 @@ public class Tal_tp04Lexer extends Lexer {
                 case 'y':
                 case 'z':
                     {
-                    alt5=1;
+                    alt4=1;
                     }
                     break;
                 case '0':
@@ -570,12 +539,12 @@ public class Tal_tp04Lexer extends Lexer {
                 case '8':
                 case '9':
                     {
-                    alt5=2;
+                    alt4=2;
                     }
                     break;
                 case '-':
                     {
-                    alt5=3;
+                    alt4=3;
                     }
                     break;
                 case '\u00A0':
@@ -675,18 +644,18 @@ public class Tal_tp04Lexer extends Lexer {
                 case '\u00FE':
                 case '\u00FF':
                     {
-                    alt5=4;
+                    alt4=4;
                     }
                     break;
 
                 }
 
-                switch (alt5) {
+                switch (alt4) {
             	case 1 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:48: ( 'a' .. 'z' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:48: ( 'a' .. 'z' )
             	    {
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:48: ( 'a' .. 'z' )
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:49: 'a' .. 'z'
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:48: ( 'a' .. 'z' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:49: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); 
 
@@ -696,10 +665,10 @@ public class Tal_tp04Lexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:59: ( '0' .. '9' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:59: ( '0' .. '9' )
             	    {
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:59: ( '0' .. '9' )
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:60: '0' .. '9'
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:59: ( '0' .. '9' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:60: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -709,17 +678,17 @@ public class Tal_tp04Lexer extends Lexer {
             	    }
             	    break;
             	case 3 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:70: '-'
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:70: '-'
             	    {
             	    match('-'); 
 
             	    }
             	    break;
             	case 4 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:74: ( '\\u00a0' .. '\\u00ff' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:74: ( '\\u00a0' .. '\\u00ff' )
             	    {
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:74: ( '\\u00a0' .. '\\u00ff' )
-            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:20:75: '\\u00a0' .. '\\u00ff'
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:74: ( '\\u00a0' .. '\\u00ff' )
+            	    // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:21:75: '\\u00a0' .. '\\u00ff'
             	    {
             	    matchRange('\u00A0','\u00FF'); 
 
@@ -730,12 +699,12 @@ public class Tal_tp04Lexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt5 >= 1 ) break loop5;
+            	    if ( cnt4 >= 1 ) break loop4;
                         EarlyExitException eee =
-                            new EarlyExitException(5, input);
+                            new EarlyExitException(4, input);
                         throw eee;
                 }
-                cnt5++;
+                cnt4++;
             } while (true);
 
 
@@ -750,10 +719,10 @@ public class Tal_tp04Lexer extends Lexer {
     // $ANTLR end "VAR"
 
     public void mTokens() throws RecognitionException {
-        // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:8: ( SELECT | COMBIEN | ARTICLE | PAGE | UNE | FOCUS | RAPPELS | VOIRAUSSI | GROSTITRES | AUTEUR | CONJ | CONTENIR | POINT | WS | VAR )
-        int alt6=15;
-        alt6 = dfa6.predict(input);
-        switch (alt6) {
+        // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:8: ( SELECT | COMBIEN | ARTICLE | PAGE | UNE | FOCUS | RAPPELS | VOIRAUSSI | GROSTITRES | AUTEUR | ET | OU | CONTENIR | POINT | WS | VAR )
+        int alt5=16;
+        alt5 = dfa5.predict(input);
+        switch (alt5) {
             case 1 :
                 // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:10: SELECT
                 {
@@ -825,35 +794,42 @@ public class Tal_tp04Lexer extends Lexer {
                 }
                 break;
             case 11 :
-                // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:84: CONJ
+                // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:84: ET
                 {
-                mCONJ(); 
+                mET(); 
 
                 }
                 break;
             case 12 :
-                // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:89: CONTENIR
+                // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:87: OU
+                {
+                mOU(); 
+
+                }
+                break;
+            case 13 :
+                // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:90: CONTENIR
                 {
                 mCONTENIR(); 
 
                 }
                 break;
-            case 13 :
-                // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:98: POINT
+            case 14 :
+                // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:99: POINT
                 {
                 mPOINT(); 
 
                 }
                 break;
-            case 14 :
-                // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:104: WS
+            case 15 :
+                // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:105: WS
                 {
                 mWS(); 
 
                 }
                 break;
-            case 15 :
-                // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:107: VAR
+            case 16 :
+                // /home/jehu/Documents/git/lo17/lo17_tp04/src/antlr/Tal_tp04.g:1:108: VAR
                 {
                 mVAR(); 
 
@@ -865,179 +841,171 @@ public class Tal_tp04Lexer extends Lexer {
     }
 
 
-    protected DFA6 dfa6 = new DFA6(this);
-    static final String DFA6_eotS =
-        "\21\uffff\11\20\2\53\13\20\1\67\3\20\1\uffff\1\20\1\14\7\20\1\103"+
-        "\1\20\1\uffff\3\20\2\14\6\20\1\uffff\1\20\1\117\1\20\1\uffff\5\20"+
-        "\1\126\1\127\1\uffff\1\20\1\131\1\20\1\133\1\20\1\135\2\uffff\1"+
-        "\136\1\uffff\1\20\1\uffff\1\127\2\uffff\1\140\1\uffff";
-    static final String DFA6_eofS =
-        "\141\uffff";
-    static final String DFA6_minS =
-        "\1\11\12\55\2\uffff\3\55\1\uffff\1\151\1\155\2\164\1\147\1\145\1"+
-        "\143\1\160\1\157\2\55\1\157\1\151\1\156\1\154\1\162\1\142\1\164"+
-        "\1\151\2\145\1\154\1\55\1\165\1\160\1\163\1\uffff\1\160\1\55\1\164"+
-        "\1\157\1\141\1\151\1\145\1\143\1\165\1\55\1\145\1\uffff\1\163\1"+
-        "\145\1\40\2\55\1\151\1\165\1\145\1\156\1\154\1\162\1\uffff\1\162"+
-        "\1\55\1\154\1\uffff\1\162\1\163\1\156\1\151\1\145\2\55\1\uffff\1"+
-        "\163\1\55\1\163\1\55\1\162\1\55\2\uffff\1\55\1\uffff\1\151\1\uffff"+
-        "\1\55\2\uffff\1\55\1\uffff";
-    static final String DFA6_maxS =
-        "\13\u00ff\2\uffff\3\u00ff\1\uffff\1\165\1\156\2\164\1\162\1\145"+
-        "\1\143\1\160\1\157\2\u00ff\1\157\1\151\1\156\1\154\1\162\1\142\1"+
-        "\164\1\151\2\145\1\154\1\u00ff\1\165\1\160\1\163\1\uffff\1\160\1"+
-        "\u00ff\1\164\1\157\1\141\1\151\1\145\1\143\1\165\1\u00ff\1\145\1"+
-        "\uffff\1\163\1\145\1\40\2\u00ff\1\151\1\165\1\145\1\156\1\154\1"+
-        "\162\1\uffff\1\162\1\u00ff\1\154\1\uffff\1\162\1\163\1\156\1\151"+
-        "\1\145\2\u00ff\1\uffff\1\163\1\u00ff\1\163\1\u00ff\1\162\1\u00ff"+
-        "\2\uffff\1\u00ff\1\uffff\1\151\1\uffff\1\u00ff\2\uffff\1\u00ff\1"+
-        "\uffff";
-    static final String DFA6_acceptS =
-        "\13\uffff\1\15\1\16\3\uffff\1\17\32\uffff\1\13\13\uffff\1\5\13\uffff"+
-        "\1\4\3\uffff\1\11\7\uffff\1\6\6\uffff\1\12\1\14\1\uffff\1\1\1\uffff"+
-        "\1\2\1\uffff\1\3\1\7\1\uffff\1\10";
-    static final String DFA6_specialS =
-        "\141\uffff}>";
-    static final String[] DFA6_transitionS = {
+    protected DFA5 dfa5 = new DFA5(this);
+    static final String DFA5_eotS =
+        "\17\uffff\11\16\1\47\1\50\11\16\1\62\3\16\2\uffff\7\16\1\75\1\16"+
+        "\1\uffff\3\16\1\14\6\16\1\uffff\1\16\1\111\1\16\1\uffff\5\16\1\120"+
+        "\1\121\1\uffff\1\16\1\123\1\16\1\125\1\16\1\127\2\uffff\1\130\1"+
+        "\uffff\1\16\1\uffff\1\121\2\uffff\1\132\1\uffff";
+    static final String DFA5_eofS =
+        "\133\uffff";
+    static final String DFA5_minS =
+        "\1\11\12\55\2\uffff\1\55\1\uffff\1\151\1\155\2\164\1\147\1\145\1"+
+        "\143\1\160\1\157\2\55\1\157\1\154\1\162\1\142\1\164\1\151\2\145"+
+        "\1\154\1\55\1\165\1\160\1\163\2\uffff\1\160\1\157\1\141\1\151\1"+
+        "\145\1\143\1\165\1\55\1\145\1\uffff\1\163\1\145\1\40\1\55\1\151"+
+        "\1\165\1\145\1\156\1\154\1\162\1\uffff\1\162\1\55\1\154\1\uffff"+
+        "\1\162\1\163\1\156\1\151\1\145\2\55\1\uffff\1\163\1\55\1\163\1\55"+
+        "\1\162\1\55\2\uffff\1\55\1\uffff\1\151\1\uffff\1\55\2\uffff\1\55"+
+        "\1\uffff";
+    static final String DFA5_maxS =
+        "\13\u00ff\2\uffff\1\u00ff\1\uffff\1\165\1\156\2\164\1\162\1\145"+
+        "\1\143\1\160\1\157\2\u00ff\1\157\1\154\1\162\1\142\1\164\1\151\2"+
+        "\145\1\154\1\u00ff\1\165\1\160\1\163\2\uffff\1\160\1\157\1\141\1"+
+        "\151\1\145\1\143\1\165\1\u00ff\1\145\1\uffff\1\163\1\145\1\40\1"+
+        "\u00ff\1\151\1\165\1\145\1\156\1\154\1\162\1\uffff\1\162\1\u00ff"+
+        "\1\154\1\uffff\1\162\1\163\1\156\1\151\1\145\2\u00ff\1\uffff\1\163"+
+        "\1\u00ff\1\163\1\u00ff\1\162\1\u00ff\2\uffff\1\u00ff\1\uffff\1\151"+
+        "\1\uffff\1\u00ff\2\uffff\1\u00ff\1\uffff";
+    static final String DFA5_acceptS =
+        "\13\uffff\1\16\1\17\1\uffff\1\20\30\uffff\1\13\1\14\11\uffff\1\5"+
+        "\12\uffff\1\4\3\uffff\1\11\7\uffff\1\6\6\uffff\1\12\1\15\1\uffff"+
+        "\1\1\1\uffff\1\2\1\uffff\1\3\1\7\1\uffff\1\10";
+    static final String DFA5_specialS =
+        "\133\uffff}>";
+    static final String[] DFA5_transitionS = {
             "\2\14\2\uffff\1\14\22\uffff\1\14\15\uffff\1\13\20\uffff\1\13"+
-            "\1\uffff\32\20\6\uffff\1\3\1\20\1\2\1\17\1\11\1\6\1\10\7\20"+
-            "\1\12\1\4\1\16\1\7\1\15\1\20\1\5\1\1\4\20\45\uffff\140\20",
-            "\1\20\2\uffff\12\20\47\uffff\16\20\1\21\13\20\45\uffff\140"+
-            "\20",
-            "\1\20\2\uffff\12\20\47\uffff\16\20\1\22\13\20\45\uffff\140"+
-            "\20",
-            "\1\20\2\uffff\12\20\47\uffff\21\20\1\23\2\20\1\24\5\20\45\uffff"+
-            "\140\20",
-            "\1\20\2\uffff\12\20\47\uffff\1\25\31\20\45\uffff\140\20",
-            "\1\20\2\uffff\12\20\47\uffff\15\20\1\26\14\20\45\uffff\140"+
-            "\20",
-            "\1\20\2\uffff\12\20\47\uffff\16\20\1\27\13\20\45\uffff\140"+
-            "\20",
-            "\1\20\2\uffff\12\20\47\uffff\1\30\31\20\45\uffff\140\20",
-            "\1\20\2\uffff\12\20\47\uffff\21\20\1\31\10\20\45\uffff\140"+
-            "\20",
-            "\1\20\2\uffff\12\20\47\uffff\23\20\1\32\6\20\45\uffff\140\20",
-            "\1\20\2\uffff\12\20\47\uffff\24\20\1\33\5\20\45\uffff\140\20",
+            "\1\uffff\32\16\6\uffff\1\3\1\16\1\2\1\16\1\11\1\6\1\10\7\16"+
+            "\1\12\1\4\1\16\1\7\1\15\1\16\1\5\1\1\4\16\45\uffff\140\16",
+            "\1\16\2\uffff\12\16\47\uffff\16\16\1\17\13\16\45\uffff\140"+
+            "\16",
+            "\1\16\2\uffff\12\16\47\uffff\16\16\1\20\13\16\45\uffff\140"+
+            "\16",
+            "\1\16\2\uffff\12\16\47\uffff\21\16\1\21\2\16\1\22\5\16\45\uffff"+
+            "\140\16",
+            "\1\16\2\uffff\12\16\47\uffff\1\23\31\16\45\uffff\140\16",
+            "\1\16\2\uffff\12\16\47\uffff\15\16\1\24\14\16\45\uffff\140"+
+            "\16",
+            "\1\16\2\uffff\12\16\47\uffff\16\16\1\25\13\16\45\uffff\140"+
+            "\16",
+            "\1\16\2\uffff\12\16\47\uffff\1\26\31\16\45\uffff\140\16",
+            "\1\16\2\uffff\12\16\47\uffff\21\16\1\27\10\16\45\uffff\140"+
+            "\16",
+            "\1\16\2\uffff\12\16\47\uffff\23\16\1\30\6\16\45\uffff\140\16",
+            "\1\16\2\uffff\12\16\47\uffff\24\16\1\31\5\16\45\uffff\140\16",
             "",
             "",
-            "\1\20\2\uffff\12\20\47\uffff\23\20\1\34\6\20\45\uffff\140\20",
-            "\1\20\2\uffff\12\20\47\uffff\24\20\1\35\5\20\45\uffff\140\20",
-            "\1\20\2\uffff\12\20\47\uffff\16\20\1\36\13\20\45\uffff\140"+
-            "\20",
+            "\1\16\2\uffff\12\16\47\uffff\23\16\1\32\6\16\45\uffff\140\16",
             "",
-            "\1\40\13\uffff\1\37",
-            "\1\41\1\42",
+            "\1\34\13\uffff\1\33",
+            "\1\35\1\36",
+            "\1\37",
+            "\1\40",
+            "\1\41\12\uffff\1\42",
             "\1\43",
             "\1\44",
-            "\1\45\12\uffff\1\46",
-            "\1\47",
-            "\1\50",
+            "\1\45",
+            "\1\46",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
             "\1\51",
             "\1\52",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
+            "\1\53",
             "\1\54",
             "\1\55",
             "\1\56",
             "\1\57",
             "\1\60",
             "\1\61",
-            "\1\62",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
             "\1\63",
             "\1\64",
             "\1\65",
+            "",
+            "",
             "\1\66",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
+            "\1\67",
             "\1\70",
             "\1\71",
             "\1\72",
-            "",
             "\1\73",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
             "\1\74",
-            "\1\75",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
             "\1\76",
+            "",
             "\1\77",
             "\1\100",
             "\1\101",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
             "\1\102",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
+            "\1\103",
             "\1\104",
-            "",
             "\1\105",
             "\1\106",
             "\1\107",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
+            "",
             "\1\110",
-            "\1\111",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
             "\1\112",
+            "",
             "\1\113",
             "\1\114",
             "\1\115",
-            "",
             "\1\116",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
-            "\1\120",
+            "\1\117",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
             "",
-            "\1\121",
             "\1\122",
-            "\1\123",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
             "\1\124",
-            "\1\125",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
-            "",
-            "\1\130",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
-            "\1\132",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
-            "\1\134",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
+            "\1\126",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
             "",
             "",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
             "",
-            "\1\137",
+            "\1\131",
             "",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
             "",
             "",
-            "\1\20\2\uffff\12\20\47\uffff\32\20\45\uffff\140\20",
+            "\1\16\2\uffff\12\16\47\uffff\32\16\45\uffff\140\16",
             ""
     };
 
-    static final short[] DFA6_eot = DFA.unpackEncodedString(DFA6_eotS);
-    static final short[] DFA6_eof = DFA.unpackEncodedString(DFA6_eofS);
-    static final char[] DFA6_min = DFA.unpackEncodedStringToUnsignedChars(DFA6_minS);
-    static final char[] DFA6_max = DFA.unpackEncodedStringToUnsignedChars(DFA6_maxS);
-    static final short[] DFA6_accept = DFA.unpackEncodedString(DFA6_acceptS);
-    static final short[] DFA6_special = DFA.unpackEncodedString(DFA6_specialS);
-    static final short[][] DFA6_transition;
+    static final short[] DFA5_eot = DFA.unpackEncodedString(DFA5_eotS);
+    static final short[] DFA5_eof = DFA.unpackEncodedString(DFA5_eofS);
+    static final char[] DFA5_min = DFA.unpackEncodedStringToUnsignedChars(DFA5_minS);
+    static final char[] DFA5_max = DFA.unpackEncodedStringToUnsignedChars(DFA5_maxS);
+    static final short[] DFA5_accept = DFA.unpackEncodedString(DFA5_acceptS);
+    static final short[] DFA5_special = DFA.unpackEncodedString(DFA5_specialS);
+    static final short[][] DFA5_transition;
 
     static {
-        int numStates = DFA6_transitionS.length;
-        DFA6_transition = new short[numStates][];
+        int numStates = DFA5_transitionS.length;
+        DFA5_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA6_transition[i] = DFA.unpackEncodedString(DFA6_transitionS[i]);
+            DFA5_transition[i] = DFA.unpackEncodedString(DFA5_transitionS[i]);
         }
     }
 
-    class DFA6 extends DFA {
+    class DFA5 extends DFA {
 
-        public DFA6(BaseRecognizer recognizer) {
+        public DFA5(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 6;
-            this.eot = DFA6_eot;
-            this.eof = DFA6_eof;
-            this.min = DFA6_min;
-            this.max = DFA6_max;
-            this.accept = DFA6_accept;
-            this.special = DFA6_special;
-            this.transition = DFA6_transition;
+            this.decisionNumber = 5;
+            this.eot = DFA5_eot;
+            this.eof = DFA5_eof;
+            this.min = DFA5_min;
+            this.max = DFA5_max;
+            this.accept = DFA5_accept;
+            this.special = DFA5_special;
+            this.transition = DFA5_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( SELECT | COMBIEN | ARTICLE | PAGE | UNE | FOCUS | RAPPELS | VOIRAUSSI | GROSTITRES | AUTEUR | CONJ | CONTENIR | POINT | WS | VAR );";
+            return "1:1: Tokens : ( SELECT | COMBIEN | ARTICLE | PAGE | UNE | FOCUS | RAPPELS | VOIRAUSSI | GROSTITRES | AUTEUR | ET | OU | CONTENIR | POINT | WS | VAR );";
         }
     }
  

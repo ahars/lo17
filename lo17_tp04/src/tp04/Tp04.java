@@ -27,13 +27,14 @@ public class Tp04 {
 		Lexique stop = new Lexique("stoplist.txt");
 		Cat q = new Cat("corpusQuestionA09Sort.txt");
 
-		while ((str = q.getChaine()) != null) {
+//		while ((str = q.getChaine()) != null) {
 
-//			str = "je voudrais d'article parlent l'irak?";
+			str = "Combien d'article parlent l'irak et accusateur et bush?";
 
 			if (!str.isEmpty()) {
 
 				System.out.println("question : " + str);
+				str = str.toLowerCase();
 				st = new StringTokenizer(str);
 				result = "";
 
@@ -85,6 +86,6 @@ public class Tp04 {
 					System.out.println("arbre : " + arbre);
 				} catch(Exception e) {  }
 			}
-		}
+//		}
 	}
 }

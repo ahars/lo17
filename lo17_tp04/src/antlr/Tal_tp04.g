@@ -13,10 +13,11 @@ RAPPELS : 'rappels';
 VOIRAUSSI : 'voiraussi';
 GROSTITRES : 'gros titre';
 AUTEUR : 'auteur';
-CONJ : 'et' | 'ou';
+ET : 'et';
+OU : 'ou';
 CONTENIR : 'contenir' | 'parler';
 POINT : '.'|'?';
-WS : (' ' |'\t' | '\r' | 'stop' | 'qui' | 'dont') { skip(); } | '\n';
+WS : (' ' |'\t' | '\r' | 'stop') { skip(); } | '\n';
 VAR : ('A'..'Z' | 'a'..'z'|'\u00a0'..'\u00ff')(('a'..'z')|('0'..'9')|'-'|('\u00a0'..'\u00ff'))+;
 
 listerequetes returns [String sql = ""]
@@ -94,15 +95,16 @@ requete returns [Arbre req_arbre = new Arbre("")]
 
 params returns [Arbre les_pars_arbre = new Arbre("")]
 	@init {
-		Arbre par1_arbre, par2_arbre;
+		Arbre par1_arbre, par2_arbre, conj_arbre;
 	} :
 		par1 = param {
 			par1_arbre = $par1.lepar_arbre;
 			les_pars_arbre.ajouteFils(par1_arbre);
 		}
-		(CONJ par2 = param {
+		(c = conj par2 = param {
+			conj_arbre = $c.conj_arbre;
 			par2_arbre = $par2.lepar_arbre;
-			les_pars_arbre.ajouteFils(new Arbre("", "OR"));
+			les_pars_arbre.ajouteFils(conj_arbre);
 			les_pars_arbre.ajouteFils(par2_arbre);
 		})*;
 
@@ -111,3 +113,10 @@ param returns [Arbre lepar_arbre = new Arbre("")] :
 		lepar_arbre.ajouteFils(new Arbre("mot =", "'" + a.getText() + "'"));
 	};
 
+conj returns [Arbre conj_arbre = new Arbre("")] :
+	ET {
+		conj_arbre.ajouteFils(new Arbre("", "AND"));
+	}
+	| OU {
+		conj_arbre.ajouteFils( new Arbre("", "OR"));
+	};
