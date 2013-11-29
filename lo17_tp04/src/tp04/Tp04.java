@@ -25,11 +25,13 @@ public class Tp04 {
 		Lexique lexique = new Lexique("lexicA12.txt");
 		Lexique pivot = new Lexique("pivot.txt");
 		Lexique stop = new Lexique("stoplist.txt");
-		Cat q = new Cat("corpusQuestionA09Sort.txt");
+		//Cat q = new Cat("corpusQuestionA09Sort.txt");
+		Cat q = new Cat("questions.txt");
 
-//		while ((str = q.getChaine()) != null) {
+		while ((str = q.getChaine()) != null) {
 
-			str = "Combien d'article parlent l'irak et accusateur ou accorder et Royaume-Uni?";
+			//str = "Combien d'article parlent l'irak et accusateur ou accorder et Royaume-Uni?";
+			//str = "Je veux les articles qui parlent d'accorder et d'accusateur.";
 
 			if (!str.isEmpty()) {
 
@@ -43,14 +45,14 @@ public class Tp04 {
 					tr = st.nextToken();
 
 					if ((tr.charAt(0) == 'd') && (tr.charAt(1) == '\'')) {
-						temp = tr;
-						tr = temp.replaceAll("d'", "");
+						tr = tr.replaceAll("d'", "");
 					}
 
 					if ((tr.charAt(0) == 'l') && (tr.charAt(1) == '\'')) {
-						temp = tr;
-						tr = temp.replaceAll("l'", "");
+						tr = tr.replaceAll("l'", "");
 					}
+					tr = tr.replace(".", "");
+					tr = tr.replace("?", "");
 
 					if (stop.getValue(tr) != null) {
 						result = result.concat(stop.getValue(tr) + " ");
@@ -76,6 +78,7 @@ public class Tp04 {
 						}
 					}
 				}
+				result = result.concat(".");
 				System.out.println("resultat : " + result);
 
 				try {
@@ -86,6 +89,6 @@ public class Tp04 {
 					System.out.println("arbre : " + arbre);
 				} catch(Exception e) {  }
 			}
-//		}
+		}
 	}
 }
