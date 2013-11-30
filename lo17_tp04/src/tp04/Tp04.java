@@ -86,7 +86,7 @@ public class Tp04 {
 					CommonTokenStream tokens = new CommonTokenStream(lexer);
 					Tal_tp04Parser parser = new Tal_tp04Parser(tokens);
 					String arbre = parser.listerequetes();
-					System.out.println("arbre : " + arbre);
+					System.out.println("arbre : " + arbre + "\n");
 				} catch(Exception e) {  }
 			}
 		}

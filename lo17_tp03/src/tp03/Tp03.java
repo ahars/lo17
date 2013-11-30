@@ -19,7 +19,7 @@ public class Tp03 {
 
 		/* Récupération de la phrase. */
 		//Saisie s = new Saisie();
-		Saisie s = new Saisie("ACCEPTER AFFIRMENT AFFAIeRes ACCOMPAGNATeur Danyyyyyyy larges");
+		Saisie s = new Saisie("ACCEPTER AFFIRMENT AFAIeRes ACCOMPAGNATeur Danyyyy larges");
 		System.out.println("saisie : " + s.getChaine() + "\n");
 		StringTokenizer st = new StringTokenizer(s.getChaine());
 
