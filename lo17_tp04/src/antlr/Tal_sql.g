@@ -5,8 +5,23 @@ grammar Tal_sql;
  * Fichier : Tal_sql.g
  */
 
-@lexer::header{package antlr.output;}
-@parser::header{package antlr.output;}
+@lexer::header {
+package antlr.output;
+
+/* UV : LO17 - TP04
+ * Analyse Syntaxique
+ * Fichier : Tal_sqlLexer.java
+ */
+}
+
+@parser::header {
+package antlr.output;
+
+/* UV : LO17 - TP04
+ * Analyse Syntaxique
+ * Fichier : Tal_sqlParser.java
+ */
+}
 
 SELECT : 'vouloir';
 ARTICLE : 'article';

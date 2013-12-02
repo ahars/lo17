@@ -6,8 +6,25 @@ grammar Tal_tp04;
  * Fichier : Tal_tp04.g
  */
 
-@lexer::header{package antlr.output;}
-@parser::header{package antlr.output;}
+@lexer::header {
+package antlr.output;
+
+/* UV : LO17 - TP04
+ * Analyse Syntaxique
+ * Auteurs : Dany Ferreira - Antoine Hars
+ * Fichier : Tal_tp04Lexer.java
+ */
+}
+
+@parser::header {
+package antlr.output;
+
+/* UV : LO17 - TP04
+ * Analyse Syntaxique
+ * Auteurs : Dany Ferreira - Antoine Hars
+ * Fichier : Tal_tp04Parser.java
+ */
+}
 
 ARTICLE : 'article';
 AUTEUR : 'auteur';
