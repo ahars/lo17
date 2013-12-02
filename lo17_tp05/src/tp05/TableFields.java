@@ -9,6 +9,7 @@ package tp05;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Set;
+import java.util.StringTokenizer;
 
 public class TableFields {
 
@@ -27,7 +28,6 @@ public class TableFields {
 		fields.add("article");
 		fields.add("rubrique");
 		bdd.put("datearticle", fields.toString());
-		
 		fields.clear();
 		
 		// Table datepage
@@ -37,7 +37,6 @@ public class TableFields {
 		fields.add("annee");
 		fields.add("page");
 		bdd.put("datepage", fields.toString());
-		
 		fields.clear();
 		
 		// Table theme
@@ -46,7 +45,6 @@ public class TableFields {
 		fields.add("page");
 		fields.add("article");
 		bdd.put("theme", fields.toString());
-		
 		fields.clear();
 		
 		// Table titre
@@ -55,7 +53,6 @@ public class TableFields {
 		fields.add("rubrique");
 		fields.add("article");
 		bdd.put("titre", fields.toString());
-		
 		fields.clear();
 	
 		// Table titreresume
@@ -64,7 +61,6 @@ public class TableFields {
 		fields.add("rubrique");
 		fields.add("article");
 		bdd.put("titreresume", fields.toString());
-		
 		fields.clear();
 		
 		// Table email
@@ -73,7 +69,6 @@ public class TableFields {
 		fields.add("rubrique");
 		fields.add("article");
 		bdd.put("email", fields.toString());
-		
 		fields.clear();
 		
 		// Table emailarticle
@@ -83,7 +78,6 @@ public class TableFields {
 		fields.add("page");
 		fields.add("rubrique");
 		bdd.put("emailarticle", fields.toString());
-		
 		fields.clear();
 	}
 	
@@ -91,4 +85,22 @@ public class TableFields {
 		return bdd;
 	}
 
+	public StringTokenizer getValueOf(String key) {
+
+		StringTokenizer st = new StringTokenizer(bdd.get(key));
+		String tr, temp = "";
+	
+		while (st.hasMoreTokens()) {
+
+			tr = st.nextToken();
+			tr = tr.replace(",", "");
+			tr = tr.replace("[", "");
+			tr = tr.replace("]", "");
+			temp = temp.concat(tr + " ");
+		}
+		st = new StringTokenizer(temp);
+		
+		return st;
+	}
+	
 }

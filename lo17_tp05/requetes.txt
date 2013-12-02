@@ -1,2 +1,3 @@
 select page, rubrique from titre where mot = 'pape';
 select count(page) from titre where mot = 'pape';
+select page, mot, rubrique, article, titre, theme from titreresume where mot = 'pape';
