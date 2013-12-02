@@ -1,0 +1,2 @@
+select page, rubrique from titre where mot = 'pape';
+select count(page) from titre where mot = 'pape';
