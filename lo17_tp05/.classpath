@@ -2,5 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="/home/jehu/Documents/git/lo17/lo17_tp05/antlr-3.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/jehu/Documents/git/lo17/lo17_tp05/antlrworks-1.4.jar"/>
+	<classpathentry kind="lib" path="/home/jehu/Documents/git/lo17/lo17_tp05/postgresql-9.0-801.jdbc4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
