@@ -24,21 +24,13 @@ public class Projet {
 		StringTokenizer st;
 		Set<String> resultP, resultL;
 
-		Cat r = new Cat("requetes.txt");
-
 		Lexique lexique = new Lexique("lexicA12.txt");
 		Lexique pivot = new Lexique("pivot.txt");
 		Lexique stop = new Lexique("stoplist.txt");
+
 //		Cat q = new Cat("corpusQuestionA09.txt");
 		Cat q = new Cat("questions.txt");
 
-//		InterrogPostgresql sql = new InterrogPostgresql();
-		Test test = new Test();
-
-//		TableFields tf = new TableFields();
-//		StringTokenizer st = tf.getValueOf("titre");
-		
-		
 		while ((str = q.getChaine()) != null) {
 
 			if (!str.isEmpty()) {
@@ -89,9 +81,6 @@ public class Projet {
 				result = result.concat(".");
 				System.out.println("resultat : " + result);
 
-/*				sql.setRequete(str);
-				sql.exec_sql();
-*/
 				try {
 					Tal_projetLexer lexer = new Tal_projetLexer(new ANTLRReaderStream(new StringReader(result)));
 					CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -99,9 +88,6 @@ public class Projet {
 					String arbre = parser.listerequetes();
 					System.out.println("arbre : " + arbre + "\n");
 				} catch(Exception e) {  }
-				
-				test.setRequete(str);
-				test.exec_sql();
 			}
 		}
 	}
