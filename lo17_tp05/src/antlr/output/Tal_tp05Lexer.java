@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g 2013-12-02 14:06:18
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g 2013-12-28 17:55:07
 
 package antlr.output;
 

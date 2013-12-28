@@ -102,7 +102,6 @@ public class Tp05 {
 					System.out.println("arbre : " + arbre + "\n");
 				} catch(Exception e) {  }
 				
-				
 				test.setRequete(str);
 				test.exec_sql();
 			}

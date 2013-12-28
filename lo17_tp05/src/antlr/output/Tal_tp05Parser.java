@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g 2013-12-02 14:06:17
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g 2013-12-28 17:55:07
 
 package antlr.output;
 
@@ -96,7 +96,7 @@ public class Tal_tp05Parser extends Parser {
 
 
     // $ANTLR start "requete"
-    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:57:1: requete returns [Arbre req_arbre = new Arbre(\"\")] : ( SELECT | COMBIEN ) ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER ) ps= params ;
+    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:57:1: requete returns [Arbre req_arbre = new Arbre(\"\")] : ( SELECT ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER ) | COMBIEN ) ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER ) ps= params ;
     public final Arbre requete() throws RecognitionException {
         Arbre req_arbre =  new Arbre("");
 
@@ -107,40 +107,180 @@ public class Tal_tp05Parser extends Parser {
         		Arbre ps_arbre;
         	
         try {
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:60:4: ( ( SELECT | COMBIEN ) ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER ) ps= params )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:61:3: ( SELECT | COMBIEN ) ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER ) ps= params
+            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:60:4: ( ( SELECT ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER ) | COMBIEN ) ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER ) ps= params )
+            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:61:3: ( SELECT ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER ) | COMBIEN ) ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER ) ps= params
             {
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:61:3: ( SELECT | COMBIEN )
-            int alt1=2;
-            int LA1_0 = input.LA(1);
+            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:61:3: ( SELECT ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER ) | COMBIEN )
+            int alt2=2;
+            int LA2_0 = input.LA(1);
 
-            if ( (LA1_0==SELECT) ) {
-                alt1=1;
+            if ( (LA2_0==SELECT) ) {
+                alt2=1;
             }
-            else if ( (LA1_0==COMBIEN) ) {
-                alt1=2;
+            else if ( (LA2_0==COMBIEN) ) {
+                alt2=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 1, 0, input);
+                    new NoViableAltException("", 2, 0, input);
 
                 throw nvae;
             }
-            switch (alt1) {
+            switch (alt2) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:61:4: SELECT
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:61:4: SELECT ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER )
                     {
                     match(input,SELECT,FOLLOW_SELECT_in_requete250); 
 
                     			req_arbre.ajouteFils(new Arbre("", "select distinct"));
                     		
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:64:3: ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER )
+                    int alt1=7;
+                    switch ( input.LA(1) ) {
+                    case ARTICLE:
+                        {
+                        alt1=1;
+                        }
+                        break;
+                    case PAGE:
+                        {
+                        alt1=2;
+                        }
+                        break;
+                    case UNE:
+                        {
+                        alt1=3;
+                        }
+                        break;
+                    case VOIRAUSSI:
+                        {
+                        alt1=4;
+                        }
+                        break;
+                    case FOCUS:
+                        {
+                        alt1=5;
+                        }
+                        break;
+                    case RAPPELS:
+                        {
+                        alt1=6;
+                        }
+                        break;
+                    case GROSTITRES:
+                        {
+                        alt1=7;
+                        }
+                        break;
+                    default:
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 1, 0, input);
+
+                        throw nvae;
+                    }
+
+                    switch (alt1) {
+                        case 1 :
+                            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:64:4: ARTICLE PARLER
+                            {
+                            match(input,ARTICLE,FOLLOW_ARTICLE_in_requete257); 
+                            match(input,PARLER,FOLLOW_PARLER_in_requete259); 
+
+                            			req_arbre.ajouteFils(new Arbre("", "article"));
+                            			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+                            			req_arbre.ajouteFils(new Arbre("", "where"));
+                            		
+
+                            }
+                            break;
+                        case 2 :
+                            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:69:5: PAGE PARLER
+                            {
+                            match(input,PAGE,FOLLOW_PAGE_in_requete267); 
+                            match(input,PARLER,FOLLOW_PARLER_in_requete269); 
+
+                            			req_arbre.ajouteFils(new Arbre("", "page"));
+                            			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+                            			req_arbre.ajouteFils(new Arbre("", "where"));
+                            		
+
+                            }
+                            break;
+                        case 3 :
+                            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:74:5: UNE PARLER
+                            {
+                            match(input,UNE,FOLLOW_UNE_in_requete276); 
+                            match(input,PARLER,FOLLOW_PARLER_in_requete278); 
+
+                            			req_arbre.ajouteFils(new Arbre("", "rubrique"));
+                            			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+                            			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'une' AND"));
+                            		
+
+                            }
+                            break;
+                        case 4 :
+                            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:79:5: VOIRAUSSI PARLER
+                            {
+                            match(input,VOIRAUSSI,FOLLOW_VOIRAUSSI_in_requete286); 
+                            match(input,PARLER,FOLLOW_PARLER_in_requete288); 
+
+                            			req_arbre.ajouteFils(new Arbre("", "rubrique"));
+                            			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+                            			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'voiraussi' AND"));
+                            		
+
+                            }
+                            break;
+                        case 5 :
+                            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:84:5: FOCUS PARLER
+                            {
+                            match(input,FOCUS,FOLLOW_FOCUS_in_requete296); 
+                            match(input,PARLER,FOLLOW_PARLER_in_requete298); 
+
+                            			req_arbre.ajouteFils(new Arbre("", "rubrique"));
+                            			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+                            			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'focus' AND"));
+                            		
+
+                            }
+                            break;
+                        case 6 :
+                            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:89:5: RAPPELS PARLER
+                            {
+                            match(input,RAPPELS,FOLLOW_RAPPELS_in_requete306); 
+                            match(input,PARLER,FOLLOW_PARLER_in_requete308); 
+
+                            			req_arbre.ajouteFils(new Arbre("", "rubrique"));
+                            			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+                            			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'rappels' AND"));
+                            		
+
+                            }
+                            break;
+                        case 7 :
+                            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:94:5: GROSTITRES PARLER
+                            {
+                            match(input,GROSTITRES,FOLLOW_GROSTITRES_in_requete316); 
+                            match(input,PARLER,FOLLOW_PARLER_in_requete318); 
+
+                            			req_arbre.ajouteFils(new Arbre("", "rubrique"));
+                            			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+                            			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'grostitre' AND"));
+                            		
+
+                            }
+                            break;
+
+                    }
+
 
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:64:5: COMBIEN
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:99:5: COMBIEN
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete258); 
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete327); 
 
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     		
@@ -150,57 +290,57 @@ public class Tal_tp05Parser extends Parser {
 
             }
 
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:67:3: ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER )
-            int alt2=7;
+            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:102:3: ( ARTICLE PARLER | PAGE PARLER | UNE PARLER | VOIRAUSSI PARLER | FOCUS PARLER | RAPPELS PARLER | GROSTITRES PARLER )
+            int alt3=7;
             switch ( input.LA(1) ) {
             case ARTICLE:
                 {
-                alt2=1;
+                alt3=1;
                 }
                 break;
             case PAGE:
                 {
-                alt2=2;
+                alt3=2;
                 }
                 break;
             case UNE:
                 {
-                alt2=3;
+                alt3=3;
                 }
                 break;
             case VOIRAUSSI:
                 {
-                alt2=4;
+                alt3=4;
                 }
                 break;
             case FOCUS:
                 {
-                alt2=5;
+                alt3=5;
                 }
                 break;
             case RAPPELS:
                 {
-                alt2=6;
+                alt3=6;
                 }
                 break;
             case GROSTITRES:
                 {
-                alt2=7;
+                alt3=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 2, 0, input);
+                    new NoViableAltException("", 3, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt2) {
+            switch (alt3) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:67:4: ARTICLE PARLER
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:102:4: ARTICLE PARLER
                     {
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete266); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete268); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete335); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete337); 
 
                     			req_arbre.ajouteFils(new Arbre("", "article)"));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
@@ -210,10 +350,10 @@ public class Tal_tp05Parser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:72:5: PAGE PARLER
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:107:5: PAGE PARLER
                     {
-                    match(input,PAGE,FOLLOW_PAGE_in_requete276); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete278); 
+                    match(input,PAGE,FOLLOW_PAGE_in_requete345); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete347); 
 
                     			req_arbre.ajouteFils(new Arbre("", "page)"));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
@@ -223,10 +363,10 @@ public class Tal_tp05Parser extends Parser {
                     }
                     break;
                 case 3 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:77:5: UNE PARLER
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:112:5: UNE PARLER
                     {
-                    match(input,UNE,FOLLOW_UNE_in_requete285); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete287); 
+                    match(input,UNE,FOLLOW_UNE_in_requete354); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete356); 
 
                     			req_arbre.ajouteFils(new Arbre("", "rubrique)"));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
@@ -236,10 +376,10 @@ public class Tal_tp05Parser extends Parser {
                     }
                     break;
                 case 4 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:82:5: VOIRAUSSI PARLER
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:117:5: VOIRAUSSI PARLER
                     {
-                    match(input,VOIRAUSSI,FOLLOW_VOIRAUSSI_in_requete295); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete297); 
+                    match(input,VOIRAUSSI,FOLLOW_VOIRAUSSI_in_requete364); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete366); 
 
                     			req_arbre.ajouteFils(new Arbre("", "rubrique)"));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
@@ -249,10 +389,10 @@ public class Tal_tp05Parser extends Parser {
                     }
                     break;
                 case 5 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:87:5: FOCUS PARLER
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:122:5: FOCUS PARLER
                     {
-                    match(input,FOCUS,FOLLOW_FOCUS_in_requete305); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete307); 
+                    match(input,FOCUS,FOLLOW_FOCUS_in_requete374); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete376); 
 
                     			req_arbre.ajouteFils(new Arbre("", "rubrique)"));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
@@ -262,10 +402,10 @@ public class Tal_tp05Parser extends Parser {
                     }
                     break;
                 case 6 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:92:5: RAPPELS PARLER
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:127:5: RAPPELS PARLER
                     {
-                    match(input,RAPPELS,FOLLOW_RAPPELS_in_requete315); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete317); 
+                    match(input,RAPPELS,FOLLOW_RAPPELS_in_requete384); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete386); 
 
                     			req_arbre.ajouteFils(new Arbre("", "rubrique)"));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
@@ -275,10 +415,10 @@ public class Tal_tp05Parser extends Parser {
                     }
                     break;
                 case 7 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:97:5: GROSTITRES PARLER
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:132:5: GROSTITRES PARLER
                     {
-                    match(input,GROSTITRES,FOLLOW_GROSTITRES_in_requete325); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete327); 
+                    match(input,GROSTITRES,FOLLOW_GROSTITRES_in_requete394); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete396); 
 
                     			req_arbre.ajouteFils(new Arbre("", "rubrique)"));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
@@ -290,7 +430,7 @@ public class Tal_tp05Parser extends Parser {
 
             }
 
-            pushFollow(FOLLOW_params_in_requete338);
+            pushFollow(FOLLOW_params_in_requete407);
             ps=params();
 
             state._fsp--;
@@ -315,7 +455,7 @@ public class Tal_tp05Parser extends Parser {
 
 
     // $ANTLR start "params"
-    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:107:1: params returns [Arbre les_pars_arbre = new Arbre(\"\")] : par1= param (c= conj par2= param )* ;
+    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:142:1: params returns [Arbre les_pars_arbre = new Arbre(\"\")] : par1= param (c= conj par2= param )* ;
     public final Arbre params() throws RecognitionException {
         Arbre les_pars_arbre =  new Arbre("");
 
@@ -330,10 +470,10 @@ public class Tal_tp05Parser extends Parser {
         		Arbre par1_arbre, par2_arbre, conj_arbre;
         	
         try {
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:110:4: (par1= param (c= conj par2= param )* )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:111:3: par1= param (c= conj par2= param )*
+            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:145:4: (par1= param (c= conj par2= param )* )
+            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:146:3: par1= param (c= conj par2= param )*
             {
-            pushFollow(FOLLOW_param_in_params364);
+            pushFollow(FOLLOW_param_in_params433);
             par1=param();
 
             state._fsp--;
@@ -342,27 +482,27 @@ public class Tal_tp05Parser extends Parser {
             			par1_arbre = par1;
             			les_pars_arbre.ajouteFils(par1_arbre);
             		
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:115:3: (c= conj par2= param )*
-            loop3:
+            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:150:3: (c= conj par2= param )*
+            loop4:
             do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( (LA3_0==ET||LA3_0==OU) ) {
-                    alt3=1;
+                if ( (LA4_0==ET||LA4_0==OU) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt3) {
+                switch (alt4) {
             	case 1 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:115:4: c= conj par2= param
+            	    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:150:4: c= conj par2= param
             	    {
-            	    pushFollow(FOLLOW_conj_in_params375);
+            	    pushFollow(FOLLOW_conj_in_params444);
             	    c=conj();
 
             	    state._fsp--;
 
-            	    pushFollow(FOLLOW_param_in_params381);
+            	    pushFollow(FOLLOW_param_in_params450);
             	    par2=param();
 
             	    state._fsp--;
@@ -378,7 +518,7 @@ public class Tal_tp05Parser extends Parser {
             	    break;
 
             	default :
-            	    break loop3;
+            	    break loop4;
                 }
             } while (true);
 
@@ -398,7 +538,7 @@ public class Tal_tp05Parser extends Parser {
 
 
     // $ANTLR start "param"
-    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:122:1: param returns [Arbre lepar_arbre = new Arbre(\"\")] : (a= VAR | a1= VAR a2= VAR );
+    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:157:1: param returns [Arbre lepar_arbre = new Arbre(\"\")] : (a= VAR | a1= VAR a2= VAR );
     public final Arbre param() throws RecognitionException {
         Arbre lepar_arbre =  new Arbre("");
 
@@ -407,37 +547,37 @@ public class Tal_tp05Parser extends Parser {
         Token a2=null;
 
         try {
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:122:51: (a= VAR | a1= VAR a2= VAR )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:157:51: (a= VAR | a1= VAR a2= VAR )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA4_0==VAR) ) {
-                int LA4_1 = input.LA(2);
+            if ( (LA5_0==VAR) ) {
+                int LA5_1 = input.LA(2);
 
-                if ( (LA4_1==VAR) ) {
-                    alt4=2;
+                if ( (LA5_1==VAR) ) {
+                    alt5=2;
                 }
-                else if ( (LA4_1==ET||LA4_1==OU||LA4_1==POINT) ) {
-                    alt4=1;
+                else if ( (LA5_1==ET||LA5_1==OU||LA5_1==POINT) ) {
+                    alt5=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 4, 1, input);
+                        new NoViableAltException("", 5, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt4) {
+            switch (alt5) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:123:2: a= VAR
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:158:2: a= VAR
                     {
-                    a=(Token)match(input,VAR,FOLLOW_VAR_in_param402); 
+                    a=(Token)match(input,VAR,FOLLOW_VAR_in_param471); 
 
                     		lepar_arbre.ajouteFils(new Arbre("mot =", "'" + a.getText() + "'"));
                     	
@@ -445,12 +585,12 @@ public class Tal_tp05Parser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:126:4: a1= VAR a2= VAR
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:161:4: a1= VAR a2= VAR
                     {
-                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_param413); 
-                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_param419); 
+                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_param482); 
+                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_param488); 
 
-                    		lepar_arbre.ajouteFils(new Arbre("", "mot = '" + a1.getText() + "' AND mot = '" + a2.getText() + "'"));
+                    		lepar_arbre.ajouteFils(new Arbre("", "mot = '" + a1.getText() + "'AND mot = '" + a2.getText() + "'"));
                     	
 
                     }
@@ -470,32 +610,32 @@ public class Tal_tp05Parser extends Parser {
 
 
     // $ANTLR start "conj"
-    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:130:1: conj returns [Arbre conj_arbre = new Arbre(\"\")] : ( ET | OU );
+    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:165:1: conj returns [Arbre conj_arbre = new Arbre(\"\")] : ( ET | OU );
     public final Arbre conj() throws RecognitionException {
         Arbre conj_arbre =  new Arbre("");
 
         try {
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:130:49: ( ET | OU )
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:165:49: ( ET | OU )
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA5_0==ET) ) {
-                alt5=1;
+            if ( (LA6_0==ET) ) {
+                alt6=1;
             }
-            else if ( (LA5_0==OU) ) {
-                alt5=2;
+            else if ( (LA6_0==OU) ) {
+                alt6=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:131:2: ET
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:166:2: ET
                     {
-                    match(input,ET,FOLLOW_ET_in_conj434); 
+                    match(input,ET,FOLLOW_ET_in_conj503); 
 
                     		conj_arbre.ajouteFils(new Arbre("", "AND"));
                     	
@@ -503,9 +643,9 @@ public class Tal_tp05Parser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:134:4: OU
+                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:169:4: OU
                     {
-                    match(input,OU,FOLLOW_OU_in_conj441); 
+                    match(input,OU,FOLLOW_OU_in_conj510); 
 
                     		conj_arbre.ajouteFils(new Arbre("", "OR"));
                     	
@@ -533,29 +673,43 @@ public class Tal_tp05Parser extends Parser {
     public static final BitSet FOLLOW_requete_in_listerequetes225 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_POINT_in_listerequetes227 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_SELECT_in_requete250 = new BitSet(new long[]{0x0000000000069610L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete258 = new BitSet(new long[]{0x0000000000069610L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete266 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_PARLER_in_requete268 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_PAGE_in_requete276 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_PARLER_in_requete278 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_UNE_in_requete285 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_PARLER_in_requete287 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_VOIRAUSSI_in_requete295 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_PARLER_in_requete297 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_FOCUS_in_requete305 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_PARLER_in_requete307 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_RAPPELS_in_requete315 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_PARLER_in_requete317 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_GROSTITRES_in_requete325 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_PARLER_in_requete327 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_params_in_requete338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_param_in_params364 = new BitSet(new long[]{0x0000000000000902L});
-    public static final BitSet FOLLOW_conj_in_params375 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_param_in_params381 = new BitSet(new long[]{0x0000000000000902L});
-    public static final BitSet FOLLOW_VAR_in_param402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_param413 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_VAR_in_param419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ET_in_conj434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_OU_in_conj441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete257 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete259 = new BitSet(new long[]{0x0000000000069610L});
+    public static final BitSet FOLLOW_PAGE_in_requete267 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete269 = new BitSet(new long[]{0x0000000000069610L});
+    public static final BitSet FOLLOW_UNE_in_requete276 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete278 = new BitSet(new long[]{0x0000000000069610L});
+    public static final BitSet FOLLOW_VOIRAUSSI_in_requete286 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete288 = new BitSet(new long[]{0x0000000000069610L});
+    public static final BitSet FOLLOW_FOCUS_in_requete296 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete298 = new BitSet(new long[]{0x0000000000069610L});
+    public static final BitSet FOLLOW_RAPPELS_in_requete306 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete308 = new BitSet(new long[]{0x0000000000069610L});
+    public static final BitSet FOLLOW_GROSTITRES_in_requete316 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete318 = new BitSet(new long[]{0x0000000000069610L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete327 = new BitSet(new long[]{0x0000000000069610L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete335 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete337 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_PAGE_in_requete345 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete347 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_UNE_in_requete354 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete356 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_VOIRAUSSI_in_requete364 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete366 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_FOCUS_in_requete374 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete376 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RAPPELS_in_requete384 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete386 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_GROSTITRES_in_requete394 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_PARLER_in_requete396 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_params_in_requete407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_param_in_params433 = new BitSet(new long[]{0x0000000000000902L});
+    public static final BitSet FOLLOW_conj_in_params444 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_param_in_params450 = new BitSet(new long[]{0x0000000000000902L});
+    public static final BitSet FOLLOW_VAR_in_param471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_param482 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_VAR_in_param488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ET_in_conj503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_OU_in_conj510 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -61,6 +61,41 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		(SELECT {
 			req_arbre.ajouteFils(new Arbre("", "select distinct"));
 		}
+		(ARTICLE PARLER {
+			req_arbre.ajouteFils(new Arbre("", "article"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+			req_arbre.ajouteFils(new Arbre("", "where"));
+		}
+		| PAGE PARLER{
+			req_arbre.ajouteFils(new Arbre("", "page"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+			req_arbre.ajouteFils(new Arbre("", "where"));
+		}
+		| UNE PARLER {
+			req_arbre.ajouteFils(new Arbre("", "rubrique"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'une' AND"));
+		}
+		| VOIRAUSSI PARLER {
+			req_arbre.ajouteFils(new Arbre("", "rubrique"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'voiraussi' AND"));
+		}
+		| FOCUS PARLER {
+			req_arbre.ajouteFils(new Arbre("", "rubrique"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'focus' AND"));
+		}
+		| RAPPELS PARLER {
+			req_arbre.ajouteFils(new Arbre("", "rubrique"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'rappels' AND"));
+		}
+		| GROSTITRES PARLER {
+			req_arbre.ajouteFils(new Arbre("", "rubrique"));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre"));
+			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'grostitre' AND"));
+		})
 		| COMBIEN {
 			req_arbre.ajouteFils(new Arbre("", "select count("));
 		})
@@ -124,7 +159,7 @@ param returns [Arbre lepar_arbre = new Arbre("")] :
 		lepar_arbre.ajouteFils(new Arbre("mot =", "'" + a.getText() + "'"));
 	}
 	| a1 = VAR a2 = VAR {
-		lepar_arbre.ajouteFils(new Arbre("", "mot = '" + a1.getText() + "' AND mot = '" + a2.getText() + "'"));
+		lepar_arbre.ajouteFils(new Arbre("", "mot = '" + a1.getText() + "'AND mot = '" + a2.getText() + "'"));
 	};
 
 conj returns [Arbre conj_arbre = new Arbre("")] :

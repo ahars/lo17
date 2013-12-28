@@ -6,7 +6,7 @@
 # Fichier : tp02.pl
 
 # $fichier = "corpusA09.xml";
-$fichier = "../tp01/LCI_EXTRACT_4/corpus_lci.xml";
+$fichier = "../lo17_tp01/LCI_EXTRACT_4/corpus_lci.xml";
 
 # Paramétrage de la langue française dans le système.
 # $c = `setenv LANG C`;
