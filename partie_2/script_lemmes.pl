@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# UV : LO17 - TP02
+# UV : LO17 - partie 2
 # Préparation du Corpus
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : script_lemmes.pl

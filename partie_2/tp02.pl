@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# UV : LO17 - TP02
+# UV : LO17 - partie 2
 # Préparation du Corpus
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : tp02.pl
@@ -85,3 +85,4 @@ print "\n14) Création du fichier d'inverses depuis le corpus\n";
 $c = `cat $corpus2 | scripts/newsegmente.pl -f -a -t | scripts/newindexMot.pl > inverse.txt`;
 
 print "\n====================ÉTAPES====================\n";
+

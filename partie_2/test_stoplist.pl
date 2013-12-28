@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# UV : LO17 - TP02
+# UV : LO17 - partie 2
 # Préparation du Corpus
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : test_stoplist.pl
@@ -28,3 +28,4 @@ while ($a = <FICH2>) {
 
 close(FICH1);
 close(FICH2);
+
