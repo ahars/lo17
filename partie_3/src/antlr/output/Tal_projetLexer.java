@@ -1,11 +1,11 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g 2013-12-28 17:55:07
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g 2013-12-28 18:45:12
 
 package antlr.output;
 
-/* UV : LO17 - TP05
+/* UV : LO17 - partie 3
  * Interrogation base de données SQL
  * Auteurs : Dany Ferreira - Antoine Hars
- * Fichier : Tal_tp05Lexer.java
+ * Fichier : Tal_projetLexer.java
  */
 
 
@@ -14,7 +14,7 @@ import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Tal_tp05Lexer extends Lexer {
+public class Tal_projetLexer extends Lexer {
     public static final int FOCUS=9;
     public static final int UNE=17;
     public static final int VOIRAUSSI=18;
@@ -37,23 +37,23 @@ public class Tal_tp05Lexer extends Lexer {
     // delegates
     // delegators
 
-    public Tal_tp05Lexer() {;} 
-    public Tal_tp05Lexer(CharStream input) {
+    public Tal_projetLexer() {;} 
+    public Tal_projetLexer(CharStream input) {
         this(input, new RecognizerSharedState());
     }
-    public Tal_tp05Lexer(CharStream input, RecognizerSharedState state) {
+    public Tal_projetLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "/home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g"; }
+    public String getGrammarFileName() { return "/home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g"; }
 
     // $ANTLR start "ARTICLE"
     public final void mARTICLE() throws RecognitionException {
         try {
             int _type = ARTICLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:29:9: ( 'article' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:29:11: 'article'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:29:9: ( 'article' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:29:11: 'article'
             {
             match("article"); 
 
@@ -73,8 +73,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = AUTEUR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:30:8: ( 'auteur' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:30:10: 'auteur'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:30:8: ( 'auteur' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:30:10: 'auteur'
             {
             match("auteur"); 
 
@@ -94,8 +94,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = COMBIEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:31:9: ( 'combien' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:31:11: 'combien'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:31:9: ( 'combien' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:31:11: 'combien'
             {
             match("combien"); 
 
@@ -115,8 +115,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = DATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:32:6: ( 'date' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:32:8: 'date'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:32:6: ( 'date' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:32:8: 'date'
             {
             match("date"); 
 
@@ -136,8 +136,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = ET;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:33:4: ( 'et' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:33:6: 'et'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:33:4: ( 'et' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:33:6: 'et'
             {
             match("et"); 
 
@@ -157,8 +157,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = FOCUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:34:7: ( 'focus' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:34:9: 'focus'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:34:7: ( 'focus' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:34:9: 'focus'
             {
             match("focus"); 
 
@@ -178,8 +178,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = GROSTITRES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:35:12: ( 'gros titre' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:35:14: 'gros titre'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:35:12: ( 'gros titre' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:35:14: 'gros titre'
             {
             match("gros titre"); 
 
@@ -199,8 +199,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = OU;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:36:4: ( 'ou' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:36:6: 'ou'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:36:4: ( 'ou' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:36:6: 'ou'
             {
             match("ou"); 
 
@@ -220,8 +220,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = PAGE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:37:6: ( 'page' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:37:8: 'page'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:37:6: ( 'page' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:37:8: 'page'
             {
             match("page"); 
 
@@ -241,8 +241,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = PARLER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:38:8: ( 'parler' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:38:10: 'parler'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:38:8: ( 'parler' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:38:10: 'parler'
             {
             match("parler"); 
 
@@ -262,8 +262,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = POINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:39:7: ( '.' | '?' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:39:7: ( '.' | '?' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:
             {
             if ( input.LA(1)=='.'||input.LA(1)=='?' ) {
                 input.consume();
@@ -290,8 +290,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = RAPPELS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:40:9: ( 'rappels' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:40:11: 'rappels'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:40:9: ( 'rappels' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:40:11: 'rappels'
             {
             match("rappels"); 
 
@@ -311,8 +311,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = SELECT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:41:8: ( 'vouloir' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:41:10: 'vouloir'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:41:8: ( 'vouloir' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:41:10: 'vouloir'
             {
             match("vouloir"); 
 
@@ -332,8 +332,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = UNE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:42:5: ( 'une' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:42:7: 'une'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:42:5: ( 'une' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:42:7: 'une'
             {
             match("une"); 
 
@@ -353,8 +353,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = VOIRAUSSI;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:43:11: ( 'voiraussi' )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:43:13: 'voiraussi'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:43:11: ( 'voiraussi' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:43:13: 'voiraussi'
             {
             match("voiraussi"); 
 
@@ -374,7 +374,7 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:45:4: ( ( ' ' | '\\t' | '\\r' | 'stop' ) | '\\n' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:45:4: ( ( ' ' | '\\t' | '\\r' | 'stop' ) | '\\n' )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -392,9 +392,9 @@ public class Tal_tp05Lexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:45:6: ( ' ' | '\\t' | '\\r' | 'stop' )
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:45:6: ( ' ' | '\\t' | '\\r' | 'stop' )
                     {
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:45:6: ( ' ' | '\\t' | '\\r' | 'stop' )
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:45:6: ( ' ' | '\\t' | '\\r' | 'stop' )
                     int alt1=4;
                     switch ( input.LA(1) ) {
                     case ' ':
@@ -426,28 +426,28 @@ public class Tal_tp05Lexer extends Lexer {
 
                     switch (alt1) {
                         case 1 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:45:7: ' '
+                            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:45:7: ' '
                             {
                             match(' '); 
 
                             }
                             break;
                         case 2 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:45:12: '\\t'
+                            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:45:12: '\\t'
                             {
                             match('\t'); 
 
                             }
                             break;
                         case 3 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:45:19: '\\r'
+                            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:45:19: '\\r'
                             {
                             match('\r'); 
 
                             }
                             break;
                         case 4 :
-                            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:45:26: 'stop'
+                            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:45:26: 'stop'
                             {
                             match("stop"); 
 
@@ -462,7 +462,7 @@ public class Tal_tp05Lexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:45:48: '\\n'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:45:48: '\\n'
                     {
                     match('\n'); 
 
@@ -483,8 +483,8 @@ public class Tal_tp05Lexer extends Lexer {
         try {
             int _type = VAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z')||(input.LA(1)>='\u00A0' && input.LA(1)<='\u00FF') ) {
                 input.consume();
@@ -495,7 +495,7 @@ public class Tal_tp05Lexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:47: ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:47: ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
             int cnt3=0;
             loop3:
             do {
@@ -655,10 +655,10 @@ public class Tal_tp05Lexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:48: ( 'a' .. 'z' )
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:48: ( 'a' .. 'z' )
             	    {
-            	    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:48: ( 'a' .. 'z' )
-            	    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:49: 'a' .. 'z'
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:48: ( 'a' .. 'z' )
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:49: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); 
 
@@ -668,10 +668,10 @@ public class Tal_tp05Lexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:59: ( '0' .. '9' )
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:59: ( '0' .. '9' )
             	    {
-            	    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:59: ( '0' .. '9' )
-            	    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:60: '0' .. '9'
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:59: ( '0' .. '9' )
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:60: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -681,17 +681,17 @@ public class Tal_tp05Lexer extends Lexer {
             	    }
             	    break;
             	case 3 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:70: '-'
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:70: '-'
             	    {
             	    match('-'); 
 
             	    }
             	    break;
             	case 4 :
-            	    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:74: ( '\\u00a0' .. '\\u00ff' )
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:74: ( '\\u00a0' .. '\\u00ff' )
             	    {
-            	    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:74: ( '\\u00a0' .. '\\u00ff' )
-            	    // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:46:75: '\\u00a0' .. '\\u00ff'
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:74: ( '\\u00a0' .. '\\u00ff' )
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:75: '\\u00a0' .. '\\u00ff'
             	    {
             	    matchRange('\u00A0','\u00FF'); 
 
@@ -722,124 +722,124 @@ public class Tal_tp05Lexer extends Lexer {
     // $ANTLR end "VAR"
 
     public void mTokens() throws RecognitionException {
-        // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:8: ( ARTICLE | AUTEUR | COMBIEN | DATE | ET | FOCUS | GROSTITRES | OU | PAGE | PARLER | POINT | RAPPELS | SELECT | UNE | VOIRAUSSI | WS | VAR )
+        // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:8: ( ARTICLE | AUTEUR | COMBIEN | DATE | ET | FOCUS | GROSTITRES | OU | PAGE | PARLER | POINT | RAPPELS | SELECT | UNE | VOIRAUSSI | WS | VAR )
         int alt4=17;
         alt4 = dfa4.predict(input);
         switch (alt4) {
             case 1 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:10: ARTICLE
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:10: ARTICLE
                 {
                 mARTICLE(); 
 
                 }
                 break;
             case 2 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:18: AUTEUR
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:18: AUTEUR
                 {
                 mAUTEUR(); 
 
                 }
                 break;
             case 3 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:25: COMBIEN
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:25: COMBIEN
                 {
                 mCOMBIEN(); 
 
                 }
                 break;
             case 4 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:33: DATE
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:33: DATE
                 {
                 mDATE(); 
 
                 }
                 break;
             case 5 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:38: ET
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:38: ET
                 {
                 mET(); 
 
                 }
                 break;
             case 6 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:41: FOCUS
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:41: FOCUS
                 {
                 mFOCUS(); 
 
                 }
                 break;
             case 7 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:47: GROSTITRES
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:47: GROSTITRES
                 {
                 mGROSTITRES(); 
 
                 }
                 break;
             case 8 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:58: OU
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:58: OU
                 {
                 mOU(); 
 
                 }
                 break;
             case 9 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:61: PAGE
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:61: PAGE
                 {
                 mPAGE(); 
 
                 }
                 break;
             case 10 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:66: PARLER
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:66: PARLER
                 {
                 mPARLER(); 
 
                 }
                 break;
             case 11 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:73: POINT
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:73: POINT
                 {
                 mPOINT(); 
 
                 }
                 break;
             case 12 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:79: RAPPELS
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:79: RAPPELS
                 {
                 mRAPPELS(); 
 
                 }
                 break;
             case 13 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:87: SELECT
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:87: SELECT
                 {
                 mSELECT(); 
 
                 }
                 break;
             case 14 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:94: UNE
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:94: UNE
                 {
                 mUNE(); 
 
                 }
                 break;
             case 15 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:98: VOIRAUSSI
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:98: VOIRAUSSI
                 {
                 mVOIRAUSSI(); 
 
                 }
                 break;
             case 16 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:108: WS
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:108: WS
                 {
                 mWS(); 
 
                 }
                 break;
             case 17 :
-                // /home/jehu/Documents/git/lo17/lo17_tp05/src/antlr/Tal_tp05.g:1:111: VAR
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:111: VAR
                 {
                 mVAR(); 
 

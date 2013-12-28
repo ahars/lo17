@@ -1,4 +1,4 @@
-package tp05;
+package projet;
 
 import java.util.StringTokenizer;
 
@@ -64,3 +64,4 @@ public class Test {
 		return st;
 	}
 }
+

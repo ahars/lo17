@@ -1,6 +1,6 @@
-package tp05;
+package projet;
 
-/* UV : LO17 - TP05
+/* UV : LO17 - partie 3
  * Interrogation base de données SQL
  * Fichier : Cat.java
  */
@@ -46,3 +46,4 @@ public class Cat {
 		return br;
 	}
 }
+

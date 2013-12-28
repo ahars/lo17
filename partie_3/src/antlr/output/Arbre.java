@@ -1,6 +1,6 @@
 package antlr.output;
 
-/* UV : LO17 - TP05
+/* UV : LO17 - partie 3
  * Interrogation base de données SQL
  * Fichier : Arbre.java
  */
@@ -88,3 +88,4 @@ public class Arbre {
 		}
 	}
 }
+

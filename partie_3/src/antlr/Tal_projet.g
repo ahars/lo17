@@ -1,28 +1,28 @@
-grammar Tal_tp05;
+grammar Tal_projet;
 
-/* UV : LO17 - TP05
+/* UV : LO17 - partie 3
  * Interrogation base de données SQL
  * Auteurs : Dany Ferreira - Antoine Hars
- * Fichier : Tal_tp05.g
+ * Fichier : Tal_projet.g
  */
 
 @lexer::header {
 package antlr.output;
 
-/* UV : LO17 - TP05
+/* UV : LO17 - partie 3
  * Interrogation base de données SQL
  * Auteurs : Dany Ferreira - Antoine Hars
- * Fichier : Tal_tp05Lexer.java
+ * Fichier : Tal_projetLexer.java
  */
 }
 
 @parser::header {
 package antlr.output;
 
-/* UV : LO17 - TP05
+/* UV : LO17 - partie 3
  * Interrogation base de données SQL
  * Auteurs : Dany Ferreira - Antoine Hars
- * Fichier : Tal_tp05Parser.java
+ * Fichier : Tal_projetParser.java
  */
 }
 

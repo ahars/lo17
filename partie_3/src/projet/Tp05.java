@@ -1,4 +1,4 @@
-package tp05;
+package projet;
 
 import java.io.StringReader;
 import java.util.Set;
@@ -7,18 +7,16 @@ import java.util.StringTokenizer;
 import org.antlr.runtime.ANTLRReaderStream;
 import org.antlr.runtime.CommonTokenStream;
 
-import antlr.output.Tal_tp05Lexer;
-import antlr.output.Tal_tp05Parser;
+import antlr.output.Tal_projetLexer;
+import antlr.output.Tal_projetParser;
 
-import tp05.Lexique;
-
-/* UV : LO17 - TP05
+/* UV : LO17 - partie 3
  * Interrogation base de données SQL
  * Auteurs : Dany Ferreira - Antoine Hars
- * Fichier : Tp05.java
+ * Fichier : Projet.java
  */
 
-public class Tp05 {
+public class Projet {
 
 	public static void main(String[] args) {
 
@@ -95,9 +93,9 @@ public class Tp05 {
 				sql.exec_sql();
 */
 				try {
-					Tal_tp05Lexer lexer = new Tal_tp05Lexer(new ANTLRReaderStream(new StringReader(result)));
+					Tal_projetLexer lexer = new Tal_projetLexer(new ANTLRReaderStream(new StringReader(result)));
 					CommonTokenStream tokens = new CommonTokenStream(lexer);
-					Tal_tp05Parser parser = new Tal_tp05Parser(tokens);
+					Tal_projetParser parser = new Tal_projetParser(tokens);
 					String arbre = parser.listerequetes();
 					System.out.println("arbre : " + arbre + "\n");
 				} catch(Exception e) {  }
@@ -108,3 +106,4 @@ public class Tp05 {
 		}
 	}
 }
+
