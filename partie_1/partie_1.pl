@@ -3,7 +3,7 @@
 # UV : LO17 - partie 1
 # Préparation du Corpus
 # Auteurs : Dany Ferreira - Antoine Hars
-# Fichier : tp01.pl
+# Fichier : partie_1.pl
 
 print "\nPréparation du corpus";
 print "\n====================ÉTAPES====================\n";

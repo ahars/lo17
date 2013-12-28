@@ -3,10 +3,9 @@
 # UV : LO17 - partie 2
 # Préparation du Corpus
 # Auteurs : Dany Ferreira - Antoine Hars
-# Fichier : tp02.pl
+# Fichier : partie_2.pl
 
-# $fichier = "corpusA09.xml";
-$fichier = "../lo17_tp01/LCI_EXTRACT_4/corpus_lci.xml";
+$fichier = "../partie_1/LCI_EXTRACT_4/corpus_lci.xml";
 
 # Paramétrage de la langue française dans le système.
 # $c = `setenv LANG C`;
