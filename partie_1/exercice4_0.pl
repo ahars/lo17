@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# UV : LO17 - TP01
+# UV : LO17 - partie 1
 # Préparation du Corpus
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : exercice4_0.pl
@@ -13,3 +13,4 @@ open(FICHOUT, ">$fichier") or die "Cannot open fichier: $!";
 print FICHOUT "<CORPUS>\n";
 
 close(FICHOUT);
+

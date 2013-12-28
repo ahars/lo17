@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# UV : LO17 - TP01
+# UV : LO17 - partie 1
 # Préparation du Corpus
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : exercice2_1.pl
@@ -24,3 +24,4 @@ while($a = <FICHIN>) {
 
 close(FICHOUT);
 close(FICHIN);
+

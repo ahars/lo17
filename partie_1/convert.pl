@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# UV : LO17 - TP01
+# UV : LO17 - partie 1
 # Préparation du Corpus
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : convert.pl
@@ -23,3 +23,4 @@ while(<>) {
 	# Retranscription de la chaîne sous un format iso8859-1
 	print $u->latin1;
 }
+

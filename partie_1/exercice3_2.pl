@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# UV : LO17 - TP01
+# UV : LO17 - partie 1
 # Préparation du Corpus
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : exercice3_2.pl
@@ -78,3 +78,4 @@ print "\nNombre de fichiers finaux contenant 2 rubriques : $nbRubriquesFiles2 / 
 print "\nNombre de fichiers finaux contenant 1 rubrique : $nbRubriquesFiles1 / $nbFiles1";
 print "\nNombre de fichiers finaux contenant 0 rubrique : $nbRubriquesFiles0 / $nbFiles0\n";
 print "\n====================TESTS====================\n\n";
+

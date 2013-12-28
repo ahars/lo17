@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# UV : LO17 - TP01
+# UV : LO17 - partie 1
 # Préparation du Corpus
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : exercice3_1.pl
@@ -28,3 +28,4 @@ print FICHOUT "</LES_RAPPELS>";
 
 close(FICHOUT);
 close(FICHIN);
+

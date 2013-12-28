@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# UV : LO17 - TP01
+# UV : LO17 - partie 1
 # Préparation du Corpus
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : exercice4_7.pl
@@ -71,3 +71,4 @@ print "Nombre de fichiers dont les GROSTITRES ont été correctement traités : 
 print "Nombre de fichiers dont le FOCUS a été correctement traité : $nbFocusFini / $testNbFiles";
 print "Nombre de fichiers dont les RAPPELS ont été correctement traités : $nbRappelFini / $testNbFiles";
 print "\n====================TESTS====================\n\n";
+

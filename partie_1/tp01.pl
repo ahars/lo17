@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# UV : LO17 - TP01
+# UV : LO17 - partie 1
 # Préparation du Corpus
 # Auteurs : Dany Ferreira - Antoine Hars
 # Fichier : tp01.pl
@@ -27,3 +27,4 @@ print "\n5) Exécution de la mise en page en corpus (un corpus pour toutes les p
 $c = `./exercice4_8.pl`;
 
 print "\n====================ÉTAPES====================\n";
+
