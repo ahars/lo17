@@ -1,6 +1,7 @@
 a-t-il	vouloir
 adresses	auteur
 affiche 	vouloir
+afp	afp
 aimerais	vouloir
 articlent	article
 articles 	article
@@ -14,7 +15,6 @@ donne-moi	vouloir
 donnez	vouloir
 donnez-moi	vouloir
 écrit	auteur
-en	date
 évoque	parler
 on	parler
 ont	parler

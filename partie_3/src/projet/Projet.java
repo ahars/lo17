@@ -1,6 +1,7 @@
 package projet;
 
 import java.io.StringReader;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.StringTokenizer;
 
@@ -20,7 +21,7 @@ public class Projet {
 
 	public static void main(String[] args) {
 
-		String str, tr, result;
+		String str, tr, result, temp;
 		StringTokenizer st;
 		Set<String> resultP, resultL;
 
@@ -37,6 +38,12 @@ public class Projet {
 
 				System.out.println("question : " + str);
 				str = str.toLowerCase();
+				
+				// Suppression du ? ou du .
+				StringBuffer sb = new StringBuffer(str);
+				sb.setCharAt(str.length() - 1, ' ');
+				str = sb.toString();
+				
 				st = new StringTokenizer(str);
 				result = "";
 
@@ -51,8 +58,6 @@ public class Projet {
 					if ((tr.charAt(0) == 'l') && (tr.charAt(1) == '\'')) {
 						tr = tr.replaceAll("l'", "");
 					}
-					tr = tr.replace(".", "");
-					tr = tr.replace("?", "");
 
 					if (stop.getValue(tr) != null) {
 						result = result.concat(stop.getValue(tr) + " ");
@@ -69,10 +74,12 @@ public class Projet {
 									if (resultL.isEmpty()) {
 										result = result.concat(tr + " ");
 									} else {
-										result = result.concat(resultL.toString() + " ");
+										temp = resultL.iterator().next().toString();
+										result = result.concat(temp + " ");
 									}
 								} else {
-									result = result.concat(resultP.toString() + " ");
+									temp = resultP.iterator().next().toString();
+									result = result.concat(temp + " ");
 								}
 							}
 						}
