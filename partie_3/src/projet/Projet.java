@@ -31,6 +31,7 @@ public class Projet {
 
 //		Cat q = new Cat("corpusQuestionA09.txt");
 		Cat q = new Cat("questions.txt");
+//		q = new Cat("questions_traitees.txt");
 
 		while ((str = q.getChaine()) != null) {
 
@@ -58,6 +59,8 @@ public class Projet {
 					if ((tr.charAt(0) == 'l') && (tr.charAt(1) == '\'')) {
 						tr = tr.replaceAll("l'", "");
 					}
+					
+					tr = tr.replaceAll("\"", "");
 
 					if (stop.getValue(tr) != null) {
 						result = result.concat(stop.getValue(tr) + " ");

@@ -1,35 +1,4 @@
-Combien d'articlent traitent d'un référendum aux Pays-Bas.
-Combien d'articles évoque Berlusconi et le fascisme ?
-combien d'articles ont pour theme l'UE ?
-combien d'articles parlent sur Tony Blair ?
-Combien d'articles traitent à la fois de l'Irak et de Bush?
-Combien d'articles traitent d'accidents aériens ?
-Combien d'articles traitent d'accidents aériens ?
-Combien d'articles traitent de l'Irak?
-Combien d'articles traitent les fusillades aux états-unis?
-Combien de FOCUS parlent de Bush?
-Combien de Focus porte sur les USA  ?
-Combien de Focus porte sur l'Italie ?
-Je voudrais les articles qui parlent de Michael Jackson.
-Combien d'articles traitent du procés Jackson ?
-Combien d'articles de l'AFP traitent de Florence Aubenas?
-combien d'adresses différentes pour le domaine @tf1.fr dans le corpus ?
-Combien d'articles font référence à des attentats en Irak?
-Combien d'articles proviennent de l'AFP?
-Combien d'articles traitent du Royaume-Uni en 2005 ?
-Combien d'articles traitent de la politique étrangére des Etats-Unis en 2005 ?
-Combien d'articles porte sur les USA et sur l'Irak en même temps ?
-Quels sont les articles portant sur le thème de l'économie en juillet 2004 ?
-Comment puis-je contacter l'auteur Hervé Moustache ?
-Quelle année a le plus traité de politique ?
-Je veux savoir le nombre d'articles sur le pape écrits en 2004.
-Je veux tous les articles écrit par Jean-Michel-Michel.
-Je veux tous les auteurs ayant écrit des articles sur l'Irak.
-Quel est l'auteur qui a le plus publié ?
+Combien de pqges traitent du procs de Mickael Jackson pour le mois d'avril 2005 ?
+Combien de rappels y-a-t-il par page en moyenne ?
 
-Donnez-moi les résumés de tous les textes traitant du terrorisme.
-Je voudrais le dernier article traitant de la présidence française.
-Quels sont les articles écrits par l'auteur ayant l'adresse email jean-michel-michel@dikenek.be ?
-Je veux les unes de chaque début de mois.
-La santée est-elle un thème souvent abordé ?
-Dans quels articles est intervenu Nicolas Sarkozy sur le thème de la défense ?
+
