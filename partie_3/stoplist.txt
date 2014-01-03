@@ -1,6 +1,8 @@
+a	stop
 à	stop
 a-t-on	stop
 aux	stop
+ayant	stop
 corpus	stop
 dans	stop
 de	stop
@@ -8,12 +10,14 @@ des	stop
 différentes	stop
 dont	stop
 du	stop
+écrit	stop
 écrits	stop
 en	stop
 est	stop
 eu	stop
 fois	stop
 font	stop
+intervenu	stop
 je	stop
 la	stop
 le	stop
@@ -22,9 +26,12 @@ même	stop
 moi	stop
 pour	stop
 proviennent	stop
+puis-je	stop
 qui	stop
+savoir	stop
 sont	stop
 sur	stop
 temps	stop
+tous	stop
 un	stop
 y	stop

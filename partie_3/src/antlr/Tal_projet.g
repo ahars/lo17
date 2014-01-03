@@ -41,11 +41,14 @@ EMAIL : 'email';
 FOCUS : 'focus';
 GROSTITRES : 'gros titre';
 PAGE : 'page';
+PUBLIE : 'publie';
 RAPPELS : 'rappels';
+THEME : 'theme';
 UNE : 'une';
 VOIRAUSSI : 'voiraussi';
 
 AT : '@';
+PLUS : 'plus';
 NB : ('0'..'9')+;
 POINT : '.';
 VAR : ('A'..'Z' | 'a'..'z'|'\u00a0'..'\u00ff')(('a'..'z')|'-'|('\u00a0'..'\u00ff'))+;
@@ -61,7 +64,7 @@ listerequetes returns [String sql = ""]
 
 requete returns [Arbre req_arbre = new Arbre("")]
 	@init {
-		Arbre ps_arbre;
+		Arbre ps_arbre, d_arbre;
 	} :
 		(SELECT {
 			req_arbre.ajouteFils(new Arbre("", "select distinct "));
@@ -70,6 +73,23 @@ requete returns [Arbre req_arbre = new Arbre("")]
 			req_arbre.ajouteFils(new Arbre("", "article "));
 			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
 			req_arbre.ajouteFils(new Arbre("", "where mot = '"));
+		}
+		| ARTICLE AUTEUR {
+			req_arbre.ajouteFils(new Arbre("", "article "));
+			req_arbre.ajouteFils(new Arbre("", "from public.auteur "));
+			req_arbre.ajouteFils(new Arbre("", "where etiquette = '"));
+		}
+		| AUTEUR ARTICLE {
+			req_arbre.ajouteFils(new Arbre("", "etiquette "));
+			req_arbre.ajouteFils(new Arbre("", "from public.auteur, public.theme "));
+			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.theme.article AND mot = '"));
+		}
+		| ARTICLE a1 = VAR a2 = VAR  THEME {
+			req_arbre.ajouteFils(new Arbre("", "article "));
+			req_arbre.ajouteFils(new Arbre("", "from public.theme, public.titre "));
+			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.theme.article AND "));
+			req_arbre.ajouteFils(new Arbre("", "public.titre.mot = '" + a1.getText() + "' AND mot = '" + a2.getText() + "' "));
+			req_arbre.ajouteFils(new Arbre("", "AND public.theme.mot = '"));
 		}
 		| PAGE PARLER{
 			req_arbre.ajouteFils(new Arbre("", "page "));
@@ -100,6 +120,11 @@ requete returns [Arbre req_arbre = new Arbre("")]
 			req_arbre.ajouteFils(new Arbre("", "rubrique "));
 			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
 			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'grostitre' AND mot = '"));
+		}
+		| DATE PLUS PARLER {
+			req_arbre.ajouteFils(new Arbre("", "annee "));
+			req_arbre.ajouteFils(new Arbre("", "from public.datearticle, public.theme "));
+			req_arbre.ajouteFils(new Arbre("", "where public.datearticle.article = public.theme.article AND mot = '"));
 		})
 		| ( COMBIEN {
 			req_arbre.ajouteFils(new Arbre("", "select count("));
@@ -108,6 +133,11 @@ requete returns [Arbre req_arbre = new Arbre("")]
 			req_arbre.ajouteFils(new Arbre("", "article) "));
 			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
 			req_arbre.ajouteFils(new Arbre("", "where mot = '"));
+		}
+		| ARTICLE PARLER THEME {
+			req_arbre.ajouteFils(new Arbre("", "article) "));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.theme "));
+			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.theme.article AND mot = '"));
 		}
 		| PAGE PARLER{
 			req_arbre.ajouteFils(new Arbre("", "page) "));
@@ -159,19 +189,53 @@ requete returns [Arbre req_arbre = new Arbre("")]
 			req_arbre.ajouteFils(new Arbre("", "from public.auteur "));
 			req_arbre.ajouteFils(new Arbre("", "where etiquette = 'afp'"));
 		}
-		| COMBIEN ARTICLE PARLER ps = params d = NB{
+		| COMBIEN ARTICLE PARLER ps = params d = dat {
 			req_arbre.ajouteFils(new Arbre("", "select count("));
 			req_arbre.ajouteFils(new Arbre("", "article) "));
 			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.datearticle "));
 			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article AND mot = '"));
 			ps_arbre = $ps.les_pars_arbre;
 			req_arbre.ajouteFils(ps_arbre);
-			req_arbre.ajouteFils(new Arbre("", "AND annee = " + d.getText()));
+			req_arbre.ajouteFils(new Arbre("", "AND "));
+			d_arbre = $d.les_pars_arbre;
+			req_arbre.ajouteFils(d_arbre);
+		}
+		| SELECT EMAIL AUTEUR a1 = VAR a2 = VAR {
+			req_arbre.ajouteFils(new Arbre("", "select distinct email "));
+			req_arbre.ajouteFils(new Arbre("", "from public.auteur "));
+			req_arbre.ajouteFils(new Arbre("", "where etiquette = '" + a1.getText() + " " + a2.getText() + "'"));
+		}
+		| SELECT ARTICLE PARLER THEME ps = params d = dat {
+			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+			req_arbre.ajouteFils(new Arbre("", "article "));
+			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.theme "));
+			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.theme.article AND public.theme.mot = '"));
+			ps_arbre = $ps.les_pars_arbre;
+			req_arbre.ajouteFils(ps_arbre);
+			req_arbre.ajouteFils(new Arbre("", "AND "));
+			d_arbre = $d.les_pars_arbre;
+			req_arbre.ajouteFils(d_arbre);
+		}
+		| SELECT COMBIEN ARTICLE ps = params d = dat {
+			req_arbre.ajouteFils(new Arbre("", "select count("));
+			req_arbre.ajouteFils(new Arbre("", "article) "));
+			req_arbre.ajouteFils(new Arbre("", "from public.auteur, public.datearticle "));
+			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.datearticle.article AND mot = '"));
+			ps_arbre = $ps.les_pars_arbre;
+			req_arbre.ajouteFils(ps_arbre);
+			req_arbre.ajouteFils(new Arbre("", "AND "));
+			d_arbre = $d.les_pars_arbre;
+			req_arbre.ajouteFils(d_arbre);
+		}
+		| SELECT AUTEUR PLUS PUBLIE {
+			req_arbre.ajouteFils(new Arbre("", "select etiquette, count(article) "));
+			req_arbre.ajouteFils(new Arbre("", "from public.auteur "));
+			req_arbre.ajouteFils(new Arbre("", "group by etiquette desc"));
 		};
 
 params returns [Arbre les_pars_arbre = new Arbre("")]
 	@init {
-		Arbre par1_arbre, par2_arbre, conj_arbre;
+		Arbre par1_arbre, par2_arbre, conj_arbre, dat_arbre;
 	} :
 		par1 = param {
 			par1_arbre = $par1.lepar_arbre;
@@ -187,13 +251,13 @@ params returns [Arbre les_pars_arbre = new Arbre("")]
 
 param returns [Arbre lepar_arbre = new Arbre("")] :
 	a = VAR {
-		lepar_arbre.ajouteFils(new Arbre(a.getText() + "' "));
+		lepar_arbre.ajouteFils(new Arbre("", a.getText() + "' "));
 	}
 	| a1 = VAR a2 = VAR {
-		lepar_arbre.ajouteFils(new Arbre(a1.getText() + "' AND mot = '" + a2.getText() + "'"));
+		lepar_arbre.ajouteFils(new Arbre("", a1.getText() + "' AND mot = '" + a2.getText() + "'"));
 	}
 	| a1 = VAR a2 = VAR a3 = VAR {
-		lepar_arbre.ajouteFils(new Arbre(a1.getText() + "' AND mot = '" + a2.getText() + "' AND mot = '" + a3.getText() + "'"));
+		lepar_arbre.ajouteFils(new Arbre("", a1.getText() + "' AND mot = '" + a2.getText() + "' AND mot = '" + a3.getText() + "'"));
 	};
 
 conj returns [Arbre conj_arbre = new Arbre("")] :
@@ -202,4 +266,15 @@ conj returns [Arbre conj_arbre = new Arbre("")] :
 	}
 	| OU {
 		conj_arbre.ajouteFils(new Arbre("", "OR "));
+	};
+
+dat returns [Arbre les_pars_arbre = new Arbre("")] :
+	a = NB {
+		les_pars_arbre.ajouteFils(new Arbre("", "annee = '" + a.getText() + "'"));
+	}
+	| m = NB a = NB {
+		les_pars_arbre.ajouteFils(new Arbre("", "mois = '" + m.getText() + "' AND annee = '" + a.getText() + "'"));
+	}
+	| j = NB m = NB a = NB {
+		les_pars_arbre.ajouteFils(new Arbre("", "jour = '" + j.getText() + m.getText() + a.getText() + "'"));
 	};

@@ -74,10 +74,12 @@ public class Projet {
 									if (resultL.isEmpty()) {
 										result = result.concat(tr + " ");
 									} else {
+										// TODO : choix du mot
 										temp = resultL.iterator().next().toString();
 										result = result.concat(temp + " ");
 									}
 								} else {
+									// TODO : choix du mot
 									temp = resultP.iterator().next().toString();
 									result = result.concat(temp + " ");
 								}
