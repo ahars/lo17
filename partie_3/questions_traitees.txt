@@ -3,13 +3,11 @@ Articles écrits en septembre 2005 qui parlent du 11 septembre ?
 Articles écrits en septembre 2005 qui parlent du 11 septembre ?
 combien d'adresses différentes pour le domaine @tf1.fr dans le corpus ?
 Combien d'articlent traitent d'un référendum aux Pays-Bas.
-Combien d'articles de l'AFP traitent de Florence Aubenas?
 Combien d'articles évoque Berlusconi et le fascisme ?
 Combien d'articles font référence à des attentats en Irak?
 combien d'articles ont pour theme l'UE ?
 combien d'articles parlent sur Tony Blair ?
 Combien d'articles porte sur les USA et sur l'Irak en même temps ?
-Combien d'articles proviennent de l'AFP?
 Combien d'articles traitent à la fois de l'Irak et de Bush?
 Combien d'articles traitent d'accidents aériens ?
 Combien d'articles traitent d'accidents aériens ?
@@ -42,3 +40,53 @@ Combien de Une parle du Pape ?
 Combien de UNE concernent l'Irak?
 Combien de rappels traitent de Silvio Berlusconi?
 Combien de Une parue entre le 25 Janvier et le 17 Avril 2006 traite des sujets concernant l'Afrique ?
+Comment puis-je contacter l'auteur Hervé Moustache ?
+Dans combien d'article parle-t-on du Pape ?
+Combien de UNE concernent l'Irak?
+Combien de Une parle du Pape ?
+Combien de Une parue entre le 25 Janvier et le 17 Avril 2006 traite des sujets concernant l'Afrique ?
+Combien il y t-il d'articles traitants du Pape?
+combien y a-t-il d'article écrit par David STRAUS ?
+Combien y a-t-il d'articles sur le théme des Etats-Unis traitant de Bush ?
+Combien y a-t-il d'articles sur le théme des Etats-Unis traitant de Bush ?
+combien y a-t-il de thèmes différents ?
+Dans quels articles est intervenu Nicolas Sarkozy sur le thème de la défense ?
+Dans quels articles parlent-t-on de Nicolas Sarkozy ?
+Combien de pqges traitent du procs de Mickael Jackson pour le mois d'avril 2005 ?
+Dans quelles pages trouvent-on des articles écrits par un auteur dont l'adresse mail est agautier@tf1.fr ?
+Donnez-moi les gros titres qui parlent du cyclone Katrina.
+Donnez-moi les gros titres qui parlent du cyclone Katrina.
+Donnez-moi les résumés de tous les textes traitant du terrorisme.
+Donne moi tous les articles traitant de la menace terroriste Al-Qaïda
+Donnez les dates de parution des articles parus dans la rubrique " Le focus " dont le mail de l'auteur est dstraus@tf1.fr ?
+Donne moi tous les article concernant le procès de Mickael Jackson
+Donne moi tous les articles sur le théme de la guerre paru entre le 23 avril 2005 et le 1er Juillet 2005
+Donne moi les titres et les dates des articles traitant de George W. Bush.
+Donne moi les articles en rapport avec la politique de l'Italie.
+Donne moi l'ensemble des articles qui traitent à la fois d'économie, de politique et du président des USA.
+Donne moi l'ensemble des titres concernant la politique.
+Donne moi la liste des dates des articles traitant du Pape.
+Donne-moi la liste des gros titres parus entre le 10 septembre 2001 et le 12 septembre 2001.
+Je souhaiterais savoir s'il y a des articles qui traitent de "l'élection de Jean Sarkozy"
+Je souhaiterais les articles écrit par dstraus@tf1.fr et étant contenus dans la Une.
+J'aimerais le nombre de une sur Chirac par année.
+J'aimerais connaitre les dates des articles de l'auteur AFP.
+Combien d'articles proviennent de l'AFP?
+Combien d'articles de l'AFP traitent de Florence Aubenas?
+Entre le 12 Septembre et le 17 Octobre 2005, dans la rubrique " Le focus ", combien d'articles ont été écrit par Guillaume DEBRE et parlent du pape ?
+Je veux tous les articles écrit par Jean-Michel-Michel.
+Je veux tous les auteurs ayant écrit des articles sur l'Irak.
+Je veux savoir le nombre d'articles sur le pape écrits en 2004.
+Je veux tous les articles concernant la politique de Bush pour l'année 2005
+Donne moi les articles de 2005 dont l'auteur a pour adresse e-mail fauvert@tf1.fr
+Je veux les gros titres et les rappels traitant de Guantanamo ou de l'Irak ou de Bush.
+Je veux les auteurs et leur adresse e-mail des articules d'aujourd'hui.
+Je veux les articles possédant le terme juge.
+Je veux les articles sur l'Allemagne écrits par Franck Lefebvre.
+Je veux les articles sur l'Allemagne écrits par Franck Lefebvre.
+Je veux les articles traitant de l'Irak ou de l'Afghanistan
+Je veux les auteurs des articles parlant du G8 ?
+Je souhaiterais les articles écrit par dstraus@tf1.fr et étant contenus dans la Une.
+Je souhaiterais savoir s'il y a des articles qui traitent de "l'élection de Jean Sarkozy"
+je veux la liste des articles qui parlent de bush et usa et de la Franceet de Washington
+je veux la liste des articles qui parlent de bush et usa ou de la France

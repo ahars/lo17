@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g 2014-01-04 00:43:48
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g 2014-01-05 18:56:22
 
 package antlr.output;
 
@@ -15,37 +15,34 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Tal_projetLexer extends Lexer {
-    public static final int FOCUS=15;
-    public static final int UNE=23;
-    public static final int VOIRAUSSI=24;
-    public static final int POINT=32;
-    public static final int THEME=22;
+    public static final int POINT=29;
+    public static final int THEME=18;
     public static final int COMBIEN=5;
-    public static final int SOURCE=9;
     public static final int EOF=-1;
-    public static final int EMAIL=14;
-    public static final int MOT=28;
-    public static final int RAPPELS=20;
-    public static final int JOURS=17;
-    public static final int AUTEUR=12;
-    public static final int AT=25;
-    public static final int RESUME=21;
-    public static final int WS=10;
-    public static final int PAGE=18;
+    public static final int EMAIL=13;
+    public static final int MOT=25;
+    public static final int JOURS=14;
+    public static final int AUTEUR=11;
+    public static final int AT=22;
+    public static final int AUJOURDHUI=21;
+    public static final int RESUME=17;
+    public static final int WS=9;
+    public static final int PAGE=15;
+    public static final int RUBRIQUE=20;
     public static final int PARLER=8;
     public static final int OU=7;
-    public static final int MOIS=27;
-    public static final int PLUS=30;
+    public static final int MOIS=24;
+    public static final int PLUS=27;
     public static final int ET=6;
-    public static final int VAR=33;
-    public static final int PUBLIE=19;
-    public static final int DATE=13;
+    public static final int VAR=30;
+    public static final int PUBLIE=16;
+    public static final int DATE=12;
+    public static final int TITRE=19;
     public static final int SELECT=4;
-    public static final int NB=29;
-    public static final int ARTICLE=11;
-    public static final int GROSTITRES=16;
-    public static final int ENTRE=26;
-    public static final int PREMIER=31;
+    public static final int NB=26;
+    public static final int ARTICLE=10;
+    public static final int ENTRE=23;
+    public static final int PREMIER=28;
 
     // delegates
     // delegators
@@ -165,33 +162,12 @@ public class Tal_projetLexer extends Lexer {
     }
     // $ANTLR end "PARLER"
 
-    // $ANTLR start "SOURCE"
-    public final void mSOURCE() throws RecognitionException {
-        try {
-            int _type = SOURCE;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:34:8: ( 'afp' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:34:10: 'afp'
-            {
-            match("afp"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "SOURCE"
-
     // $ANTLR start "WS"
     public final void mWS() throws RecognitionException {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:35:4: ( ( ' ' | '\\t' | '\\r' | 'stop' ) | '\\n' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:34:4: ( ( ' ' | '\\t' | '\\r' | 'stop' ) | '\\n' )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -209,9 +185,9 @@ public class Tal_projetLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:35:6: ( ' ' | '\\t' | '\\r' | 'stop' )
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:34:6: ( ' ' | '\\t' | '\\r' | 'stop' )
                     {
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:35:6: ( ' ' | '\\t' | '\\r' | 'stop' )
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:34:6: ( ' ' | '\\t' | '\\r' | 'stop' )
                     int alt1=4;
                     switch ( input.LA(1) ) {
                     case ' ':
@@ -243,28 +219,28 @@ public class Tal_projetLexer extends Lexer {
 
                     switch (alt1) {
                         case 1 :
-                            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:35:7: ' '
+                            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:34:7: ' '
                             {
                             match(' '); 
 
                             }
                             break;
                         case 2 :
-                            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:35:12: '\\t'
+                            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:34:13: '\\t'
                             {
                             match('\t'); 
 
                             }
                             break;
                         case 3 :
-                            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:35:19: '\\r'
+                            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:34:20: '\\r'
                             {
                             match('\r'); 
 
                             }
                             break;
                         case 4 :
-                            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:35:26: 'stop'
+                            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:34:27: 'stop'
                             {
                             match("stop"); 
 
@@ -279,7 +255,7 @@ public class Tal_projetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:35:48: '\\n'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:34:49: '\\n'
                     {
                     match('\n'); 
 
@@ -300,8 +276,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = ARTICLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:37:9: ( 'article' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:37:11: 'article'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:36:9: ( 'article' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:36:11: 'article'
             {
             match("article"); 
 
@@ -321,8 +297,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = AUTEUR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:38:8: ( 'auteur' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:38:10: 'auteur'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:37:8: ( 'auteur' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:37:10: 'auteur'
             {
             match("auteur"); 
 
@@ -342,8 +318,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = DATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:39:6: ( 'date' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:39:8: 'date'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:38:6: ( 'date' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:38:8: 'date'
             {
             match("date"); 
 
@@ -363,8 +339,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = EMAIL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:40:7: ( 'email' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:40:9: 'email'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:39:7: ( 'email' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:39:9: 'email'
             {
             match("email"); 
 
@@ -379,55 +355,13 @@ public class Tal_projetLexer extends Lexer {
     }
     // $ANTLR end "EMAIL"
 
-    // $ANTLR start "FOCUS"
-    public final void mFOCUS() throws RecognitionException {
-        try {
-            int _type = FOCUS;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:41:7: ( 'focus' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:41:9: 'focus'
-            {
-            match("focus"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "FOCUS"
-
-    // $ANTLR start "GROSTITRES"
-    public final void mGROSTITRES() throws RecognitionException {
-        try {
-            int _type = GROSTITRES;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:42:12: ( 'gros titre' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:42:14: 'gros titre'
-            {
-            match("gros titre"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "GROSTITRES"
-
     // $ANTLR start "JOURS"
     public final void mJOURS() throws RecognitionException {
         try {
             int _type = JOURS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:43:7: ( 'jours' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:43:9: 'jours'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:40:7: ( 'jours' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:40:9: 'jours'
             {
             match("jours"); 
 
@@ -447,8 +381,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = PAGE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:44:6: ( 'page' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:44:8: 'page'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:41:6: ( 'page' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:41:8: 'page'
             {
             match("page"); 
 
@@ -468,8 +402,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = PUBLIE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:45:8: ( 'publie' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:45:10: 'publie'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:42:8: ( 'publie' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:42:10: 'publie'
             {
             match("publie"); 
 
@@ -484,34 +418,13 @@ public class Tal_projetLexer extends Lexer {
     }
     // $ANTLR end "PUBLIE"
 
-    // $ANTLR start "RAPPELS"
-    public final void mRAPPELS() throws RecognitionException {
-        try {
-            int _type = RAPPELS;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:9: ( 'rappels' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:11: 'rappels'
-            {
-            match("rappels"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RAPPELS"
-
     // $ANTLR start "RESUME"
     public final void mRESUME() throws RecognitionException {
         try {
             int _type = RESUME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:47:8: ( 'resume' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:47:10: 'resume'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:43:8: ( 'resume' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:43:10: 'resume'
             {
             match("resume"); 
 
@@ -531,8 +444,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = THEME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:48:7: ( 'theme' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:48:9: 'theme'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:44:7: ( 'theme' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:44:9: 'theme'
             {
             match("theme"); 
 
@@ -547,15 +460,15 @@ public class Tal_projetLexer extends Lexer {
     }
     // $ANTLR end "THEME"
 
-    // $ANTLR start "UNE"
-    public final void mUNE() throws RecognitionException {
+    // $ANTLR start "TITRE"
+    public final void mTITRE() throws RecognitionException {
         try {
-            int _type = UNE;
+            int _type = TITRE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:49:5: ( 'une' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:49:7: 'une'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:45:7: ( 'titre' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:45:9: 'titre'
             {
-            match("une"); 
+            match("titre"); 
 
 
             }
@@ -566,17 +479,108 @@ public class Tal_projetLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "UNE"
+    // $ANTLR end "TITRE"
 
-    // $ANTLR start "VOIRAUSSI"
-    public final void mVOIRAUSSI() throws RecognitionException {
+    // $ANTLR start "RUBRIQUE"
+    public final void mRUBRIQUE() throws RecognitionException {
         try {
-            int _type = VOIRAUSSI;
+            int _type = RUBRIQUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:50:11: ( 'voiraussi' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:50:13: 'voiraussi'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:10: ( 'une' | 'gros titre' | 'focus' | 'rappels' | 'voiraussi' )
+            int alt3=5;
+            switch ( input.LA(1) ) {
+            case 'u':
+                {
+                alt3=1;
+                }
+                break;
+            case 'g':
+                {
+                alt3=2;
+                }
+                break;
+            case 'f':
+                {
+                alt3=3;
+                }
+                break;
+            case 'r':
+                {
+                alt3=4;
+                }
+                break;
+            case 'v':
+                {
+                alt3=5;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 3, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt3) {
+                case 1 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:12: 'une'
+                    {
+                    match("une"); 
+
+
+                    }
+                    break;
+                case 2 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:20: 'gros titre'
+                    {
+                    match("gros titre"); 
+
+
+                    }
+                    break;
+                case 3 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:35: 'focus'
+                    {
+                    match("focus"); 
+
+
+                    }
+                    break;
+                case 4 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:45: 'rappels'
+                    {
+                    match("rappels"); 
+
+
+                    }
+                    break;
+                case 5 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:46:57: 'voiraussi'
+                    {
+                    match("voiraussi"); 
+
+
+                    }
+                    break;
+
+            }
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RUBRIQUE"
+
+    // $ANTLR start "AUJOURDHUI"
+    public final void mAUJOURDHUI() throws RecognitionException {
+        try {
+            int _type = AUJOURDHUI;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:48:12: ( 'aujourd' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:48:14: 'aujourd'
             {
-            match("voiraussi"); 
+            match("aujourd"); 
 
 
             }
@@ -587,15 +591,15 @@ public class Tal_projetLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "VOIRAUSSI"
+    // $ANTLR end "AUJOURDHUI"
 
     // $ANTLR start "AT"
     public final void mAT() throws RecognitionException {
         try {
             int _type = AT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:52:4: ( '@' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:52:6: '@'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:49:4: ( '@' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:49:6: '@'
             {
             match('@'); 
 
@@ -614,8 +618,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = ENTRE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:53:7: ( 'entre' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:53:9: 'entre'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:50:7: ( 'entre' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:50:9: 'entre'
             {
             match("entre"); 
 
@@ -635,12 +639,12 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = MOIS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:6: ( 'janvier' | 'février' | 'mars' | 'avril' | 'mai' | 'juin' | 'juillet' | 'août' | 'sept' | 'octobre' | 'novembre' | 'décembre' )
-            int alt3=12;
-            alt3 = dfa3.predict(input);
-            switch (alt3) {
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:6: ( 'janvier' | 'février' | 'mars' | 'avril' | 'mai' | 'juin' | 'juillet' | 'août' | 'sept' | 'octobre' | 'novembre' | 'décembre' )
+            int alt4=12;
+            alt4 = dfa4.predict(input);
+            switch (alt4) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:8: 'janvier'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:8: 'janvier'
                     {
                     match("janvier"); 
 
@@ -648,7 +652,7 @@ public class Tal_projetLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:20: 'février'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:20: 'février'
                     {
                     match("février"); 
 
@@ -656,7 +660,7 @@ public class Tal_projetLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:32: 'mars'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:32: 'mars'
                     {
                     match("mars"); 
 
@@ -664,7 +668,7 @@ public class Tal_projetLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:41: 'avril'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:41: 'avril'
                     {
                     match("avril"); 
 
@@ -672,7 +676,7 @@ public class Tal_projetLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:51: 'mai'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:51: 'mai'
                     {
                     match("mai"); 
 
@@ -680,7 +684,7 @@ public class Tal_projetLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:59: 'juin'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:59: 'juin'
                     {
                     match("juin"); 
 
@@ -688,7 +692,7 @@ public class Tal_projetLexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:68: 'juillet'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:68: 'juillet'
                     {
                     match("juillet"); 
 
@@ -696,7 +700,7 @@ public class Tal_projetLexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:80: 'août'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:80: 'août'
                     {
                     match("août"); 
 
@@ -704,7 +708,7 @@ public class Tal_projetLexer extends Lexer {
                     }
                     break;
                 case 9 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:89: 'sept'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:89: 'sept'
                     {
                     match("sept"); 
 
@@ -712,7 +716,7 @@ public class Tal_projetLexer extends Lexer {
                     }
                     break;
                 case 10 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:98: 'octobre'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:98: 'octobre'
                     {
                     match("octobre"); 
 
@@ -720,7 +724,7 @@ public class Tal_projetLexer extends Lexer {
                     }
                     break;
                 case 11 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:110: 'novembre'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:110: 'novembre'
                     {
                     match("novembre"); 
 
@@ -728,7 +732,7 @@ public class Tal_projetLexer extends Lexer {
                     }
                     break;
                 case 12 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:123: 'décembre'
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:51:123: 'décembre'
                     {
                     match("décembre"); 
 
@@ -750,8 +754,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = MOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:55:5: ( 'mot' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:55:7: 'mot'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:52:5: ( 'mot' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:52:7: 'mot'
             {
             match("mot"); 
 
@@ -771,24 +775,24 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = NB;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:56:4: ( ( '0' .. '9' )+ )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:56:6: ( '0' .. '9' )+
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:53:4: ( ( '0' .. '9' )+ )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:53:6: ( '0' .. '9' )+
             {
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:56:6: ( '0' .. '9' )+
-            int cnt4=0;
-            loop4:
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:53:6: ( '0' .. '9' )+
+            int cnt5=0;
+            loop5:
             do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( ((LA4_0>='0' && LA4_0<='9')) ) {
-                    alt4=1;
+                if ( ((LA5_0>='0' && LA5_0<='9')) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt4) {
+                switch (alt5) {
             	case 1 :
-            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:56:7: '0' .. '9'
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:53:7: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -796,12 +800,12 @@ public class Tal_projetLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt4 >= 1 ) break loop4;
+            	    if ( cnt5 >= 1 ) break loop5;
                         EarlyExitException eee =
-                            new EarlyExitException(4, input);
+                            new EarlyExitException(5, input);
                         throw eee;
                 }
-                cnt4++;
+                cnt5++;
             } while (true);
 
 
@@ -820,8 +824,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:57:6: ( 'plus' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:57:8: 'plus'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:6: ( 'plus' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:54:8: 'plus'
             {
             match("plus"); 
 
@@ -841,8 +845,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = PREMIER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:9: ( 'premier' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:11: 'premier'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:55:9: ( 'premier' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:55:11: 'premier'
             {
             match("premier"); 
 
@@ -862,8 +866,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = POINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:60:7: ( '.' )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:60:9: '.'
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:57:7: ( '.' )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:57:9: '.'
             {
             match('.'); 
 
@@ -882,8 +886,8 @@ public class Tal_projetLexer extends Lexer {
         try {
             int _type = VAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:61:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:61:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z')||(input.LA(1)>='\u00A0' && input.LA(1)<='\u00FF') ) {
                 input.consume();
@@ -894,11 +898,11 @@ public class Tal_projetLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:61:47: ( ( 'a' .. 'z' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
-            int cnt5=0;
-            loop5:
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:49: ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
+            int cnt6=0;
+            loop6:
             do {
-                int alt5=4;
+                int alt6=5;
                 switch ( input.LA(1) ) {
                 case 'a':
                 case 'b':
@@ -927,12 +931,26 @@ public class Tal_projetLexer extends Lexer {
                 case 'y':
                 case 'z':
                     {
-                    alt5=1;
+                    alt6=1;
+                    }
+                    break;
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    {
+                    alt6=2;
                     }
                     break;
                 case '-':
                     {
-                    alt5=2;
+                    alt6=3;
                     }
                     break;
                 case '\u00A0':
@@ -1032,18 +1050,18 @@ public class Tal_projetLexer extends Lexer {
                 case '\u00FE':
                 case '\u00FF':
                     {
-                    alt5=3;
+                    alt6=4;
                     }
                     break;
 
                 }
 
-                switch (alt5) {
+                switch (alt6) {
             	case 1 :
-            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:61:48: ( 'a' .. 'z' )
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:50: ( 'a' .. 'z' )
             	    {
-            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:61:48: ( 'a' .. 'z' )
-            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:61:49: 'a' .. 'z'
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:50: ( 'a' .. 'z' )
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:51: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); 
 
@@ -1053,17 +1071,30 @@ public class Tal_projetLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:61:59: '-'
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:63: ( '0' .. '9' )
+            	    {
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:63: ( '0' .. '9' )
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:64: '0' .. '9'
+            	    {
+            	    matchRange('0','9'); 
+
+            	    }
+
+
+            	    }
+            	    break;
+            	case 3 :
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:76: '-'
             	    {
             	    match('-'); 
 
             	    }
             	    break;
-            	case 3 :
-            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:61:63: ( '\\u00a0' .. '\\u00ff' )
+            	case 4 :
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:82: ( '\\u00a0' .. '\\u00ff' )
             	    {
-            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:61:63: ( '\\u00a0' .. '\\u00ff' )
-            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:61:64: '\\u00a0' .. '\\u00ff'
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:82: ( '\\u00a0' .. '\\u00ff' )
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:58:83: '\\u00a0' .. '\\u00ff'
             	    {
             	    matchRange('\u00A0','\u00FF'); 
 
@@ -1074,12 +1105,12 @@ public class Tal_projetLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt5 >= 1 ) break loop5;
+            	    if ( cnt6 >= 1 ) break loop6;
                         EarlyExitException eee =
-                            new EarlyExitException(5, input);
+                            new EarlyExitException(6, input);
                         throw eee;
                 }
-                cnt5++;
+                cnt6++;
             } while (true);
 
 
@@ -1094,10 +1125,10 @@ public class Tal_projetLexer extends Lexer {
     // $ANTLR end "VAR"
 
     public void mTokens() throws RecognitionException {
-        // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:8: ( SELECT | COMBIEN | ET | OU | PARLER | SOURCE | WS | ARTICLE | AUTEUR | DATE | EMAIL | FOCUS | GROSTITRES | JOURS | PAGE | PUBLIE | RAPPELS | RESUME | THEME | UNE | VOIRAUSSI | AT | ENTRE | MOIS | MOT | NB | PLUS | PREMIER | POINT | VAR )
-        int alt6=30;
-        alt6 = dfa6.predict(input);
-        switch (alt6) {
+        // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:8: ( SELECT | COMBIEN | ET | OU | PARLER | WS | ARTICLE | AUTEUR | DATE | EMAIL | JOURS | PAGE | PUBLIE | RESUME | THEME | TITRE | RUBRIQUE | AUJOURDHUI | AT | ENTRE | MOIS | MOT | NB | PLUS | PREMIER | POINT | VAR )
+        int alt7=27;
+        alt7 = dfa7.predict(input);
+        switch (alt7) {
             case 1 :
                 // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:10: SELECT
                 {
@@ -1134,175 +1165,154 @@ public class Tal_projetLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:38: SOURCE
-                {
-                mSOURCE(); 
-
-                }
-                break;
-            case 7 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:45: WS
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:38: WS
                 {
                 mWS(); 
 
                 }
                 break;
-            case 8 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:48: ARTICLE
+            case 7 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:41: ARTICLE
                 {
                 mARTICLE(); 
 
                 }
                 break;
-            case 9 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:56: AUTEUR
+            case 8 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:49: AUTEUR
                 {
                 mAUTEUR(); 
 
                 }
                 break;
-            case 10 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:63: DATE
+            case 9 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:56: DATE
                 {
                 mDATE(); 
 
                 }
                 break;
-            case 11 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:68: EMAIL
+            case 10 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:61: EMAIL
                 {
                 mEMAIL(); 
 
                 }
                 break;
-            case 12 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:74: FOCUS
-                {
-                mFOCUS(); 
-
-                }
-                break;
-            case 13 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:80: GROSTITRES
-                {
-                mGROSTITRES(); 
-
-                }
-                break;
-            case 14 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:91: JOURS
+            case 11 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:67: JOURS
                 {
                 mJOURS(); 
 
                 }
                 break;
-            case 15 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:97: PAGE
+            case 12 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:73: PAGE
                 {
                 mPAGE(); 
 
                 }
                 break;
-            case 16 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:102: PUBLIE
+            case 13 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:78: PUBLIE
                 {
                 mPUBLIE(); 
 
                 }
                 break;
-            case 17 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:109: RAPPELS
-                {
-                mRAPPELS(); 
-
-                }
-                break;
-            case 18 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:117: RESUME
+            case 14 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:85: RESUME
                 {
                 mRESUME(); 
 
                 }
                 break;
-            case 19 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:124: THEME
+            case 15 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:92: THEME
                 {
                 mTHEME(); 
 
                 }
                 break;
-            case 20 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:130: UNE
+            case 16 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:98: TITRE
                 {
-                mUNE(); 
+                mTITRE(); 
 
                 }
                 break;
-            case 21 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:134: VOIRAUSSI
+            case 17 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:104: RUBRIQUE
                 {
-                mVOIRAUSSI(); 
+                mRUBRIQUE(); 
 
                 }
                 break;
-            case 22 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:144: AT
+            case 18 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:113: AUJOURDHUI
+                {
+                mAUJOURDHUI(); 
+
+                }
+                break;
+            case 19 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:124: AT
                 {
                 mAT(); 
 
                 }
                 break;
-            case 23 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:147: ENTRE
+            case 20 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:127: ENTRE
                 {
                 mENTRE(); 
 
                 }
                 break;
-            case 24 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:153: MOIS
+            case 21 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:133: MOIS
                 {
                 mMOIS(); 
 
                 }
                 break;
-            case 25 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:158: MOT
+            case 22 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:138: MOT
                 {
                 mMOT(); 
 
                 }
                 break;
-            case 26 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:162: NB
+            case 23 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:142: NB
                 {
                 mNB(); 
 
                 }
                 break;
-            case 27 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:165: PLUS
+            case 24 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:145: PLUS
                 {
                 mPLUS(); 
 
                 }
                 break;
-            case 28 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:170: PREMIER
+            case 25 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:150: PREMIER
                 {
                 mPREMIER(); 
 
                 }
                 break;
-            case 29 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:178: POINT
+            case 26 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:158: POINT
                 {
                 mPOINT(); 
 
                 }
                 break;
-            case 30 :
-                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:184: VAR
+            case 27 :
+                // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:1:164: VAR
                 {
                 mVAR(); 
 
@@ -1314,23 +1324,23 @@ public class Tal_projetLexer extends Lexer {
     }
 
 
-    protected DFA3 dfa3 = new DFA3(this);
-    protected DFA6 dfa6 = new DFA6(this);
-    static final String DFA3_eotS =
+    protected DFA4 dfa4 = new DFA4(this);
+    protected DFA7 dfa7 = new DFA7(this);
+    static final String DFA4_eotS =
         "\23\uffff";
-    static final String DFA3_eofS =
+    static final String DFA4_eofS =
         "\23\uffff";
-    static final String DFA3_minS =
+    static final String DFA4_minS =
         "\2\141\1\uffff\1\141\1\157\5\uffff\2\151\2\uffff\1\154\4\uffff";
-    static final String DFA3_maxS =
+    static final String DFA4_maxS =
         "\1\163\1\165\1\uffff\1\141\1\166\5\uffff\1\151\1\162\2\uffff\1\156"+
         "\4\uffff";
-    static final String DFA3_acceptS =
+    static final String DFA4_acceptS =
         "\2\uffff\1\2\2\uffff\1\11\1\12\1\13\1\14\1\1\2\uffff\1\4\1\10\1"+
         "\uffff\1\3\1\5\1\6\1\7";
-    static final String DFA3_specialS =
+    static final String DFA4_specialS =
         "\23\uffff}>";
-    static final String[] DFA3_transitionS = {
+    static final String[] DFA4_transitionS = {
             "\1\4\2\uffff\1\10\1\uffff\1\2\3\uffff\1\1\2\uffff\1\3\1\7\1"+
             "\6\3\uffff\1\5",
             "\1\11\23\uffff\1\12",
@@ -1353,131 +1363,141 @@ public class Tal_projetLexer extends Lexer {
             ""
     };
 
-    static final short[] DFA3_eot = DFA.unpackEncodedString(DFA3_eotS);
-    static final short[] DFA3_eof = DFA.unpackEncodedString(DFA3_eofS);
-    static final char[] DFA3_min = DFA.unpackEncodedStringToUnsignedChars(DFA3_minS);
-    static final char[] DFA3_max = DFA.unpackEncodedStringToUnsignedChars(DFA3_maxS);
-    static final short[] DFA3_accept = DFA.unpackEncodedString(DFA3_acceptS);
-    static final short[] DFA3_special = DFA.unpackEncodedString(DFA3_specialS);
-    static final short[][] DFA3_transition;
+    static final short[] DFA4_eot = DFA.unpackEncodedString(DFA4_eotS);
+    static final short[] DFA4_eof = DFA.unpackEncodedString(DFA4_eofS);
+    static final char[] DFA4_min = DFA.unpackEncodedStringToUnsignedChars(DFA4_minS);
+    static final char[] DFA4_max = DFA.unpackEncodedStringToUnsignedChars(DFA4_maxS);
+    static final short[] DFA4_accept = DFA.unpackEncodedString(DFA4_acceptS);
+    static final short[] DFA4_special = DFA.unpackEncodedString(DFA4_specialS);
+    static final short[][] DFA4_transition;
 
     static {
-        int numStates = DFA3_transitionS.length;
-        DFA3_transition = new short[numStates][];
+        int numStates = DFA4_transitionS.length;
+        DFA4_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA3_transition[i] = DFA.unpackEncodedString(DFA3_transitionS[i]);
+            DFA4_transition[i] = DFA.unpackEncodedString(DFA4_transitionS[i]);
         }
     }
 
-    class DFA3 extends DFA {
+    class DFA4 extends DFA {
 
-        public DFA3(BaseRecognizer recognizer) {
+        public DFA4(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 3;
-            this.eot = DFA3_eot;
-            this.eof = DFA3_eof;
-            this.min = DFA3_min;
-            this.max = DFA3_max;
-            this.accept = DFA3_accept;
-            this.special = DFA3_special;
-            this.transition = DFA3_transition;
+            this.decisionNumber = 4;
+            this.eot = DFA4_eot;
+            this.eof = DFA4_eof;
+            this.min = DFA4_min;
+            this.max = DFA4_max;
+            this.accept = DFA4_accept;
+            this.special = DFA4_special;
+            this.transition = DFA4_transition;
         }
         public String getDescription() {
-            return "54:1: MOIS : ( 'janvier' | 'février' | 'mars' | 'avril' | 'mai' | 'juin' | 'juillet' | 'août' | 'sept' | 'octobre' | 'novembre' | 'décembre' );";
+            return "51:1: MOIS : ( 'janvier' | 'février' | 'mars' | 'avril' | 'mai' | 'juin' | 'juillet' | 'août' | 'sept' | 'octobre' | 'novembre' | 'décembre' );";
         }
     }
-    static final String DFA6_eotS =
-        "\26\uffff\2\25\1\72\2\25\1\75\36\25\1\uffff\2\25\1\uffff\6\25\1"+
-        "\146\21\25\1\171\1\25\1\173\1\174\10\25\1\u0085\1\25\1\u0087\1\25"+
-        "\1\uffff\3\25\1\173\1\7\1\173\1\u008c\6\25\1\173\4\25\1\uffff\1"+
-        "\173\2\uffff\4\25\1\u009b\1\u009c\2\25\1\uffff\1\25\1\uffff\3\25"+
-        "\1\173\1\uffff\1\25\1\u00a4\1\25\1\uffff\1\u00a6\4\25\1\u00ab\4"+
-        "\25\2\uffff\1\25\1\u00b1\1\u00b2\2\25\1\u00b5\1\25\1\uffff\1\25"+
-        "\1\uffff\3\25\1\u00bb\1\uffff\1\25\1\u00bd\1\25\1\u00bf\1\173\2"+
-        "\uffff\1\u00c0\1\u00c1\1\uffff\1\25\3\173\1\u00c3\1\uffff\1\25\1"+
-        "\uffff\1\25\3\uffff\1\173\1\uffff\1\173\1\u00c6\1\uffff";
-    static final String DFA6_eofS =
-        "\u00c7\uffff";
-    static final String DFA6_minS =
-        "\1\11\6\55\1\uffff\10\55\1\uffff\2\55\3\uffff\1\151\1\155\1\55\1"+
-        "\141\1\164\1\55\1\164\1\147\1\142\1\165\1\145\1\160\2\164\1\162"+
-        "\1\u00fb\1\157\1\160\1\164\2\143\1\166\1\157\1\165\1\156\1\151\1"+
-        "\160\1\163\2\145\1\151\1\164\1\166\1\154\1\162\1\142\1\uffff\1\151"+
-        "\1\162\1\uffff\1\157\1\154\1\145\1\154\1\163\1\155\1\55\1\151\1"+
-        "\145\1\151\1\164\1\160\1\164\2\145\1\165\1\162\1\163\1\162\1\166"+
-        "\1\154\1\160\1\165\1\155\1\55\1\163\2\55\1\145\1\157\1\141\1\151"+
-        "\1\154\1\145\1\142\1\145\1\55\1\151\1\55\1\151\1\uffff\1\143\1\165"+
-        "\1\154\4\55\1\155\1\163\1\151\1\40\1\163\1\151\1\55\1\154\1\145"+
-        "\1\155\1\145\1\uffff\1\55\2\uffff\1\155\1\151\1\165\1\145\2\55\2"+
-        "\162\1\uffff\1\145\1\uffff\1\145\1\154\1\162\1\55\1\uffff\1\142"+
-        "\1\55\1\145\1\uffff\1\55\2\145\1\154\1\145\1\55\1\142\1\162\1\163"+
-        "\1\156\2\uffff\1\145\2\55\1\162\1\145\1\55\1\162\1\uffff\1\162\1"+
-        "\uffff\1\162\1\164\1\163\1\55\1\uffff\1\162\1\55\1\163\2\55\2\uffff"+
-        "\2\55\1\uffff\1\145\4\55\1\uffff\1\145\1\uffff\1\151\3\uffff\1\55"+
-        "\1\uffff\2\55\1\uffff";
-    static final String DFA6_maxS =
-        "\7\u00ff\1\uffff\10\u00ff\1\uffff\2\u00ff\3\uffff\1\165\1\155\1"+
-        "\u00ff\1\141\1\164\1\u00ff\1\164\1\162\1\142\1\165\1\145\1\160\2"+
-        "\164\1\162\1\u00fb\1\157\1\160\1\164\2\143\1\166\1\157\1\165\1\156"+
-        "\1\151\1\160\1\163\2\145\1\162\1\164\1\166\1\154\1\162\1\142\1\uffff"+
-        "\1\151\1\162\1\uffff\1\157\1\154\1\145\1\154\1\163\1\155\1\u00ff"+
-        "\1\151\1\145\1\151\1\164\1\160\1\164\2\145\1\165\1\162\1\163\1\162"+
-        "\1\166\1\156\1\160\1\165\1\155\1\u00ff\1\163\2\u00ff\1\145\1\157"+
-        "\1\141\1\151\1\154\1\145\1\142\1\145\1\u00ff\1\151\1\u00ff\1\151"+
-        "\1\uffff\1\143\1\165\1\154\4\u00ff\1\155\1\163\1\151\1\40\1\163"+
-        "\1\151\1\u00ff\1\154\1\145\1\155\1\145\1\uffff\1\u00ff\2\uffff\1"+
-        "\155\1\151\1\165\1\145\2\u00ff\2\162\1\uffff\1\145\1\uffff\1\145"+
-        "\1\154\1\162\1\u00ff\1\uffff\1\142\1\u00ff\1\145\1\uffff\1\u00ff"+
-        "\2\145\1\154\1\145\1\u00ff\1\142\1\162\1\163\1\156\2\uffff\1\145"+
-        "\2\u00ff\1\162\1\145\1\u00ff\1\162\1\uffff\1\162\1\uffff\1\162\1"+
-        "\164\1\163\1\u00ff\1\uffff\1\162\1\u00ff\1\163\2\u00ff\2\uffff\2"+
-        "\u00ff\1\uffff\1\145\4\u00ff\1\uffff\1\145\1\uffff\1\151\3\uffff"+
-        "\1\u00ff\1\uffff\2\u00ff\1\uffff";
-    static final String DFA6_acceptS =
-        "\7\uffff\1\7\10\uffff\1\26\2\uffff\1\32\1\35\1\36\44\uffff\1\3\2"+
-        "\uffff\1\4\50\uffff\1\6\22\uffff\1\24\1\uffff\1\30\1\31\10\uffff"+
-        "\1\17\1\uffff\1\33\4\uffff\1\12\3\uffff\1\15\12\uffff\1\13\1\27"+
-        "\7\uffff\1\14\1\uffff\1\16\4\uffff\1\23\5\uffff\1\5\1\20\2\uffff"+
-        "\1\11\5\uffff\1\22\1\uffff\1\1\1\uffff\1\2\1\34\1\10\1\uffff\1\21"+
-        "\2\uffff\1\25";
-    static final String DFA6_specialS =
-        "\u00c7\uffff}>";
-    static final String[] DFA6_transitionS = {
-            "\2\7\2\uffff\1\7\22\uffff\1\7\15\uffff\1\24\1\uffff\12\23\6"+
-            "\uffff\1\20\32\25\6\uffff\1\6\1\25\1\2\1\11\1\3\1\12\1\13\2"+
-            "\25\1\14\2\25\1\21\1\22\1\4\1\5\1\25\1\15\1\10\1\16\1\17\1\1"+
+    static final String DFA7_eotS =
+        "\26\uffff\2\25\1\72\2\25\1\75\36\25\1\uffff\2\25\1\uffff\26\25\1"+
+        "\170\4\25\1\175\1\176\10\25\1\u0087\1\25\1\u0089\1\25\1\6\1\175"+
+        "\4\25\1\175\1\u008f\3\25\1\175\5\25\1\uffff\3\25\1\175\2\uffff\4"+
+        "\25\1\u009e\1\u009f\2\25\1\uffff\1\25\1\uffff\4\25\1\175\1\uffff"+
+        "\1\25\1\u00a8\4\25\1\u00ad\1\u00ae\1\170\5\25\2\uffff\1\25\1\u00b5"+
+        "\1\u00b6\2\25\1\u00b9\2\25\1\uffff\2\25\1\u00be\1\25\2\uffff\2\25"+
+        "\1\u00c2\1\25\1\u00c4\1\175\2\uffff\1\u00c5\1\u00c6\1\uffff\1\u00c7"+
+        "\1\25\2\175\1\uffff\1\170\1\175\1\25\1\uffff\1\25\4\uffff\2\175"+
+        "\1\170";
+    static final String DFA7_eofS =
+        "\u00cb\uffff";
+    static final String DFA7_minS =
+        "\1\11\5\55\1\uffff\11\55\1\uffff\2\55\3\uffff\1\151\1\155\1\55\1"+
+        "\141\1\164\1\55\1\164\1\147\1\142\1\165\1\145\1\157\1\160\1\164"+
+        "\1\152\1\162\1\u00fb\1\164\1\143\1\165\1\156\1\151\1\163\1\160\1"+
+        "\145\1\164\1\145\1\157\1\143\1\166\1\151\1\164\1\166\1\154\1\162"+
+        "\1\142\1\uffff\1\151\1\162\1\uffff\1\157\1\154\1\145\1\154\1\163"+
+        "\1\155\1\160\1\164\1\151\1\145\1\157\1\151\1\164\2\145\1\162\1\166"+
+        "\1\154\1\165\1\160\1\155\1\162\1\55\1\163\1\165\1\162\1\163\2\55"+
+        "\1\145\1\157\1\141\1\151\1\154\1\145\1\142\1\145\1\55\1\151\1\55"+
+        "\1\151\2\55\1\143\2\165\1\154\2\55\1\155\1\163\1\151\1\55\1\154"+
+        "\1\155\3\145\1\uffff\1\40\1\163\1\151\1\55\2\uffff\1\155\1\151\1"+
+        "\165\1\145\2\55\2\162\1\uffff\1\145\1\uffff\1\145\1\154\2\162\1"+
+        "\55\1\uffff\1\142\1\55\3\145\1\154\3\55\1\145\1\142\1\162\1\163"+
+        "\1\156\2\uffff\1\145\2\55\1\162\1\145\1\55\1\144\1\162\1\uffff\1"+
+        "\162\1\164\1\55\1\163\2\uffff\2\162\1\55\1\163\2\55\2\uffff\2\55"+
+        "\1\uffff\1\55\1\145\2\55\1\uffff\2\55\1\145\1\uffff\1\151\4\uffff"+
+        "\3\55";
+    static final String DFA7_maxS =
+        "\6\u00ff\1\uffff\11\u00ff\1\uffff\2\u00ff\3\uffff\1\165\1\155\1"+
+        "\u00ff\1\141\1\164\1\u00ff\1\164\1\162\1\142\1\165\1\145\1\157\1"+
+        "\160\2\164\1\162\1\u00fb\1\164\1\143\1\165\1\156\1\151\1\163\1\160"+
+        "\1\145\1\164\1\145\1\157\1\143\1\166\1\162\1\164\1\166\1\154\1\162"+
+        "\1\142\1\uffff\1\151\1\162\1\uffff\1\157\1\154\1\145\1\154\1\163"+
+        "\1\155\1\160\1\164\1\151\1\145\1\157\1\151\1\164\2\145\1\162\1\166"+
+        "\1\156\1\165\1\160\1\155\1\162\1\u00ff\1\163\1\165\1\162\1\163\2"+
+        "\u00ff\1\145\1\157\1\141\1\151\1\154\1\145\1\142\1\145\1\u00ff\1"+
+        "\151\1\u00ff\1\151\2\u00ff\1\143\2\165\1\154\2\u00ff\1\155\1\163"+
+        "\1\151\1\u00ff\1\154\1\155\3\145\1\uffff\1\40\1\163\1\151\1\u00ff"+
+        "\2\uffff\1\155\1\151\1\165\1\145\2\u00ff\2\162\1\uffff\1\145\1\uffff"+
+        "\1\145\1\154\2\162\1\u00ff\1\uffff\1\142\1\u00ff\3\145\1\154\3\u00ff"+
+        "\1\145\1\142\1\162\1\163\1\156\2\uffff\1\145\2\u00ff\1\162\1\145"+
+        "\1\u00ff\1\144\1\162\1\uffff\1\162\1\164\1\u00ff\1\163\2\uffff\2"+
+        "\162\1\u00ff\1\163\2\u00ff\2\uffff\2\u00ff\1\uffff\1\u00ff\1\145"+
+        "\2\u00ff\1\uffff\2\u00ff\1\145\1\uffff\1\151\4\uffff\3\u00ff";
+    static final String DFA7_acceptS =
+        "\6\uffff\1\6\11\uffff\1\23\2\uffff\1\27\1\32\1\33\44\uffff\1\3\2"+
+        "\uffff\1\4\72\uffff\1\21\4\uffff\1\25\1\26\10\uffff\1\14\1\uffff"+
+        "\1\30\5\uffff\1\11\16\uffff\1\12\1\24\10\uffff\1\13\4\uffff\1\17"+
+        "\1\20\6\uffff\1\5\1\15\2\uffff\1\10\4\uffff\1\16\3\uffff\1\1\1\uffff"+
+        "\1\2\1\31\1\7\1\22\3\uffff";
+    static final String DFA7_specialS =
+        "\u00cb\uffff}>";
+    static final String[] DFA7_transitionS = {
+            "\2\6\2\uffff\1\6\22\uffff\1\6\15\uffff\1\24\1\uffff\12\23\6"+
+            "\uffff\1\20\32\25\6\uffff\1\10\1\25\1\2\1\11\1\3\1\17\1\16\2"+
+            "\25\1\12\2\25\1\21\1\22\1\4\1\5\1\25\1\13\1\7\1\14\1\15\1\1"+
             "\4\25\45\uffff\140\25",
-            "\1\25\63\uffff\16\25\1\26\13\25\45\uffff\140\25",
-            "\1\25\63\uffff\16\25\1\27\13\25\45\uffff\140\25",
-            "\1\25\63\uffff\14\25\1\31\1\32\5\25\1\30\6\25\45\uffff\140"+
+            "\1\25\2\uffff\12\25\47\uffff\16\25\1\26\13\25\45\uffff\140"+
             "\25",
-            "\1\25\63\uffff\2\25\1\34\21\25\1\33\5\25\45\uffff\140\25",
-            "\1\25\63\uffff\1\35\12\25\1\37\5\25\1\40\2\25\1\36\5\25\45"+
-            "\uffff\140\25",
-            "\1\25\63\uffff\5\25\1\41\10\25\1\45\2\25\1\42\2\25\1\43\1\44"+
-            "\4\25\45\uffff\140\25",
-            "",
-            "\1\25\63\uffff\4\25\1\47\16\25\1\46\6\25\45\uffff\140\25",
-            "\1\25\63\uffff\1\50\31\25\45\uffff\111\25\1\51\26\25",
-            "\1\25\63\uffff\16\25\1\52\13\25\45\uffff\111\25\1\53\26\25",
-            "\1\25\63\uffff\21\25\1\54\10\25\45\uffff\140\25",
-            "\1\25\63\uffff\1\56\15\25\1\55\5\25\1\57\5\25\45\uffff\140"+
+            "\1\25\2\uffff\12\25\47\uffff\16\25\1\27\13\25\45\uffff\140"+
             "\25",
-            "\1\25\63\uffff\1\60\3\25\1\61\25\25\45\uffff\140\25",
-            "\1\25\63\uffff\7\25\1\62\22\25\45\uffff\140\25",
-            "\1\25\63\uffff\15\25\1\63\14\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\14\25\1\31\1\32\5\25\1\30\6\25"+
+            "\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\2\25\1\34\21\25\1\33\5\25\45\uffff"+
+            "\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\1\35\12\25\1\37\5\25\1\40\2\25"+
+            "\1\36\5\25\45\uffff\140\25",
             "",
-            "\1\25\63\uffff\1\64\15\25\1\65\13\25\45\uffff\140\25",
-            "\1\25\63\uffff\16\25\1\66\13\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\4\25\1\42\16\25\1\41\6\25\45\uffff"+
+            "\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\16\25\1\46\2\25\1\43\2\25\1\44"+
+            "\1\45\4\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\1\47\31\25\45\uffff\111\25\1\50"+
+            "\26\25",
+            "\1\25\2\uffff\12\25\47\uffff\1\52\15\25\1\51\5\25\1\53\5\25"+
+            "\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\1\55\3\25\1\54\25\25\45\uffff"+
+            "\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\7\25\1\56\1\57\21\25\45\uffff"+
+            "\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\15\25\1\60\14\25\45\uffff\140"+
+            "\25",
+            "\1\25\2\uffff\12\25\47\uffff\21\25\1\61\10\25\45\uffff\140"+
+            "\25",
+            "\1\25\2\uffff\12\25\47\uffff\16\25\1\62\13\25\45\uffff\111"+
+            "\25\1\63\26\25",
+            "",
+            "\1\25\2\uffff\12\25\47\uffff\1\64\15\25\1\65\13\25\45\uffff"+
+            "\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\16\25\1\66\13\25\45\uffff\140"+
+            "\25",
             "",
             "",
             "",
             "\1\70\13\uffff\1\67",
             "\1\71",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\73",
             "\1\74",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\76",
             "\1\100\12\uffff\1\77",
             "\1\101",
@@ -1486,8 +1506,7 @@ public class Tal_projetLexer extends Lexer {
             "\1\104",
             "\1\105",
             "\1\106",
-            "\1\107",
-            "\1\110",
+            "\1\110\11\uffff\1\107",
             "\1\111",
             "\1\112",
             "\1\113",
@@ -1502,23 +1521,23 @@ public class Tal_projetLexer extends Lexer {
             "\1\124",
             "\1\125",
             "\1\126",
-            "\1\130\10\uffff\1\127",
-            "\1\131",
+            "\1\127",
+            "\1\131\10\uffff\1\130",
             "\1\132",
             "\1\133",
             "\1\134",
             "\1\135",
-            "",
             "\1\136",
-            "\1\137",
             "",
+            "\1\137",
             "\1\140",
+            "",
             "\1\141",
             "\1\142",
             "\1\143",
             "\1\144",
             "\1\145",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\146",
             "\1\147",
             "\1\150",
             "\1\151",
@@ -1530,158 +1549,163 @@ public class Tal_projetLexer extends Lexer {
             "\1\157",
             "\1\160",
             "\1\161",
-            "\1\162",
-            "\1\163",
-            "\1\165\1\uffff\1\164",
+            "\1\163\1\uffff\1\162",
+            "\1\164",
+            "\1\165",
             "\1\166",
             "\1\167",
-            "\1\170",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\171",
             "\1\172",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\175",
-            "\1\176",
+            "\1\173",
+            "\1\174",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\177",
             "\1\u0080",
             "\1\u0081",
             "\1\u0082",
             "\1\u0083",
             "\1\u0084",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\u0085",
             "\1\u0086",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\u0088",
-            "",
-            "\1\u0089",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\u008a",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\u008b",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\u008c",
             "\1\u008d",
             "\1\u008e",
-            "\1\u008f",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\u0090",
             "\1\u0091",
             "\1\u0092",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\u0093",
             "\1\u0094",
             "\1\u0095",
             "\1\u0096",
-            "",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "",
-            "",
             "\1\u0097",
+            "",
+            "\1\170",
             "\1\u0098",
             "\1\u0099",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "",
+            "",
             "\1\u009a",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\u009b",
+            "\1\u009c",
             "\1\u009d",
-            "\1\u009e",
-            "",
-            "\1\u009f",
-            "",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\u00a0",
             "\1\u00a1",
+            "",
             "\1\u00a2",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
             "",
             "\1\u00a3",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\u00a4",
             "\1\u00a5",
+            "\1\u00a6",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
             "\1\u00a7",
-            "\1\u00a8",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\u00a9",
             "\1\u00aa",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\u00ab",
             "\1\u00ac",
-            "\1\u00ad",
-            "\1\u00ae",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\u00af",
-            "",
-            "",
             "\1\u00b0",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\u00b1",
+            "\1\u00b2",
             "\1\u00b3",
+            "",
+            "",
             "\1\u00b4",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\u00b6",
-            "",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\u00b7",
-            "",
             "\1\u00b8",
-            "\1\u00b9",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "\1\u00ba",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\u00bb",
             "",
             "\1\u00bc",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\u00be",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\u00bd",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\u00bf",
             "",
             "",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "",
-            "\1\u00c2",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "",
-            "\1\u00c4",
-            "",
-            "\1\u00c5",
+            "\1\u00c0",
+            "\1\u00c1",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\u00c3",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "",
             "",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\u00c8",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
             "",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            "\1\25\63\uffff\32\25\45\uffff\140\25",
-            ""
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\u00c9",
+            "",
+            "\1\u00ca",
+            "",
+            "",
+            "",
+            "",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25",
+            "\1\25\2\uffff\12\25\47\uffff\32\25\45\uffff\140\25"
     };
 
-    static final short[] DFA6_eot = DFA.unpackEncodedString(DFA6_eotS);
-    static final short[] DFA6_eof = DFA.unpackEncodedString(DFA6_eofS);
-    static final char[] DFA6_min = DFA.unpackEncodedStringToUnsignedChars(DFA6_minS);
-    static final char[] DFA6_max = DFA.unpackEncodedStringToUnsignedChars(DFA6_maxS);
-    static final short[] DFA6_accept = DFA.unpackEncodedString(DFA6_acceptS);
-    static final short[] DFA6_special = DFA.unpackEncodedString(DFA6_specialS);
-    static final short[][] DFA6_transition;
+    static final short[] DFA7_eot = DFA.unpackEncodedString(DFA7_eotS);
+    static final short[] DFA7_eof = DFA.unpackEncodedString(DFA7_eofS);
+    static final char[] DFA7_min = DFA.unpackEncodedStringToUnsignedChars(DFA7_minS);
+    static final char[] DFA7_max = DFA.unpackEncodedStringToUnsignedChars(DFA7_maxS);
+    static final short[] DFA7_accept = DFA.unpackEncodedString(DFA7_acceptS);
+    static final short[] DFA7_special = DFA.unpackEncodedString(DFA7_specialS);
+    static final short[][] DFA7_transition;
 
     static {
-        int numStates = DFA6_transitionS.length;
-        DFA6_transition = new short[numStates][];
+        int numStates = DFA7_transitionS.length;
+        DFA7_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA6_transition[i] = DFA.unpackEncodedString(DFA6_transitionS[i]);
+            DFA7_transition[i] = DFA.unpackEncodedString(DFA7_transitionS[i]);
         }
     }
 
-    class DFA6 extends DFA {
+    class DFA7 extends DFA {
 
-        public DFA6(BaseRecognizer recognizer) {
+        public DFA7(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 6;
-            this.eot = DFA6_eot;
-            this.eof = DFA6_eof;
-            this.min = DFA6_min;
-            this.max = DFA6_max;
-            this.accept = DFA6_accept;
-            this.special = DFA6_special;
-            this.transition = DFA6_transition;
+            this.decisionNumber = 7;
+            this.eot = DFA7_eot;
+            this.eof = DFA7_eof;
+            this.min = DFA7_min;
+            this.max = DFA7_max;
+            this.accept = DFA7_accept;
+            this.special = DFA7_special;
+            this.transition = DFA7_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( SELECT | COMBIEN | ET | OU | PARLER | SOURCE | WS | ARTICLE | AUTEUR | DATE | EMAIL | FOCUS | GROSTITRES | JOURS | PAGE | PUBLIE | RAPPELS | RESUME | THEME | UNE | VOIRAUSSI | AT | ENTRE | MOIS | MOT | NB | PLUS | PREMIER | POINT | VAR );";
+            return "1:1: Tokens : ( SELECT | COMBIEN | ET | OU | PARLER | WS | ARTICLE | AUTEUR | DATE | EMAIL | JOURS | PAGE | PUBLIE | RESUME | THEME | TITRE | RUBRIQUE | AUJOURDHUI | AT | ENTRE | MOIS | MOT | NB | PLUS | PREMIER | POINT | VAR );";
         }
     }
  

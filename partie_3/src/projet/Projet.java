@@ -1,7 +1,6 @@
 package projet;
 
 import java.io.StringReader;
-import java.util.Iterator;
 import java.util.Set;
 import java.util.StringTokenizer;
 
@@ -31,7 +30,7 @@ public class Projet {
 
 //		Cat q = new Cat("corpusQuestionA09.txt");
 		Cat q = new Cat("questions.txt");
-//		q = new Cat("questions_traitees.txt");
+		q = new Cat("questions_traitees.txt");
 
 		while ((str = q.getChaine()) != null) {
 
@@ -42,8 +41,16 @@ public class Projet {
 				
 				// Suppression du ? ou du .
 				StringBuffer sb = new StringBuffer(str);
-				sb.setCharAt(str.length() - 1, ' ');
+				if (sb.charAt(str.length() - 1) == '.' || sb.charAt(str.length() - 1) == '?') {
+					sb.setCharAt(str.length() - 1, ' ');
+				}
 				str = sb.toString();
+				
+				// Suppression du "
+				str = str.replaceAll("\"", "");
+				
+				// Suppression du ,
+				str = str.replaceAll(",", "");
 				
 				st = new StringTokenizer(str);
 				result = "";
@@ -51,16 +58,21 @@ public class Projet {
 				while (st.hasMoreTokens()) {
 
 					tr = st.nextToken();
-
+					
+					// Suppression du d'
 					if ((tr.charAt(0) == 'd') && (tr.charAt(1) == '\'')) {
 						tr = tr.replaceAll("d'", "");
 					}
 
+					// Suppression du l'
 					if ((tr.charAt(0) == 'l') && (tr.charAt(1) == '\'')) {
 						tr = tr.replaceAll("l'", "");
 					}
 					
-					tr = tr.replaceAll("\"", "");
+					// Suppression du J'
+					if ((tr.charAt(0) == 'j') && (tr.charAt(1) == '\'')) {
+						tr = tr.replaceAll("j'", "");
+					}
 
 					if (stop.getValue(tr) != null) {
 						result = result.concat(stop.getValue(tr) + " ");

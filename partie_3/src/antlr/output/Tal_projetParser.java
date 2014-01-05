@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g 2014-01-04 00:43:48
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g 2014-01-05 18:56:22
 
 package antlr.output;
 
@@ -16,39 +16,36 @@ import java.util.ArrayList;
 
 public class Tal_projetParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "SELECT", "COMBIEN", "ET", "OU", "PARLER", "SOURCE", "WS", "ARTICLE", "AUTEUR", "DATE", "EMAIL", "FOCUS", "GROSTITRES", "JOURS", "PAGE", "PUBLIE", "RAPPELS", "RESUME", "THEME", "UNE", "VOIRAUSSI", "AT", "ENTRE", "MOIS", "MOT", "NB", "PLUS", "PREMIER", "POINT", "VAR"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "SELECT", "COMBIEN", "ET", "OU", "PARLER", "WS", "ARTICLE", "AUTEUR", "DATE", "EMAIL", "JOURS", "PAGE", "PUBLIE", "RESUME", "THEME", "TITRE", "RUBRIQUE", "AUJOURDHUI", "AT", "ENTRE", "MOIS", "MOT", "NB", "PLUS", "PREMIER", "POINT", "VAR"
     };
-    public static final int FOCUS=15;
-    public static final int UNE=23;
-    public static final int VOIRAUSSI=24;
-    public static final int POINT=32;
-    public static final int THEME=22;
+    public static final int POINT=29;
+    public static final int THEME=18;
     public static final int COMBIEN=5;
-    public static final int SOURCE=9;
     public static final int EOF=-1;
-    public static final int EMAIL=14;
-    public static final int MOT=28;
-    public static final int RAPPELS=20;
-    public static final int JOURS=17;
-    public static final int AUTEUR=12;
-    public static final int AT=25;
-    public static final int RESUME=21;
-    public static final int WS=10;
-    public static final int PAGE=18;
+    public static final int EMAIL=13;
+    public static final int MOT=25;
+    public static final int JOURS=14;
+    public static final int AUTEUR=11;
+    public static final int AT=22;
+    public static final int AUJOURDHUI=21;
+    public static final int RESUME=17;
+    public static final int WS=9;
+    public static final int PAGE=15;
+    public static final int RUBRIQUE=20;
     public static final int PARLER=8;
     public static final int OU=7;
-    public static final int MOIS=27;
-    public static final int PLUS=30;
-    public static final int VAR=33;
+    public static final int MOIS=24;
+    public static final int PLUS=27;
+    public static final int VAR=30;
     public static final int ET=6;
-    public static final int DATE=13;
-    public static final int PUBLIE=19;
+    public static final int TITRE=19;
+    public static final int DATE=12;
+    public static final int PUBLIE=16;
     public static final int SELECT=4;
-    public static final int NB=29;
-    public static final int ARTICLE=11;
-    public static final int GROSTITRES=16;
-    public static final int PREMIER=31;
-    public static final int ENTRE=26;
+    public static final int NB=26;
+    public static final int ARTICLE=10;
+    public static final int PREMIER=28;
+    public static final int ENTRE=23;
 
     // delegates
     // delegators
@@ -69,68 +66,92 @@ public class Tal_projetParser extends Parser {
 
 
     // $ANTLR start "requete"
-    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:64:1: requete returns [Arbre req_arbre = new Arbre(\"\")] : ( ARTICLE d= dat PARLER a1= NB a2= MOIS | COMBIEN ARTICLE PARLER ps= params | COMBIEN ARTICLE PARLER ps= params d= dat | COMBIEN ARTICLE PARLER THEME ps= params | COMBIEN ARTICLE SOURCE | COMBIEN ARTICLE SOURCE PARLER ps= params | COMBIEN AUTEUR EMAIL a1= VAR AT a2= VAR b= NB c= POINT a3= VAR PARLER ps= params | COMBIEN AUTEUR EMAIL AT a= VAR b= NB c= POINT ps= params | COMBIEN AUTEUR PARLER ARTICLE d= dat | COMBIEN AUTEUR PARLER ARTICLE ENTRE d1= jour ET d2= jour | COMBIEN AUTEUR PARLER ARTICLE PARLER ps= params | COMBIEN FOCUS PARLER ps= params | COMBIEN GROSTITRES ps= params | COMBIEN GROSTITRES PARLER ps= params | COMBIEN GROSTITRES PARLER ps= params ENTRE d1= jour ET d2= jour | COMBIEN JOURS PARLER ps= params | COMBIEN MOT ps= params RAPPELS | COMBIEN MOT ps= params ET SELECT ARTICLE | COMBIEN PAGE PARLER ps= params | COMBIEN RAPPELS PARLER ps= params | COMBIEN SELECT ARTICLE AUTEUR ps= params | COMBIEN SELECT ARTICLE THEME ps1= params PARLER ps2= params | COMBIEN SELECT PARLER ps= params | COMBIEN SELECT THEME | COMBIEN UNE ENTRE d1= jour ET d2= jour PARLER PARLER ps= params | COMBIEN UNE PARLER ps= params | COMBIEN VOIRAUSSI PARLER ps= params | PREMIER SELECT DATE PARLER ps= params | SELECT ARTICLE AUTEUR ps= params | SELECT ARTICLE AUTEUR AUTEUR EMAIL a1= VAR AT a2= VAR POINT ps= params | SELECT ARTICLE PARLER ps= params | SELECT ARTICLE PARLER THEME ps= params d= dat | SELECT ARTICLE a1= VAR a2= VAR THEME ps= params | SELECT AUTEUR ARTICLE ps= params | SELECT AUTEUR PLUS PUBLIE | SELECT COMBIEN ARTICLE ps= params d= dat | SELECT DATE PLUS PARLER ps= params | SELECT EMAIL AUTEUR a1= VAR a2= VAR | SELECT FOCUS PARLER ps= params | SELECT GROSTITRES PARLER ps= params | SELECT PAGE PARLER ps= params | SELECT RAPPELS PARLER ps= params | SELECT RESUME PARLER ps= params | SELECT UNE PARLER ps= params | SELECT VOIRAUSSI PARLER ps= params );
+    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:61:1: requete returns [Arbre req_arbre = new Arbre(\"\")] : ( ARTICLE d= dat PARLER a1= NB a2= MOIS | COMBIEN ARTICLE ps= params | COMBIEN ARTICLE PARLER ps= params | COMBIEN ARTICLE PARLER ps= params d= dat | COMBIEN ARTICLE PARLER THEME ps= params | COMBIEN ARTICLE ps1= params PARLER ps2= params | COMBIEN AUTEUR e= email PARLER ps= params | COMBIEN AUTEUR e= email | COMBIEN AUTEUR PARLER ARTICLE d= dat | COMBIEN AUTEUR PARLER ARTICLE ENTRE d1= jour ET d2= jour | COMBIEN AUTEUR PARLER ARTICLE PARLER ps= params | COMBIEN JOURS PARLER ps= params | COMBIEN MOT ps= params r= RUBRIQUE | COMBIEN MOT ps= params ET SELECT ARTICLE | COMBIEN PAGE PARLER ps= params | COMBIEN PAGE PARLER ps= params d= dat | COMBIEN r= RUBRIQUE ps= params | COMBIEN r= RUBRIQUE PARLER ps= params | COMBIEN r= RUBRIQUE PARLER ps= params ENTRE d1= jour ET d2= jour | COMBIEN r= RUBRIQUE ENTRE d1= jour ET d2= jour PARLER PARLER ps= params | COMBIEN SELECT ARTICLE AUTEUR ps= params | COMBIEN SELECT ARTICLE THEME ps1= params PARLER ps2= params | COMBIEN SELECT PARLER ps= params | COMBIEN SELECT THEME | ENTRE d1= jour ET d2= jour r= RUBRIQUE COMBIEN ARTICLE PARLER AUTEUR ps1= params ET PARLER ps2= param | PREMIER SELECT DATE PARLER ps= params | SELECT ARTICLE AUTEUR e= email ET PARLER r= RUBRIQUE | SELECT ARTICLE AUTEUR ps= params | SELECT ARTICLE AUTEUR AUTEUR e= email | SELECT ARTICLE d= dat AUTEUR e= email | SELECT ARTICLE PARLER ps= params DATE d= dat | SELECT ARTICLE PARLER ps= params | SELECT ARTICLE ps1= params THEME ps2= params | SELECT ARTICLE THEME ps= params | SELECT ARTICLE ps1= params AUTEUR ps2= params | SELECT ARTICLE THEME ps= params ENTRE d1= jour ET d2= jour | SELECT AUTEUR ARTICLE PARLER ps= params | SELECT AUTEUR ARTICLE ps= params | SELECT AUTEUR ET EMAIL ARTICLE AUJOURDHUI | SELECT AUTEUR PLUS PUBLIE | SELECT COMBIEN ARTICLE ps= params d= dat | SELECT COMBIEN r= RUBRIQUE ps= params AUTEUR DATE | SELECT DATE ARTICLE AUTEUR ps= params | SELECT DATE ARTICLE RUBRIQUE e= email | SELECT DATE ARTICLE PARLER ps= params | SELECT DATE PLUS PARLER ps= params | SELECT EMAIL AUTEUR a1= VAR a2= VAR | SELECT PAGE PARLER ps= params | SELECT PAGE ARTICLE AUTEUR AUTEUR e= email | SELECT RESUME PARLER ps= params | SELECT r= RUBRIQUE ENTRE d1= jour ET d2= jour | SELECT r= RUBRIQUE PARLER ps= params | SELECT r1= RUBRIQUE ET r2= RUBRIQUE PARLER ps= params | SELECT TITRE ET DATE ARTICLE PARLER ps= params | SELECT TITRE PARLER ps= params );
     public final Arbre requete() throws RecognitionException {
         Arbre req_arbre =  new Arbre("");
 
         Token a1=null;
         Token a2=null;
-        Token b=null;
-        Token c=null;
-        Token a3=null;
-        Token a=null;
+        Token r=null;
+        Token r1=null;
+        Token r2=null;
         Arbre d = null;
 
         Arbre ps = null;
 
-        Arbre d1 = null;
-
-        Arbre d2 = null;
-
         Arbre ps1 = null;
 
         Arbre ps2 = null;
+
+        Arbre e = null;
+
+        Arbre d1 = null;
+
+        Arbre d2 = null;
 
 
 
         		Arbre ps_arbre, d_arbre;
         	
         try {
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:67:4: ( ARTICLE d= dat PARLER a1= NB a2= MOIS | COMBIEN ARTICLE PARLER ps= params | COMBIEN ARTICLE PARLER ps= params d= dat | COMBIEN ARTICLE PARLER THEME ps= params | COMBIEN ARTICLE SOURCE | COMBIEN ARTICLE SOURCE PARLER ps= params | COMBIEN AUTEUR EMAIL a1= VAR AT a2= VAR b= NB c= POINT a3= VAR PARLER ps= params | COMBIEN AUTEUR EMAIL AT a= VAR b= NB c= POINT ps= params | COMBIEN AUTEUR PARLER ARTICLE d= dat | COMBIEN AUTEUR PARLER ARTICLE ENTRE d1= jour ET d2= jour | COMBIEN AUTEUR PARLER ARTICLE PARLER ps= params | COMBIEN FOCUS PARLER ps= params | COMBIEN GROSTITRES ps= params | COMBIEN GROSTITRES PARLER ps= params | COMBIEN GROSTITRES PARLER ps= params ENTRE d1= jour ET d2= jour | COMBIEN JOURS PARLER ps= params | COMBIEN MOT ps= params RAPPELS | COMBIEN MOT ps= params ET SELECT ARTICLE | COMBIEN PAGE PARLER ps= params | COMBIEN RAPPELS PARLER ps= params | COMBIEN SELECT ARTICLE AUTEUR ps= params | COMBIEN SELECT ARTICLE THEME ps1= params PARLER ps2= params | COMBIEN SELECT PARLER ps= params | COMBIEN SELECT THEME | COMBIEN UNE ENTRE d1= jour ET d2= jour PARLER PARLER ps= params | COMBIEN UNE PARLER ps= params | COMBIEN VOIRAUSSI PARLER ps= params | PREMIER SELECT DATE PARLER ps= params | SELECT ARTICLE AUTEUR ps= params | SELECT ARTICLE AUTEUR AUTEUR EMAIL a1= VAR AT a2= VAR POINT ps= params | SELECT ARTICLE PARLER ps= params | SELECT ARTICLE PARLER THEME ps= params d= dat | SELECT ARTICLE a1= VAR a2= VAR THEME ps= params | SELECT AUTEUR ARTICLE ps= params | SELECT AUTEUR PLUS PUBLIE | SELECT COMBIEN ARTICLE ps= params d= dat | SELECT DATE PLUS PARLER ps= params | SELECT EMAIL AUTEUR a1= VAR a2= VAR | SELECT FOCUS PARLER ps= params | SELECT GROSTITRES PARLER ps= params | SELECT PAGE PARLER ps= params | SELECT RAPPELS PARLER ps= params | SELECT RESUME PARLER ps= params | SELECT UNE PARLER ps= params | SELECT VOIRAUSSI PARLER ps= params )
-            int alt1=45;
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:64:4: ( ARTICLE d= dat PARLER a1= NB a2= MOIS | COMBIEN ARTICLE ps= params | COMBIEN ARTICLE PARLER ps= params | COMBIEN ARTICLE PARLER ps= params d= dat | COMBIEN ARTICLE PARLER THEME ps= params | COMBIEN ARTICLE ps1= params PARLER ps2= params | COMBIEN AUTEUR e= email PARLER ps= params | COMBIEN AUTEUR e= email | COMBIEN AUTEUR PARLER ARTICLE d= dat | COMBIEN AUTEUR PARLER ARTICLE ENTRE d1= jour ET d2= jour | COMBIEN AUTEUR PARLER ARTICLE PARLER ps= params | COMBIEN JOURS PARLER ps= params | COMBIEN MOT ps= params r= RUBRIQUE | COMBIEN MOT ps= params ET SELECT ARTICLE | COMBIEN PAGE PARLER ps= params | COMBIEN PAGE PARLER ps= params d= dat | COMBIEN r= RUBRIQUE ps= params | COMBIEN r= RUBRIQUE PARLER ps= params | COMBIEN r= RUBRIQUE PARLER ps= params ENTRE d1= jour ET d2= jour | COMBIEN r= RUBRIQUE ENTRE d1= jour ET d2= jour PARLER PARLER ps= params | COMBIEN SELECT ARTICLE AUTEUR ps= params | COMBIEN SELECT ARTICLE THEME ps1= params PARLER ps2= params | COMBIEN SELECT PARLER ps= params | COMBIEN SELECT THEME | ENTRE d1= jour ET d2= jour r= RUBRIQUE COMBIEN ARTICLE PARLER AUTEUR ps1= params ET PARLER ps2= param | PREMIER SELECT DATE PARLER ps= params | SELECT ARTICLE AUTEUR e= email ET PARLER r= RUBRIQUE | SELECT ARTICLE AUTEUR ps= params | SELECT ARTICLE AUTEUR AUTEUR e= email | SELECT ARTICLE d= dat AUTEUR e= email | SELECT ARTICLE PARLER ps= params DATE d= dat | SELECT ARTICLE PARLER ps= params | SELECT ARTICLE ps1= params THEME ps2= params | SELECT ARTICLE THEME ps= params | SELECT ARTICLE ps1= params AUTEUR ps2= params | SELECT ARTICLE THEME ps= params ENTRE d1= jour ET d2= jour | SELECT AUTEUR ARTICLE PARLER ps= params | SELECT AUTEUR ARTICLE ps= params | SELECT AUTEUR ET EMAIL ARTICLE AUJOURDHUI | SELECT AUTEUR PLUS PUBLIE | SELECT COMBIEN ARTICLE ps= params d= dat | SELECT COMBIEN r= RUBRIQUE ps= params AUTEUR DATE | SELECT DATE ARTICLE AUTEUR ps= params | SELECT DATE ARTICLE RUBRIQUE e= email | SELECT DATE ARTICLE PARLER ps= params | SELECT DATE PLUS PARLER ps= params | SELECT EMAIL AUTEUR a1= VAR a2= VAR | SELECT PAGE PARLER ps= params | SELECT PAGE ARTICLE AUTEUR AUTEUR e= email | SELECT RESUME PARLER ps= params | SELECT r= RUBRIQUE ENTRE d1= jour ET d2= jour | SELECT r= RUBRIQUE PARLER ps= params | SELECT r1= RUBRIQUE ET r2= RUBRIQUE PARLER ps= params | SELECT TITRE ET DATE ARTICLE PARLER ps= params | SELECT TITRE PARLER ps= params )
+            int alt1=55;
             alt1 = dfa1.predict(input);
             switch (alt1) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:68:4: ARTICLE d= dat PARLER a1= NB a2= MOIS
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:65:4: ARTICLE d= dat PARLER a1= NB a2= MOIS
                     {
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete357); 
-                    pushFollow(FOLLOW_dat_in_requete363);
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete367); 
+                    pushFollow(FOLLOW_dat_in_requete373);
                     d=dat();
 
                     state._fsp--;
 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete365); 
-                    a1=(Token)match(input,NB,FOLLOW_NB_in_requete371); 
-                    a2=(Token)match(input,MOIS,FOLLOW_MOIS_in_requete377); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete375); 
+                    a1=(Token)match(input,NB,FOLLOW_NB_in_requete381); 
+                    a2=(Token)match(input,MOIS,FOLLOW_MOIS_in_requete387); 
 
                     			req_arbre.ajouteFils(new Arbre("", "select distinct"));
                     			req_arbre.ajouteFils(new Arbre("", "article "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.datearticle "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article AND "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND "));
                     			d_arbre = d;
                     			req_arbre.ajouteFils(d_arbre);
-                    			req_arbre.ajouteFils(new Arbre("", " AND mot = '" + a1.getText() + "' AND mot = '" + a2.getText() + "'"));
+                    			req_arbre.ajouteFils(new Arbre("", " AND mot = '" + a1.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '" + a2.getText() + "'"));
                     		
 
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:77:5: COMBIEN ARTICLE PARLER ps= params
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:76:5: COMBIEN ARTICLE ps= params
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete385); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete387); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete389); 
-                    pushFollow(FOLLOW_params_in_requete395);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete395); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete397); 
+                    pushFollow(FOLLOW_params_in_requete403);
+                    ps=params();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select count("));
+                    			req_arbre.ajouteFils(new Arbre("", "etiquette) "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.auteur "));
+                    			req_arbre.ajouteFils(new Arbre("", "where etiquette = '"));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 3 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:84:5: COMBIEN ARTICLE PARLER ps= params
+                    {
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete411); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete413); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete415); 
+                    pushFollow(FOLLOW_params_in_requete421);
                     ps=params();
 
                     state._fsp--;
@@ -146,18 +167,18 @@ public class Tal_projetParser extends Parser {
 
                     }
                     break;
-                case 3 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:85:5: COMBIEN ARTICLE PARLER ps= params d= dat
+                case 4 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:92:5: COMBIEN ARTICLE PARLER ps= params d= dat
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete403); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete405); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete407); 
-                    pushFollow(FOLLOW_params_in_requete413);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete429); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete431); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete433); 
+                    pushFollow(FOLLOW_params_in_requete439);
                     ps=params();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_dat_in_requete419);
+                    pushFollow(FOLLOW_dat_in_requete445);
                     d=dat();
 
                     state._fsp--;
@@ -166,7 +187,8 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "article) "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.datearticle "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     			req_arbre.ajouteFils(new Arbre("", "AND "));
@@ -176,14 +198,14 @@ public class Tal_projetParser extends Parser {
 
                     }
                     break;
-                case 4 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:96:5: COMBIEN ARTICLE PARLER THEME ps= params
+                case 5 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:104:5: COMBIEN ARTICLE PARLER THEME ps= params
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete427); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete429); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete431); 
-                    match(input,THEME,FOLLOW_THEME_in_requete433); 
-                    pushFollow(FOLLOW_params_in_requete439);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete453); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete455); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete457); 
+                    match(input,THEME,FOLLOW_THEME_in_requete459); 
+                    pushFollow(FOLLOW_params_in_requete465);
                     ps=params();
 
                     state._fsp--;
@@ -192,37 +214,27 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "article) "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.theme "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.theme.article AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.theme.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
-                case 5 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:104:5: COMBIEN ARTICLE SOURCE
-                    {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete447); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete449); 
-                    match(input,SOURCE,FOLLOW_SOURCE_in_requete451); 
-
-                    			req_arbre.ajouteFils(new Arbre("", "select count("));
-                    			req_arbre.ajouteFils(new Arbre("", "etiquette) "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.auteur "));
-                    			req_arbre.ajouteFils(new Arbre("", "where etiquette = 'afp'"));
-                    		
-
-                    }
-                    break;
                 case 6 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:110:5: COMBIEN ARTICLE SOURCE PARLER ps= params
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:113:5: COMBIEN ARTICLE ps1= params PARLER ps2= params
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete459); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete461); 
-                    match(input,SOURCE,FOLLOW_SOURCE_in_requete463); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete465); 
-                    pushFollow(FOLLOW_params_in_requete471);
-                    ps=params();
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete473); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete475); 
+                    pushFollow(FOLLOW_params_in_requete481);
+                    ps1=params();
+
+                    state._fsp--;
+
+                    match(input,PARLER,FOLLOW_PARLER_in_requete483); 
+                    pushFollow(FOLLOW_params_in_requete489);
+                    ps2=params();
 
                     state._fsp--;
 
@@ -230,27 +242,28 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "etiquette) "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.auteur "));
-                    			req_arbre.ajouteFils(new Arbre("", "where etiquette = 'afp' AND mot = '"));
-                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(new Arbre("", "where etiquette = '"));
+                    			ps_arbre = ps1;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", " AND mot = '"));
+                    			ps_arbre = ps2;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
                 case 7 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:118:5: COMBIEN AUTEUR EMAIL a1= VAR AT a2= VAR b= NB c= POINT a3= VAR PARLER ps= params
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:124:5: COMBIEN AUTEUR e= email PARLER ps= params
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete479); 
-                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete481); 
-                    match(input,EMAIL,FOLLOW_EMAIL_in_requete483); 
-                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_requete489); 
-                    match(input,AT,FOLLOW_AT_in_requete491); 
-                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_requete497); 
-                    b=(Token)match(input,NB,FOLLOW_NB_in_requete503); 
-                    c=(Token)match(input,POINT,FOLLOW_POINT_in_requete509); 
-                    a3=(Token)match(input,VAR,FOLLOW_VAR_in_requete515); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete517); 
-                    pushFollow(FOLLOW_params_in_requete523);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete497); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete499); 
+                    pushFollow(FOLLOW_email_in_requete505);
+                    e=email();
+
+                    state._fsp--;
+
+                    match(input,PARLER,FOLLOW_PARLER_in_requete507); 
+                    pushFollow(FOLLOW_params_in_requete513);
                     ps=params();
 
                     state._fsp--;
@@ -259,8 +272,9 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "etiquette) "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.auteur "));
-                    			req_arbre.ajouteFils(new Arbre("", "where email = '"));
-                    			req_arbre.ajouteFils(new Arbre("", a1.getText() + "@" + a2.getText() + b.getText() + c.getText() + a3.getText()));
+                    			req_arbre.ajouteFils(new Arbre("", "where "));
+                    			ps_arbre = e;
+                    			req_arbre.ajouteFils(ps_arbre);
                     			req_arbre.ajouteFils(new Arbre("", "' AND mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
@@ -269,17 +283,12 @@ public class Tal_projetParser extends Parser {
                     }
                     break;
                 case 8 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:128:5: COMBIEN AUTEUR EMAIL AT a= VAR b= NB c= POINT ps= params
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:135:5: COMBIEN AUTEUR e= email
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete531); 
-                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete533); 
-                    match(input,EMAIL,FOLLOW_EMAIL_in_requete535); 
-                    match(input,AT,FOLLOW_AT_in_requete537); 
-                    a=(Token)match(input,VAR,FOLLOW_VAR_in_requete543); 
-                    b=(Token)match(input,NB,FOLLOW_NB_in_requete549); 
-                    c=(Token)match(input,POINT,FOLLOW_POINT_in_requete555); 
-                    pushFollow(FOLLOW_params_in_requete561);
-                    ps=params();
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete521); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete523); 
+                    pushFollow(FOLLOW_email_in_requete529);
+                    e=email();
 
                     state._fsp--;
 
@@ -287,21 +296,21 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "etiquette) "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.auteur "));
-                    			req_arbre.ajouteFils(new Arbre("", "where email = '@" + a.getText() + b.getText() + c.getText()));
-                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(new Arbre("", "where "));
+                    			ps_arbre = e;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
                 case 9 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:136:5: COMBIEN AUTEUR PARLER ARTICLE d= dat
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:143:5: COMBIEN AUTEUR PARLER ARTICLE d= dat
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete569); 
-                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete571); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete573); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete575); 
-                    pushFollow(FOLLOW_dat_in_requete581);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete537); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete539); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete541); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete543); 
+                    pushFollow(FOLLOW_dat_in_requete549);
                     d=dat();
 
                     state._fsp--;
@@ -310,7 +319,8 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "etiquette) "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.auteur, public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.titre.article AND "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.titre.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND "));
                     			d_arbre = d;
                     			req_arbre.ajouteFils(d_arbre);
                     		
@@ -318,20 +328,20 @@ public class Tal_projetParser extends Parser {
                     }
                     break;
                 case 10 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:144:5: COMBIEN AUTEUR PARLER ARTICLE ENTRE d1= jour ET d2= jour
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:152:5: COMBIEN AUTEUR PARLER ARTICLE ENTRE d1= jour ET d2= jour
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete589); 
-                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete591); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete593); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete595); 
-                    match(input,ENTRE,FOLLOW_ENTRE_in_requete597); 
-                    pushFollow(FOLLOW_jour_in_requete603);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete557); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete559); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete561); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete563); 
+                    match(input,ENTRE,FOLLOW_ENTRE_in_requete565); 
+                    pushFollow(FOLLOW_jour_in_requete571);
                     d1=jour();
 
                     state._fsp--;
 
-                    match(input,ET,FOLLOW_ET_in_requete605); 
-                    pushFollow(FOLLOW_jour_in_requete611);
+                    match(input,ET,FOLLOW_ET_in_requete573); 
+                    pushFollow(FOLLOW_jour_in_requete579);
                     d2=jour();
 
                     state._fsp--;
@@ -353,14 +363,14 @@ public class Tal_projetParser extends Parser {
                     }
                     break;
                 case 11 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:157:5: COMBIEN AUTEUR PARLER ARTICLE PARLER ps= params
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:165:5: COMBIEN AUTEUR PARLER ARTICLE PARLER ps= params
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete619); 
-                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete621); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete623); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete625); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete627); 
-                    pushFollow(FOLLOW_params_in_requete633);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete587); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete589); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete591); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete593); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete595); 
+                    pushFollow(FOLLOW_params_in_requete601);
                     ps=params();
 
                     state._fsp--;
@@ -369,7 +379,8 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "etiquette) "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.auteur, public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.titre.article AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.titre.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
@@ -377,118 +388,12 @@ public class Tal_projetParser extends Parser {
                     }
                     break;
                 case 12 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:165:5: COMBIEN FOCUS PARLER ps= params
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:174:5: COMBIEN JOURS PARLER ps= params
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete641); 
-                    match(input,FOCUS,FOLLOW_FOCUS_in_requete643); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete645); 
-                    pushFollow(FOLLOW_params_in_requete651);
-                    ps=params();
-
-                    state._fsp--;
-
-
-                    			req_arbre.ajouteFils(new Arbre("", "select count("));
-                    			req_arbre.ajouteFils(new Arbre("", "rubrique) "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'focus' AND mot = '"));
-                    			ps_arbre = ps;
-                    			req_arbre.ajouteFils(ps_arbre);
-                    		
-
-                    }
-                    break;
-                case 13 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:173:5: COMBIEN GROSTITRES ps= params
-                    {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete659); 
-                    match(input,GROSTITRES,FOLLOW_GROSTITRES_in_requete661); 
-                    pushFollow(FOLLOW_params_in_requete668);
-                    ps=params();
-
-                    state._fsp--;
-
-
-                    			req_arbre.ajouteFils(new Arbre("", "select count("));
-                    			req_arbre.ajouteFils(new Arbre("", "rubrique) "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'grostitre' AND mot = '"));
-                    			ps_arbre = ps;
-                    			req_arbre.ajouteFils(ps_arbre);
-                    		
-
-                    }
-                    break;
-                case 14 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:181:5: COMBIEN GROSTITRES PARLER ps= params
-                    {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete677); 
-                    match(input,GROSTITRES,FOLLOW_GROSTITRES_in_requete679); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete681); 
-                    pushFollow(FOLLOW_params_in_requete688);
-                    ps=params();
-
-                    state._fsp--;
-
-
-                    			req_arbre.ajouteFils(new Arbre("", "select count("));
-                    			req_arbre.ajouteFils(new Arbre("", "rubrique) "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'grostitre' AND mot = '"));
-                    			ps_arbre = ps;
-                    			req_arbre.ajouteFils(ps_arbre);
-                    		
-
-                    }
-                    break;
-                case 15 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:189:5: COMBIEN GROSTITRES PARLER ps= params ENTRE d1= jour ET d2= jour
-                    {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete697); 
-                    match(input,GROSTITRES,FOLLOW_GROSTITRES_in_requete699); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete701); 
-                    pushFollow(FOLLOW_params_in_requete707);
-                    ps=params();
-
-                    state._fsp--;
-
-                    match(input,ENTRE,FOLLOW_ENTRE_in_requete709); 
-                    pushFollow(FOLLOW_jour_in_requete715);
-                    d1=jour();
-
-                    state._fsp--;
-
-                    match(input,ET,FOLLOW_ET_in_requete717); 
-                    pushFollow(FOLLOW_jour_in_requete723);
-                    d2=jour();
-
-                    state._fsp--;
-
-
-                    			req_arbre.ajouteFils(new Arbre("", "select count("));
-                    			req_arbre.ajouteFils(new Arbre("", "rubrique) "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.datearticle "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article "));
-                    			req_arbre.ajouteFils(new Arbre("", "AND rubrique = 'grostitre' AND mot = '"));
-                    			ps_arbre = ps;
-                    			req_arbre.ajouteFils(ps_arbre);
-                    			req_arbre.ajouteFils(new Arbre("", " AND jour >= "));
-                    			d_arbre = d1;
-                    			req_arbre.ajouteFils(d_arbre);
-                    			req_arbre.ajouteFils(new Arbre("", " AND jour <= "));
-                    			d_arbre = d2;
-                    			req_arbre.ajouteFils(d_arbre);
-                    		
-
-                    }
-                    break;
-                case 16 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:204:5: COMBIEN JOURS PARLER ps= params
-                    {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete731); 
-                    match(input,JOURS,FOLLOW_JOURS_in_requete733); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete735); 
-                    pushFollow(FOLLOW_params_in_requete741);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete609); 
+                    match(input,JOURS,FOLLOW_JOURS_in_requete611); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete613); 
+                    pushFollow(FOLLOW_params_in_requete619);
                     ps=params();
 
                     state._fsp--;
@@ -497,48 +402,50 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "jour) "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.datearticle "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
-                case 17 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:212:5: COMBIEN MOT ps= params RAPPELS
+                case 13 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:183:5: COMBIEN MOT ps= params r= RUBRIQUE
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete749); 
-                    match(input,MOT,FOLLOW_MOT_in_requete751); 
-                    pushFollow(FOLLOW_params_in_requete757);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete627); 
+                    match(input,MOT,FOLLOW_MOT_in_requete629); 
+                    pushFollow(FOLLOW_params_in_requete635);
                     ps=params();
 
                     state._fsp--;
 
-                    match(input,RAPPELS,FOLLOW_RAPPELS_in_requete759); 
+                    r=(Token)match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete641); 
 
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "mot) "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'rappels' AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = '" + r.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", " AND mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
-                case 18 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:220:5: COMBIEN MOT ps= params ET SELECT ARTICLE
+                case 14 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:192:5: COMBIEN MOT ps= params ET SELECT ARTICLE
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete767); 
-                    match(input,MOT,FOLLOW_MOT_in_requete769); 
-                    pushFollow(FOLLOW_params_in_requete775);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete649); 
+                    match(input,MOT,FOLLOW_MOT_in_requete651); 
+                    pushFollow(FOLLOW_params_in_requete657);
                     ps=params();
 
                     state._fsp--;
 
-                    match(input,ET,FOLLOW_ET_in_requete777); 
-                    match(input,SELECT,FOLLOW_SELECT_in_requete779); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete781); 
+                    match(input,ET,FOLLOW_ET_in_requete659); 
+                    match(input,SELECT,FOLLOW_SELECT_in_requete661); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete663); 
 
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "mot)"));
@@ -551,13 +458,13 @@ public class Tal_projetParser extends Parser {
 
                     }
                     break;
-                case 19 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:229:5: COMBIEN PAGE PARLER ps= params
+                case 15 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:201:5: COMBIEN PAGE PARLER ps= params
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete789); 
-                    match(input,PAGE,FOLLOW_PAGE_in_requete791); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete793); 
-                    pushFollow(FOLLOW_params_in_requete799);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete671); 
+                    match(input,PAGE,FOLLOW_PAGE_in_requete673); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete675); 
+                    pushFollow(FOLLOW_params_in_requete681);
                     ps=params();
 
                     state._fsp--;
@@ -573,13 +480,43 @@ public class Tal_projetParser extends Parser {
 
                     }
                     break;
-                case 20 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:237:5: COMBIEN RAPPELS PARLER ps= params
+                case 16 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:209:5: COMBIEN PAGE PARLER ps= params d= dat
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete807); 
-                    match(input,RAPPELS,FOLLOW_RAPPELS_in_requete809); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete811); 
-                    pushFollow(FOLLOW_params_in_requete817);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete689); 
+                    match(input,PAGE,FOLLOW_PAGE_in_requete691); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete693); 
+                    pushFollow(FOLLOW_params_in_requete699);
+                    ps=params();
+
+                    state._fsp--;
+
+                    pushFollow(FOLLOW_dat_in_requete705);
+                    d=dat();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select count("));
+                    			req_arbre.ajouteFils(new Arbre("", "page) "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.pagearticle, public.datearticle "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.pagearticle.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", " AND "));
+                    			d_arbre = d;
+                    			req_arbre.ajouteFils(d_arbre);
+                    		
+
+                    }
+                    break;
+                case 17 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:221:5: COMBIEN r= RUBRIQUE ps= params
+                    {
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete713); 
+                    r=(Token)match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete719); 
+                    pushFollow(FOLLOW_params_in_requete725);
                     ps=params();
 
                     state._fsp--;
@@ -588,7 +525,116 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "rubrique) "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'rappels' AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = '" + r.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 18 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:230:5: COMBIEN r= RUBRIQUE PARLER ps= params
+                    {
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete733); 
+                    r=(Token)match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete739); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete741); 
+                    pushFollow(FOLLOW_params_in_requete747);
+                    ps=params();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select count("));
+                    			req_arbre.ajouteFils(new Arbre("", "rubrique) "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
+                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = '" + r.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 19 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:239:5: COMBIEN r= RUBRIQUE PARLER ps= params ENTRE d1= jour ET d2= jour
+                    {
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete755); 
+                    r=(Token)match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete761); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete763); 
+                    pushFollow(FOLLOW_params_in_requete769);
+                    ps=params();
+
+                    state._fsp--;
+
+                    match(input,ENTRE,FOLLOW_ENTRE_in_requete771); 
+                    pushFollow(FOLLOW_jour_in_requete777);
+                    d1=jour();
+
+                    state._fsp--;
+
+                    match(input,ET,FOLLOW_ET_in_requete779); 
+                    pushFollow(FOLLOW_jour_in_requete785);
+                    d2=jour();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select count("));
+                    			req_arbre.ajouteFils(new Arbre("", "rubrique) "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.datearticle "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND rubrique = '" + r.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", " AND jour >= "));
+                    			d_arbre = d1;
+                    			req_arbre.ajouteFils(d_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", " AND jour <= "));
+                    			d_arbre = d2;
+                    			req_arbre.ajouteFils(d_arbre);
+                    		
+
+                    }
+                    break;
+                case 20 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:255:5: COMBIEN r= RUBRIQUE ENTRE d1= jour ET d2= jour PARLER PARLER ps= params
+                    {
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete793); 
+                    r=(Token)match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete799); 
+                    match(input,ENTRE,FOLLOW_ENTRE_in_requete801); 
+                    pushFollow(FOLLOW_jour_in_requete807);
+                    d1=jour();
+
+                    state._fsp--;
+
+                    match(input,ET,FOLLOW_ET_in_requete809); 
+                    pushFollow(FOLLOW_jour_in_requete815);
+                    d2=jour();
+
+                    state._fsp--;
+
+                    match(input,PARLER,FOLLOW_PARLER_in_requete817); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete819); 
+                    pushFollow(FOLLOW_params_in_requete825);
+                    ps=params();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select count("));
+                    			req_arbre.ajouteFils(new Arbre("", "rubrique) "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.datearticle "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND rubrique = '" + r.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND jour >= "));
+                    			d_arbre = d1;
+                    			req_arbre.ajouteFils(d_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", " AND jour <= "));
+                    			d_arbre = d2;
+                    			req_arbre.ajouteFils(d_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
@@ -596,13 +642,13 @@ public class Tal_projetParser extends Parser {
                     }
                     break;
                 case 21 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:245:5: COMBIEN SELECT ARTICLE AUTEUR ps= params
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:271:5: COMBIEN SELECT ARTICLE AUTEUR ps= params
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete825); 
-                    match(input,SELECT,FOLLOW_SELECT_in_requete827); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete829); 
-                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete831); 
-                    pushFollow(FOLLOW_params_in_requete837);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete833); 
+                    match(input,SELECT,FOLLOW_SELECT_in_requete835); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete837); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete839); 
+                    pushFollow(FOLLOW_params_in_requete845);
                     ps=params();
 
                     state._fsp--;
@@ -619,19 +665,19 @@ public class Tal_projetParser extends Parser {
                     }
                     break;
                 case 22 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:253:5: COMBIEN SELECT ARTICLE THEME ps1= params PARLER ps2= params
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:279:5: COMBIEN SELECT ARTICLE THEME ps1= params PARLER ps2= params
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete845); 
-                    match(input,SELECT,FOLLOW_SELECT_in_requete847); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete849); 
-                    match(input,THEME,FOLLOW_THEME_in_requete851); 
-                    pushFollow(FOLLOW_params_in_requete857);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete853); 
+                    match(input,SELECT,FOLLOW_SELECT_in_requete855); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete857); 
+                    match(input,THEME,FOLLOW_THEME_in_requete859); 
+                    pushFollow(FOLLOW_params_in_requete865);
                     ps1=params();
 
                     state._fsp--;
 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete859); 
-                    pushFollow(FOLLOW_params_in_requete865);
+                    match(input,PARLER,FOLLOW_PARLER_in_requete867); 
+                    pushFollow(FOLLOW_params_in_requete873);
                     ps2=params();
 
                     state._fsp--;
@@ -651,12 +697,12 @@ public class Tal_projetParser extends Parser {
                     }
                     break;
                 case 23 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:264:5: COMBIEN SELECT PARLER ps= params
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:290:5: COMBIEN SELECT PARLER ps= params
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete873); 
-                    match(input,SELECT,FOLLOW_SELECT_in_requete875); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete877); 
-                    pushFollow(FOLLOW_params_in_requete883);
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete881); 
+                    match(input,SELECT,FOLLOW_SELECT_in_requete883); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete885); 
+                    pushFollow(FOLLOW_params_in_requete891);
                     ps=params();
 
                     state._fsp--;
@@ -665,7 +711,8 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "rubrique) "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'voiraussi' AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'voiraussi' "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
@@ -673,11 +720,11 @@ public class Tal_projetParser extends Parser {
                     }
                     break;
                 case 24 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:272:5: COMBIEN SELECT THEME
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:299:5: COMBIEN SELECT THEME
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete891); 
-                    match(input,SELECT,FOLLOW_SELECT_in_requete893); 
-                    match(input,THEME,FOLLOW_THEME_in_requete895); 
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete899); 
+                    match(input,SELECT,FOLLOW_SELECT_in_requete901); 
+                    match(input,THEME,FOLLOW_THEME_in_requete903); 
 
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "mot) "));
@@ -687,100 +734,68 @@ public class Tal_projetParser extends Parser {
                     }
                     break;
                 case 25 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:277:5: COMBIEN UNE ENTRE d1= jour ET d2= jour PARLER PARLER ps= params
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:304:5: ENTRE d1= jour ET d2= jour r= RUBRIQUE COMBIEN ARTICLE PARLER AUTEUR ps1= params ET PARLER ps2= param
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete903); 
-                    match(input,UNE,FOLLOW_UNE_in_requete905); 
-                    match(input,ENTRE,FOLLOW_ENTRE_in_requete907); 
-                    pushFollow(FOLLOW_jour_in_requete913);
+                    match(input,ENTRE,FOLLOW_ENTRE_in_requete911); 
+                    pushFollow(FOLLOW_jour_in_requete917);
                     d1=jour();
 
                     state._fsp--;
 
-                    match(input,ET,FOLLOW_ET_in_requete915); 
-                    pushFollow(FOLLOW_jour_in_requete921);
+                    match(input,ET,FOLLOW_ET_in_requete919); 
+                    pushFollow(FOLLOW_jour_in_requete925);
                     d2=jour();
 
                     state._fsp--;
 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete923); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete925); 
-                    pushFollow(FOLLOW_params_in_requete931);
-                    ps=params();
+                    r=(Token)match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete931); 
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete933); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete935); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete937); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete939); 
+                    pushFollow(FOLLOW_params_in_requete945);
+                    ps1=params();
+
+                    state._fsp--;
+
+                    match(input,ET,FOLLOW_ET_in_requete947); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete949); 
+                    pushFollow(FOLLOW_param_in_requete955);
+                    ps2=param();
 
                     state._fsp--;
 
 
-                    			req_arbre.ajouteFils(new Arbre("", "select count("));
-                    			req_arbre.ajouteFils(new Arbre("", "rubrique) "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.datearticle "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article "));
-                    			req_arbre.ajouteFils(new Arbre("", "AND rubrique = 'une' "));
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "article "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.auteur, public.titre, public.datearticle "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.titre.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND public.datearticle = public.titre.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND rubrique = '" + r.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND etiquette = '"));
+                    			ps_arbre = ps1;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = "));
+                    			ps_arbre = ps2;
+                    			req_arbre.ajouteFils(ps_arbre);
                     			req_arbre.ajouteFils(new Arbre("", "AND jour >= "));
                     			d_arbre = d1;
                     			req_arbre.ajouteFils(d_arbre);
                     			req_arbre.ajouteFils(new Arbre("", " AND jour <= "));
                     			d_arbre = d2;
                     			req_arbre.ajouteFils(d_arbre);
-                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
-                    			ps_arbre = ps;
-                    			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
                 case 26 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:293:5: COMBIEN UNE PARLER ps= params
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:324:5: PREMIER SELECT DATE PARLER ps= params
                     {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete939); 
-                    match(input,UNE,FOLLOW_UNE_in_requete941); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete943); 
-                    pushFollow(FOLLOW_params_in_requete949);
-                    ps=params();
-
-                    state._fsp--;
-
-
-                    			req_arbre.ajouteFils(new Arbre("", "select count("));
-                    			req_arbre.ajouteFils(new Arbre("", "rubrique) "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'une' AND mot = '"));
-                    			ps_arbre = ps;
-                    			req_arbre.ajouteFils(ps_arbre);
-                    		
-
-                    }
-                    break;
-                case 27 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:301:5: COMBIEN VOIRAUSSI PARLER ps= params
-                    {
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete957); 
-                    match(input,VOIRAUSSI,FOLLOW_VOIRAUSSI_in_requete959); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete961); 
-                    pushFollow(FOLLOW_params_in_requete967);
-                    ps=params();
-
-                    state._fsp--;
-
-
-                    			req_arbre.ajouteFils(new Arbre("", "select count("));
-                    			req_arbre.ajouteFils(new Arbre("", "rubrique) "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'voiraussi' AND mot = '"));
-                    			ps_arbre = ps;
-                    			req_arbre.ajouteFils(ps_arbre);
-                    		
-
-                    }
-                    break;
-                case 28 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:309:5: PREMIER SELECT DATE PARLER ps= params
-                    {
-                    match(input,PREMIER,FOLLOW_PREMIER_in_requete975); 
-                    match(input,SELECT,FOLLOW_SELECT_in_requete977); 
-                    match(input,DATE,FOLLOW_DATE_in_requete979); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete981); 
-                    pushFollow(FOLLOW_params_in_requete987);
+                    match(input,PREMIER,FOLLOW_PREMIER_in_requete963); 
+                    match(input,SELECT,FOLLOW_SELECT_in_requete965); 
+                    match(input,DATE,FOLLOW_DATE_in_requete967); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete969); 
+                    pushFollow(FOLLOW_params_in_requete975);
                     ps=params();
 
                     state._fsp--;
@@ -788,20 +803,48 @@ public class Tal_projetParser extends Parser {
 
                     			req_arbre.ajouteFils(new Arbre("", "select distinct jour "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.datearticle, public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
-                case 29 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:316:5: SELECT ARTICLE AUTEUR ps= params
+                case 27 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:332:5: SELECT ARTICLE AUTEUR e= email ET PARLER r= RUBRIQUE
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete995); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete997); 
-                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete999); 
-                    pushFollow(FOLLOW_params_in_requete1005);
+                    match(input,SELECT,FOLLOW_SELECT_in_requete983); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete985); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete987); 
+                    pushFollow(FOLLOW_email_in_requete993);
+                    e=email();
+
+                    state._fsp--;
+
+                    match(input,ET,FOLLOW_ET_in_requete995); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete997); 
+                    r=(Token)match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete1003); 
+
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "article "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.auteur, public.titre "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.titre.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND "));
+                    			ps_arbre = e;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", "AND rubrique = '" + r.getText() + "' "));
+                    		
+
+                    }
+                    break;
+                case 28 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:342:5: SELECT ARTICLE AUTEUR ps= params
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1011); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1013); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1015); 
+                    pushFollow(FOLLOW_params_in_requete1021);
                     ps=params();
 
                     state._fsp--;
@@ -817,20 +860,15 @@ public class Tal_projetParser extends Parser {
 
                     }
                     break;
-                case 30 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:324:5: SELECT ARTICLE AUTEUR AUTEUR EMAIL a1= VAR AT a2= VAR POINT ps= params
+                case 29 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:350:5: SELECT ARTICLE AUTEUR AUTEUR e= email
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1013); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1015); 
-                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1017); 
-                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1019); 
-                    match(input,EMAIL,FOLLOW_EMAIL_in_requete1021); 
-                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_requete1027); 
-                    match(input,AT,FOLLOW_AT_in_requete1029); 
-                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_requete1035); 
-                    match(input,POINT,FOLLOW_POINT_in_requete1037); 
-                    pushFollow(FOLLOW_params_in_requete1043);
-                    ps=params();
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1029); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1031); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1033); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1035); 
+                    pushFollow(FOLLOW_email_in_requete1041);
+                    e=email();
 
                     state._fsp--;
 
@@ -838,20 +876,83 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select distinct "));
                     			req_arbre.ajouteFils(new Arbre("", "article "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.auteur "));
-                    			req_arbre.ajouteFils(new Arbre("", "where etiquette = '" + a1.getText() + "@" + a2.getText() + "."));
-                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(new Arbre("", "where "));
+                    			ps_arbre = e;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 30 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:358:5: SELECT ARTICLE d= dat AUTEUR e= email
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1049); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1051); 
+                    pushFollow(FOLLOW_dat_in_requete1057);
+                    d=dat();
+
+                    state._fsp--;
+
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1059); 
+                    pushFollow(FOLLOW_email_in_requete1065);
+                    e=email();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "article "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.auteur, public.datearticle "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND "));
+                    			ps_arbre = e;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", "AND "));
+                    			ps_arbre = d;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
                 case 31 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:332:5: SELECT ARTICLE PARLER ps= params
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:370:5: SELECT ARTICLE PARLER ps= params DATE d= dat
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1051); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1053); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete1055); 
-                    pushFollow(FOLLOW_params_in_requete1061);
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1073); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1075); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete1077); 
+                    pushFollow(FOLLOW_params_in_requete1083);
+                    ps=params();
+
+                    state._fsp--;
+
+                    match(input,DATE,FOLLOW_DATE_in_requete1085); 
+                    pushFollow(FOLLOW_dat_in_requete1091);
+                    d=dat();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "article "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.datearticle "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", "AND "));
+                    			ps_arbre = d;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 32 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:382:5: SELECT ARTICLE PARLER ps= params
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1098); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1100); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete1102); 
+                    pushFollow(FOLLOW_params_in_requete1108);
                     ps=params();
 
                     state._fsp--;
@@ -867,20 +968,19 @@ public class Tal_projetParser extends Parser {
 
                     }
                     break;
-                case 32 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:340:5: SELECT ARTICLE PARLER THEME ps= params d= dat
+                case 33 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:390:5: SELECT ARTICLE ps1= params THEME ps2= params
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1069); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1071); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete1073); 
-                    match(input,THEME,FOLLOW_THEME_in_requete1075); 
-                    pushFollow(FOLLOW_params_in_requete1081);
-                    ps=params();
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1116); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1118); 
+                    pushFollow(FOLLOW_params_in_requete1124);
+                    ps1=params();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_dat_in_requete1087);
-                    d=dat();
+                    match(input,THEME,FOLLOW_THEME_in_requete1126); 
+                    pushFollow(FOLLOW_params_in_requete1132);
+                    ps2=params();
 
                     state._fsp--;
 
@@ -888,25 +988,24 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select distinct "));
                     			req_arbre.ajouteFils(new Arbre("", "article "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.theme "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.theme.article AND public.theme.mot = '"));
-                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.theme.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND public.theme.mot = '"));
+                    			ps_arbre = ps2;
                     			req_arbre.ajouteFils(ps_arbre);
                     			req_arbre.ajouteFils(new Arbre("", "AND "));
-                    			d_arbre = d;
-                    			req_arbre.ajouteFils(d_arbre);
+                    			ps_arbre = ps1;
+                    			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
-                case 33 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:351:5: SELECT ARTICLE a1= VAR a2= VAR THEME ps= params
+                case 34 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:402:5: SELECT ARTICLE THEME ps= params
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1095); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1097); 
-                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_requete1103); 
-                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_requete1109); 
-                    match(input,THEME,FOLLOW_THEME_in_requete1112); 
-                    pushFollow(FOLLOW_params_in_requete1118);
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1140); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1142); 
+                    match(input,THEME,FOLLOW_THEME_in_requete1144); 
+                    pushFollow(FOLLOW_params_in_requete1150);
                     ps=params();
 
                     state._fsp--;
@@ -914,9 +1013,8 @@ public class Tal_projetParser extends Parser {
 
                     			req_arbre.ajouteFils(new Arbre("", "select distinct "));
                     			req_arbre.ajouteFils(new Arbre("", "article "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.theme, public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.theme.article AND "));
-                    			req_arbre.ajouteFils(new Arbre("", "public.titre.mot = '" + a1.getText() + "' AND mot = '" + a2.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.theme "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.theme.article "));
                     			req_arbre.ajouteFils(new Arbre("", "AND public.theme.mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
@@ -924,13 +1022,87 @@ public class Tal_projetParser extends Parser {
 
                     }
                     break;
-                case 34 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:361:5: SELECT AUTEUR ARTICLE ps= params
+                case 35 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:411:5: SELECT ARTICLE ps1= params AUTEUR ps2= params
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1126); 
-                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1128); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1130); 
-                    pushFollow(FOLLOW_params_in_requete1136);
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1158); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1160); 
+                    pushFollow(FOLLOW_params_in_requete1166);
+                    ps1=params();
+
+                    state._fsp--;
+
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1168); 
+                    pushFollow(FOLLOW_params_in_requete1174);
+                    ps2=params();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "article "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.auteur, public.theme "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.theme.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND public.theme.mot = '"));
+                    			ps_arbre = ps1;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", "AND etiquette = '"));
+                    			ps_arbre = ps2;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 36 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:423:5: SELECT ARTICLE THEME ps= params ENTRE d1= jour ET d2= jour
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1182); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1184); 
+                    match(input,THEME,FOLLOW_THEME_in_requete1186); 
+                    pushFollow(FOLLOW_params_in_requete1192);
+                    ps=params();
+
+                    state._fsp--;
+
+                    match(input,ENTRE,FOLLOW_ENTRE_in_requete1194); 
+                    pushFollow(FOLLOW_jour_in_requete1200);
+                    d1=jour();
+
+                    state._fsp--;
+
+                    match(input,ET,FOLLOW_ET_in_requete1202); 
+                    pushFollow(FOLLOW_jour_in_requete1208);
+                    d2=jour();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "article, mot "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.theme, public.datearticle "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.theme.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND public.titre.article = public.datearticle "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND public.theme.mot = '"));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", "AND jour >= "));
+                    			d_arbre = d1;
+                    			req_arbre.ajouteFils(d_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", " AND jour <= "));
+                    			d_arbre = d2;
+                    			req_arbre.ajouteFils(d_arbre);
+                    		
+
+                    }
+                    break;
+                case 37 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:439:5: SELECT AUTEUR ARTICLE PARLER ps= params
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1216); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1218); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1220); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete1222); 
+                    pushFollow(FOLLOW_params_in_requete1228);
                     ps=params();
 
                     state._fsp--;
@@ -939,20 +1111,62 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select distinct "));
                     			req_arbre.ajouteFils(new Arbre("", "etiquette "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.auteur, public.theme "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.theme.article AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.theme.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
-                case 35 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:369:5: SELECT AUTEUR PLUS PUBLIE
+                case 38 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:448:5: SELECT AUTEUR ARTICLE ps= params
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1144); 
-                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1146); 
-                    match(input,PLUS,FOLLOW_PLUS_in_requete1148); 
-                    match(input,PUBLIE,FOLLOW_PUBLIE_in_requete1150); 
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1236); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1238); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1240); 
+                    pushFollow(FOLLOW_params_in_requete1246);
+                    ps=params();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "etiquette "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.auteur, public.theme "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.theme.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 39 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:457:5: SELECT AUTEUR ET EMAIL ARTICLE AUJOURDHUI
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1254); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1256); 
+                    match(input,ET,FOLLOW_ET_in_requete1258); 
+                    match(input,EMAIL,FOLLOW_EMAIL_in_requete1260); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1262); 
+                    match(input,AUJOURDHUI,FOLLOW_AUJOURDHUI_in_requete1264); 
+
+                    			req_arbre.ajouteFils(new Arbre("", "select etiquette, email "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.auteur, public.datearticle "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND jour = CURRENT DATE "));
+                    		
+
+                    }
+                    break;
+                case 40 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:463:5: SELECT AUTEUR PLUS PUBLIE
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1272); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1274); 
+                    match(input,PLUS,FOLLOW_PLUS_in_requete1276); 
+                    match(input,PUBLIE,FOLLOW_PUBLIE_in_requete1278); 
 
                     			req_arbre.ajouteFils(new Arbre("", "select etiquette, count(article) "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.auteur "));
@@ -961,18 +1175,18 @@ public class Tal_projetParser extends Parser {
 
                     }
                     break;
-                case 36 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:374:5: SELECT COMBIEN ARTICLE ps= params d= dat
+                case 41 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:468:5: SELECT COMBIEN ARTICLE ps= params d= dat
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1158); 
-                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete1160); 
-                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1162); 
-                    pushFollow(FOLLOW_params_in_requete1168);
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1286); 
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete1288); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1290); 
+                    pushFollow(FOLLOW_params_in_requete1296);
                     ps=params();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_dat_in_requete1174);
+                    pushFollow(FOLLOW_dat_in_requete1302);
                     d=dat();
 
                     state._fsp--;
@@ -980,8 +1194,9 @@ public class Tal_projetParser extends Parser {
 
                     			req_arbre.ajouteFils(new Arbre("", "select count("));
                     			req_arbre.ajouteFils(new Arbre("", "article) "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.auteur, public.datearticle "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.auteur.article = public.datearticle.article AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.datearticle "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     			req_arbre.ajouteFils(new Arbre("", "AND "));
@@ -991,14 +1206,113 @@ public class Tal_projetParser extends Parser {
 
                     }
                     break;
-                case 37 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:385:5: SELECT DATE PLUS PARLER ps= params
+                case 42 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:480:5: SELECT COMBIEN r= RUBRIQUE ps= params AUTEUR DATE
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1182); 
-                    match(input,DATE,FOLLOW_DATE_in_requete1184); 
-                    match(input,PLUS,FOLLOW_PLUS_in_requete1186); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete1188); 
-                    pushFollow(FOLLOW_params_in_requete1194);
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1310); 
+                    match(input,COMBIEN,FOLLOW_COMBIEN_in_requete1312); 
+                    r=(Token)match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete1318); 
+                    pushFollow(FOLLOW_params_in_requete1324);
+                    ps=params();
+
+                    state._fsp--;
+
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1326); 
+                    match(input,DATE,FOLLOW_DATE_in_requete1328); 
+
+                    			req_arbre.ajouteFils(new Arbre("", "select count("));
+                    			req_arbre.ajouteFils(new Arbre("", "rubrique), jour "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.datearticle "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND rubrique = '" + r.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 43 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:490:5: SELECT DATE ARTICLE AUTEUR ps= params
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1336); 
+                    match(input,DATE,FOLLOW_DATE_in_requete1338); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1340); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1342); 
+                    pushFollow(FOLLOW_params_in_requete1348);
+                    ps=params();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "annee, article "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.datearticle, public.auteur "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.datearticle.article = public.auteur.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot ='"));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 44 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:499:5: SELECT DATE ARTICLE RUBRIQUE e= email
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1356); 
+                    match(input,DATE,FOLLOW_DATE_in_requete1358); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1360); 
+                    match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete1362); 
+                    pushFollow(FOLLOW_email_in_requete1368);
+                    e=email();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "annee, article "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.datearticle, public.theme, public.auteur "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.datearticle.article = public.theme.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND public.auteur.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND "));
+                    			ps_arbre = e;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 45 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:509:5: SELECT DATE ARTICLE PARLER ps= params
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1376); 
+                    match(input,DATE,FOLLOW_DATE_in_requete1378); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1380); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete1382); 
+                    pushFollow(FOLLOW_params_in_requete1388);
+                    ps=params();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "jour "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.datearticle, public.titre "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.datearticle.article = public.titre.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = "));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 46 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:518:5: SELECT DATE PLUS PARLER ps= params
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1396); 
+                    match(input,DATE,FOLLOW_DATE_in_requete1398); 
+                    match(input,PLUS,FOLLOW_PLUS_in_requete1400); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete1402); 
+                    pushFollow(FOLLOW_params_in_requete1408);
                     ps=params();
 
                     state._fsp--;
@@ -1007,80 +1321,38 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select distinct "));
                     			req_arbre.ajouteFils(new Arbre("", "annee "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.datearticle, public.theme "));
-                    			req_arbre.ajouteFils(new Arbre("", "where public.datearticle.article = public.theme.article AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.datearticle.article = public.theme.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = "));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
-                case 38 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:393:5: SELECT EMAIL AUTEUR a1= VAR a2= VAR
+                case 47 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:527:5: SELECT EMAIL AUTEUR a1= VAR a2= VAR
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1202); 
-                    match(input,EMAIL,FOLLOW_EMAIL_in_requete1204); 
-                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1206); 
-                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_requete1212); 
-                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_requete1218); 
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1416); 
+                    match(input,EMAIL,FOLLOW_EMAIL_in_requete1418); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1420); 
+                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_requete1426); 
+                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_requete1432); 
 
-                    			req_arbre.ajouteFils(new Arbre("", "select distinct email "));
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "email "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.auteur "));
                     			req_arbre.ajouteFils(new Arbre("", "where etiquette = '" + a1.getText() + " " + a2.getText() + "'"));
                     		
 
                     }
                     break;
-                case 39 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:398:5: SELECT FOCUS PARLER ps= params
+                case 48 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:533:5: SELECT PAGE PARLER ps= params
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1226); 
-                    match(input,FOCUS,FOLLOW_FOCUS_in_requete1228); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete1230); 
-                    pushFollow(FOLLOW_params_in_requete1236);
-                    ps=params();
-
-                    state._fsp--;
-
-
-                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
-                    			req_arbre.ajouteFils(new Arbre("", "rubrique "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'focus' AND mot = '"));
-                    			ps_arbre = ps;
-                    			req_arbre.ajouteFils(ps_arbre);
-                    		
-
-                    }
-                    break;
-                case 40 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:406:5: SELECT GROSTITRES PARLER ps= params
-                    {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1244); 
-                    match(input,GROSTITRES,FOLLOW_GROSTITRES_in_requete1246); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete1248); 
-                    pushFollow(FOLLOW_params_in_requete1254);
-                    ps=params();
-
-                    state._fsp--;
-
-
-                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
-                    			req_arbre.ajouteFils(new Arbre("", "rubrique "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'grostitre' AND mot = '"));
-                    			ps_arbre = ps;
-                    			req_arbre.ajouteFils(ps_arbre);
-                    		
-
-                    }
-                    break;
-                case 41 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:414:5: SELECT PAGE PARLER ps= params
-                    {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1262); 
-                    match(input,PAGE,FOLLOW_PAGE_in_requete1264); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete1266); 
-                    pushFollow(FOLLOW_params_in_requete1272);
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1440); 
+                    match(input,PAGE,FOLLOW_PAGE_in_requete1442); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete1444); 
+                    pushFollow(FOLLOW_params_in_requete1450);
                     ps=params();
 
                     state._fsp--;
@@ -1096,35 +1368,38 @@ public class Tal_projetParser extends Parser {
 
                     }
                     break;
-                case 42 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:422:5: SELECT RAPPELS PARLER ps= params
+                case 49 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:541:5: SELECT PAGE ARTICLE AUTEUR AUTEUR e= email
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1280); 
-                    match(input,RAPPELS,FOLLOW_RAPPELS_in_requete1282); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete1284); 
-                    pushFollow(FOLLOW_params_in_requete1290);
-                    ps=params();
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1458); 
+                    match(input,PAGE,FOLLOW_PAGE_in_requete1460); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1462); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1464); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1466); 
+                    pushFollow(FOLLOW_email_in_requete1472);
+                    e=email();
 
                     state._fsp--;
 
 
                     			req_arbre.ajouteFils(new Arbre("", "select distinct "));
-                    			req_arbre.ajouteFils(new Arbre("", "rubrique "));
-                    			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'rappels' AND mot = '"));
-                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(new Arbre("", "page "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.auteur "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.auteur.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND "));
+                    			ps_arbre = e;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
-                case 43 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:430:5: SELECT RESUME PARLER ps= params
+                case 50 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:550:5: SELECT RESUME PARLER ps= params
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1298); 
-                    match(input,RESUME,FOLLOW_RESUME_in_requete1300); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete1302); 
-                    pushFollow(FOLLOW_params_in_requete1308);
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1480); 
+                    match(input,RESUME,FOLLOW_RESUME_in_requete1482); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete1484); 
+                    pushFollow(FOLLOW_params_in_requete1490);
                     ps=params();
 
                     state._fsp--;
@@ -1140,13 +1415,45 @@ public class Tal_projetParser extends Parser {
 
                     }
                     break;
-                case 44 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:438:5: SELECT UNE PARLER ps= params
+                case 51 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:558:5: SELECT r= RUBRIQUE ENTRE d1= jour ET d2= jour
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1316); 
-                    match(input,UNE,FOLLOW_UNE_in_requete1318); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete1320); 
-                    pushFollow(FOLLOW_params_in_requete1326);
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1498); 
+                    r=(Token)match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete1504); 
+                    match(input,ENTRE,FOLLOW_ENTRE_in_requete1506); 
+                    pushFollow(FOLLOW_jour_in_requete1512);
+                    d1=jour();
+
+                    state._fsp--;
+
+                    match(input,ET,FOLLOW_ET_in_requete1514); 
+                    pushFollow(FOLLOW_jour_in_requete1520);
+                    d2=jour();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "rubrique "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
+                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = '" + r.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND jour >= "));
+                    			d_arbre = d1;
+                    			req_arbre.ajouteFils(d_arbre);
+                    			req_arbre.ajouteFils(new Arbre("", " AND jour <= "));
+                    			d_arbre = d2;
+                    			req_arbre.ajouteFils(d_arbre);
+                    		
+
+                    }
+                    break;
+                case 52 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:570:5: SELECT r= RUBRIQUE PARLER ps= params
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1528); 
+                    r=(Token)match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete1534); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete1536); 
+                    pushFollow(FOLLOW_params_in_requete1542);
                     ps=params();
 
                     state._fsp--;
@@ -1155,20 +1462,23 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select distinct "));
                     			req_arbre.ajouteFils(new Arbre("", "rubrique "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'une' AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = '" + r.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
 
                     }
                     break;
-                case 45 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:446:5: SELECT VOIRAUSSI PARLER ps= params
+                case 53 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:579:5: SELECT r1= RUBRIQUE ET r2= RUBRIQUE PARLER ps= params
                     {
-                    match(input,SELECT,FOLLOW_SELECT_in_requete1334); 
-                    match(input,VOIRAUSSI,FOLLOW_VOIRAUSSI_in_requete1336); 
-                    match(input,PARLER,FOLLOW_PARLER_in_requete1338); 
-                    pushFollow(FOLLOW_params_in_requete1344);
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1550); 
+                    r1=(Token)match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete1556); 
+                    match(input,ET,FOLLOW_ET_in_requete1558); 
+                    r2=(Token)match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete1564); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete1566); 
+                    pushFollow(FOLLOW_params_in_requete1572);
                     ps=params();
 
                     state._fsp--;
@@ -1177,7 +1487,57 @@ public class Tal_projetParser extends Parser {
                     			req_arbre.ajouteFils(new Arbre("", "select distinct "));
                     			req_arbre.ajouteFils(new Arbre("", "rubrique "));
                     			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
-                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = 'voiraussi' AND mot = '"));
+                    			req_arbre.ajouteFils(new Arbre("", "where rubrique = '" + r1.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", "OR rubrique = '" + r2.getText() + "' "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 54 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:589:5: SELECT TITRE ET DATE ARTICLE PARLER ps= params
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1580); 
+                    match(input,TITRE,FOLLOW_TITRE_in_requete1582); 
+                    match(input,ET,FOLLOW_ET_in_requete1584); 
+                    match(input,DATE,FOLLOW_DATE_in_requete1586); 
+                    match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1588); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete1590); 
+                    pushFollow(FOLLOW_params_in_requete1596);
+                    ps=params();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "titre, jour "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.titre, public.datearticle "));
+                    			req_arbre.ajouteFils(new Arbre("", "where public.titre.article = public.datearticle.article "));
+                    			req_arbre.ajouteFils(new Arbre("", "AND mot = '"));
+                    			ps_arbre = ps;
+                    			req_arbre.ajouteFils(ps_arbre);
+                    		
+
+                    }
+                    break;
+                case 55 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:598:5: SELECT TITRE PARLER ps= params
+                    {
+                    match(input,SELECT,FOLLOW_SELECT_in_requete1604); 
+                    match(input,TITRE,FOLLOW_TITRE_in_requete1606); 
+                    match(input,PARLER,FOLLOW_PARLER_in_requete1608); 
+                    pushFollow(FOLLOW_params_in_requete1615);
+                    ps=params();
+
+                    state._fsp--;
+
+
+                    			req_arbre.ajouteFils(new Arbre("", "select distinct "));
+                    			req_arbre.ajouteFils(new Arbre("", "titre "));
+                    			req_arbre.ajouteFils(new Arbre("", "from public.titre "));
+                    			req_arbre.ajouteFils(new Arbre("", "where mot = '"));
                     			ps_arbre = ps;
                     			req_arbre.ajouteFils(ps_arbre);
                     		
@@ -1198,264 +1558,33 @@ public class Tal_projetParser extends Parser {
     // $ANTLR end "requete"
 
 
-    // $ANTLR start "listerequetes"
-    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:455:1: listerequetes returns [String sql = \"\"] : r= requete POINT ;
-    public final String listerequetes() throws RecognitionException {
-        String sql =  "";
-
-        Arbre r = null;
-
-
-
-        		Arbre lr_arbre;
-        	
-        try {
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:458:4: (r= requete POINT )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:459:3: r= requete POINT
-            {
-            pushFollow(FOLLOW_requete_in_listerequetes1370);
-            r=requete();
-
-            state._fsp--;
-
-            match(input,POINT,FOLLOW_POINT_in_listerequetes1372); 
-
-            			lr_arbre = r;
-            			sql = lr_arbre.sortArbre();
-            		
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return sql;
-    }
-    // $ANTLR end "listerequetes"
-
-
-    // $ANTLR start "params"
-    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:466:1: params returns [Arbre les_pars_arbre = new Arbre(\"\")] : par1= param (c= conj par2= param )* ;
-    public final Arbre params() throws RecognitionException {
-        Arbre les_pars_arbre =  new Arbre("");
-
-        Arbre par1 = null;
-
-        Arbre c = null;
-
-        Arbre par2 = null;
-
-
-
-        		Arbre par1_arbre, par2_arbre, conj_arbre, dat_arbre;
-        	
-        try {
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:469:4: (par1= param (c= conj par2= param )* )
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:470:3: par1= param (c= conj par2= param )*
-            {
-            pushFollow(FOLLOW_param_in_params1400);
-            par1=param();
-
-            state._fsp--;
-
-
-            			par1_arbre = par1;
-            			les_pars_arbre.ajouteFils(par1_arbre);
-            		
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:474:3: (c= conj par2= param )*
-            loop2:
-            do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
-
-                if ( (LA2_0==ET) ) {
-                    int LA2_2 = input.LA(2);
-
-                    if ( (LA2_2==VAR) ) {
-                        alt2=1;
-                    }
-
-
-                }
-                else if ( (LA2_0==OU) ) {
-                    alt2=1;
-                }
-
-
-                switch (alt2) {
-            	case 1 :
-            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:474:4: c= conj par2= param
-            	    {
-            	    pushFollow(FOLLOW_conj_in_params1411);
-            	    c=conj();
-
-            	    state._fsp--;
-
-            	    pushFollow(FOLLOW_param_in_params1417);
-            	    par2=param();
-
-            	    state._fsp--;
-
-
-            	    			conj_arbre = c;
-            	    			par2_arbre = par2;
-            	    			les_pars_arbre.ajouteFils(conj_arbre);
-            	    			les_pars_arbre.ajouteFils(new Arbre("", "mot = '"));
-            	    			les_pars_arbre.ajouteFils(par2_arbre);
-            	    		
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop2;
-                }
-            } while (true);
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return les_pars_arbre;
-    }
-    // $ANTLR end "params"
-
-
-    // $ANTLR start "param"
-    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:482:1: param returns [Arbre lepar_arbre = new Arbre(\"\")] : (a= VAR | a1= VAR a2= VAR | a1= VAR a2= VAR a3= VAR );
-    public final Arbre param() throws RecognitionException {
-        Arbre lepar_arbre =  new Arbre("");
-
-        Token a=null;
-        Token a1=null;
-        Token a2=null;
-        Token a3=null;
-
-        try {
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:482:51: (a= VAR | a1= VAR a2= VAR | a1= VAR a2= VAR a3= VAR )
-            int alt3=3;
-            int LA3_0 = input.LA(1);
-
-            if ( (LA3_0==VAR) ) {
-                int LA3_1 = input.LA(2);
-
-                if ( (LA3_1==VAR) ) {
-                    int LA3_2 = input.LA(3);
-
-                    if ( (LA3_2==VAR) ) {
-                        alt3=3;
-                    }
-                    else if ( ((LA3_2>=ET && LA3_2<=PARLER)||LA3_2==RAPPELS||(LA3_2>=ENTRE && LA3_2<=MOIS)||LA3_2==NB||LA3_2==POINT) ) {
-                        alt3=2;
-                    }
-                    else {
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 3, 2, input);
-
-                        throw nvae;
-                    }
-                }
-                else if ( ((LA3_1>=ET && LA3_1<=PARLER)||LA3_1==RAPPELS||(LA3_1>=ENTRE && LA3_1<=MOIS)||LA3_1==NB||LA3_1==POINT) ) {
-                    alt3=1;
-                }
-                else {
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 3, 1, input);
-
-                    throw nvae;
-                }
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 3, 0, input);
-
-                throw nvae;
-            }
-            switch (alt3) {
-                case 1 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:483:2: a= VAR
-                    {
-                    a=(Token)match(input,VAR,FOLLOW_VAR_in_param1438); 
-
-                    		lepar_arbre.ajouteFils(new Arbre("", a.getText() + "' "));
-                    	
-
-                    }
-                    break;
-                case 2 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:486:4: a1= VAR a2= VAR
-                    {
-                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_param1449); 
-                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_param1455); 
-
-                    		lepar_arbre.ajouteFils(new Arbre("", a1.getText() + "' AND mot = '" + a2.getText() + "'"));
-                    	
-
-                    }
-                    break;
-                case 3 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:489:4: a1= VAR a2= VAR a3= VAR
-                    {
-                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_param1466); 
-                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_param1472); 
-                    a3=(Token)match(input,VAR,FOLLOW_VAR_in_param1478); 
-
-                    		lepar_arbre.ajouteFils(new Arbre("", a1.getText() + "' AND mot = '" + a2.getText() + "' AND mot = '" + a3.getText() + "'"));
-                    	
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return lepar_arbre;
-    }
-    // $ANTLR end "param"
-
-
     // $ANTLR start "conj"
-    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:493:1: conj returns [Arbre conj_arbre = new Arbre(\"\")] : ( ET | OU );
+    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:607:1: conj returns [Arbre conj_arbre = new Arbre(\"\")] : ( ET | OU );
     public final Arbre conj() throws RecognitionException {
         Arbre conj_arbre =  new Arbre("");
 
         try {
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:493:49: ( ET | OU )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:607:49: ( ET | OU )
+            int alt2=2;
+            int LA2_0 = input.LA(1);
 
-            if ( (LA4_0==ET) ) {
-                alt4=1;
+            if ( (LA2_0==ET) ) {
+                alt2=1;
             }
-            else if ( (LA4_0==OU) ) {
-                alt4=2;
+            else if ( (LA2_0==OU) ) {
+                alt2=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 2, 0, input);
 
                 throw nvae;
             }
-            switch (alt4) {
+            switch (alt2) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:494:2: ET
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:608:2: ET
                     {
-                    match(input,ET,FOLLOW_ET_in_conj1493); 
+                    match(input,ET,FOLLOW_ET_in_conj1630); 
 
                     		conj_arbre.ajouteFils(new Arbre("", "AND "));
                     	
@@ -1463,9 +1592,9 @@ public class Tal_projetParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:497:4: OU
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:611:4: OU
                     {
-                    match(input,OU,FOLLOW_OU_in_conj1500); 
+                    match(input,OU,FOLLOW_OU_in_conj1637); 
 
                     		conj_arbre.ajouteFils(new Arbre("", "OR "));
                     	
@@ -1487,7 +1616,7 @@ public class Tal_projetParser extends Parser {
 
 
     // $ANTLR start "dat"
-    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:501:1: dat returns [Arbre les_pars_arbre = new Arbre(\"\")] : (a= NB | m= MOIS a= NB | j= NB m= MOIS a= NB );
+    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:615:1: dat returns [Arbre les_pars_arbre = new Arbre(\"\")] : (a= NB | m= MOIS a= NB | j= NB m= MOIS a= NB );
     public final Arbre dat() throws RecognitionException {
         Arbre les_pars_arbre =  new Arbre("");
 
@@ -1496,65 +1625,68 @@ public class Tal_projetParser extends Parser {
         Token j=null;
 
         try {
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:501:52: (a= NB | m= MOIS a= NB | j= NB m= MOIS a= NB )
-            int alt5=3;
-            int LA5_0 = input.LA(1);
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:615:52: (a= NB | m= MOIS a= NB | j= NB m= MOIS a= NB )
+            int alt3=3;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA5_0==NB) ) {
-                int LA5_1 = input.LA(2);
+            if ( (LA3_0==NB) ) {
+                int LA3_1 = input.LA(2);
 
-                if ( (LA5_1==MOIS) ) {
-                    alt5=3;
+                if ( (LA3_1==MOIS) ) {
+                    alt3=3;
                 }
-                else if ( (LA5_1==PARLER||LA5_1==POINT) ) {
-                    alt5=1;
+                else if ( (LA3_1==PARLER||LA3_1==AUTEUR||LA3_1==POINT) ) {
+                    alt3=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 5, 1, input);
+                        new NoViableAltException("", 3, 1, input);
 
                     throw nvae;
                 }
             }
-            else if ( (LA5_0==MOIS) ) {
-                alt5=2;
+            else if ( (LA3_0==MOIS) ) {
+                alt3=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 3, 0, input);
 
                 throw nvae;
             }
-            switch (alt5) {
+            switch (alt3) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:502:2: a= NB
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:616:2: a= NB
                     {
-                    a=(Token)match(input,NB,FOLLOW_NB_in_dat1519); 
+                    a=(Token)match(input,NB,FOLLOW_NB_in_dat1656); 
 
-                    		les_pars_arbre.ajouteFils(new Arbre("", "annee = '" + a.getText() + "'"));
+                    		les_pars_arbre.ajouteFils(new Arbre("", "annee = '" + a.getText() + "' "));
                     	
 
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:505:4: m= MOIS a= NB
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:619:4: m= MOIS a= NB
                     {
-                    m=(Token)match(input,MOIS,FOLLOW_MOIS_in_dat1530); 
-                    a=(Token)match(input,NB,FOLLOW_NB_in_dat1536); 
+                    m=(Token)match(input,MOIS,FOLLOW_MOIS_in_dat1667); 
+                    a=(Token)match(input,NB,FOLLOW_NB_in_dat1673); 
 
-                    		les_pars_arbre.ajouteFils(new Arbre("", "mois = '" + m.getText() + "' AND annee = '" + a.getText() + "'"));
+                    		les_pars_arbre.ajouteFils(new Arbre("", "mois = '" + m.getText() + "' "));
+                    		les_pars_arbre.ajouteFils(new Arbre("", "AND annee = '" + a.getText() + "' "));
                     	
 
                     }
                     break;
                 case 3 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:508:4: j= NB m= MOIS a= NB
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:623:4: j= NB m= MOIS a= NB
                     {
-                    j=(Token)match(input,NB,FOLLOW_NB_in_dat1547); 
-                    m=(Token)match(input,MOIS,FOLLOW_MOIS_in_dat1553); 
-                    a=(Token)match(input,NB,FOLLOW_NB_in_dat1559); 
+                    j=(Token)match(input,NB,FOLLOW_NB_in_dat1684); 
+                    m=(Token)match(input,MOIS,FOLLOW_MOIS_in_dat1690); 
+                    a=(Token)match(input,NB,FOLLOW_NB_in_dat1696); 
 
-                    		les_pars_arbre.ajouteFils(new Arbre("", "jj = '" + j.getText() + "' AND mois = '" + m.getText() + "' AND annee = '" + a.getText() + "'"));
+                    		les_pars_arbre.ajouteFils(new Arbre("", "jj = '" + j.getText() + "' "));
+                    		les_pars_arbre.ajouteFils(new Arbre("", "AND mois = '" + m.getText() + "' "));
+                    		les_pars_arbre.ajouteFils(new Arbre("", "AND annee = '" + a.getText() + "' "));
                     	
 
                     }
@@ -1573,8 +1705,132 @@ public class Tal_projetParser extends Parser {
     // $ANTLR end "dat"
 
 
+    // $ANTLR start "email"
+    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:629:1: email returns [Arbre les_pars_arbre = new Arbre(\"\")] : (a1= VAR a= AT a2= VAR p= POINT a3= VAR | EMAIL a1= VAR a= AT a2= VAR p= POINT a3= VAR | EMAIL AUTEUR a1= VAR a= AT a2= VAR p= POINT a3= VAR | EMAIL a= AT a1= VAR p= POINT a2= VAR );
+    public final Arbre email() throws RecognitionException {
+        Arbre les_pars_arbre =  new Arbre("");
+
+        Token a1=null;
+        Token a=null;
+        Token a2=null;
+        Token p=null;
+        Token a3=null;
+
+        try {
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:629:54: (a1= VAR a= AT a2= VAR p= POINT a3= VAR | EMAIL a1= VAR a= AT a2= VAR p= POINT a3= VAR | EMAIL AUTEUR a1= VAR a= AT a2= VAR p= POINT a3= VAR | EMAIL a= AT a1= VAR p= POINT a2= VAR )
+            int alt4=4;
+            int LA4_0 = input.LA(1);
+
+            if ( (LA4_0==VAR) ) {
+                alt4=1;
+            }
+            else if ( (LA4_0==EMAIL) ) {
+                switch ( input.LA(2) ) {
+                case VAR:
+                    {
+                    alt4=2;
+                    }
+                    break;
+                case AUTEUR:
+                    {
+                    alt4=3;
+                    }
+                    break;
+                case AT:
+                    {
+                    alt4=4;
+                    }
+                    break;
+                default:
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 4, 2, input);
+
+                    throw nvae;
+                }
+
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 4, 0, input);
+
+                throw nvae;
+            }
+            switch (alt4) {
+                case 1 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:630:2: a1= VAR a= AT a2= VAR p= POINT a3= VAR
+                    {
+                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_email1715); 
+                    a=(Token)match(input,AT,FOLLOW_AT_in_email1721); 
+                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_email1727); 
+                    p=(Token)match(input,POINT,FOLLOW_POINT_in_email1733); 
+                    a3=(Token)match(input,VAR,FOLLOW_VAR_in_email1739); 
+
+                    		les_pars_arbre.ajouteFils(new Arbre("", "email = '" + a1.getText() + a.getText() + a2.getText() + p.getText() + a3.getText() + "' "));
+                    	
+
+                    }
+                    break;
+                case 2 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:633:4: EMAIL a1= VAR a= AT a2= VAR p= POINT a3= VAR
+                    {
+                    match(input,EMAIL,FOLLOW_EMAIL_in_email1746); 
+                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_email1752); 
+                    a=(Token)match(input,AT,FOLLOW_AT_in_email1758); 
+                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_email1764); 
+                    p=(Token)match(input,POINT,FOLLOW_POINT_in_email1770); 
+                    a3=(Token)match(input,VAR,FOLLOW_VAR_in_email1776); 
+
+                    		les_pars_arbre.ajouteFils(new Arbre("", "email = '" + a1.getText() + a.getText() + a2.getText() + p.getText() + a3.getText() + "' "));
+                    	
+
+                    }
+                    break;
+                case 3 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:636:4: EMAIL AUTEUR a1= VAR a= AT a2= VAR p= POINT a3= VAR
+                    {
+                    match(input,EMAIL,FOLLOW_EMAIL_in_email1783); 
+                    match(input,AUTEUR,FOLLOW_AUTEUR_in_email1785); 
+                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_email1791); 
+                    a=(Token)match(input,AT,FOLLOW_AT_in_email1797); 
+                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_email1803); 
+                    p=(Token)match(input,POINT,FOLLOW_POINT_in_email1809); 
+                    a3=(Token)match(input,VAR,FOLLOW_VAR_in_email1815); 
+
+                    		les_pars_arbre.ajouteFils(new Arbre("", "email = '" + a1.getText() + a.getText() + a2.getText() + p.getText() + a3.getText() + "' "));
+                    	
+
+                    }
+                    break;
+                case 4 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:639:4: EMAIL a= AT a1= VAR p= POINT a2= VAR
+                    {
+                    match(input,EMAIL,FOLLOW_EMAIL_in_email1822); 
+                    a=(Token)match(input,AT,FOLLOW_AT_in_email1828); 
+                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_email1834); 
+                    p=(Token)match(input,POINT,FOLLOW_POINT_in_email1840); 
+                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_email1846); 
+
+                    		les_pars_arbre.ajouteFils(new Arbre("", "email = '" + a.getText() + a1.getText() + p.getText() + a2.getText() + "' "));
+                    	
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return les_pars_arbre;
+    }
+    // $ANTLR end "email"
+
+
     // $ANTLR start "jour"
-    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:512:1: jour returns [Arbre les_pars_arbre = new Arbre(\"\")] : (j= NB m= MOIS a= NB | j= NB m= MOIS );
+    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:643:1: jour returns [Arbre les_pars_arbre = new Arbre(\"\")] : (j= NB m= MOIS a= NB | j= NB m= MOIS );
     public final Arbre jour() throws RecognitionException {
         Arbre les_pars_arbre =  new Arbre("");
 
@@ -1583,62 +1839,62 @@ public class Tal_projetParser extends Parser {
         Token a=null;
 
         try {
-            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:512:53: (j= NB m= MOIS a= NB | j= NB m= MOIS )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:643:53: (j= NB m= MOIS a= NB | j= NB m= MOIS )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA6_0==NB) ) {
-                int LA6_1 = input.LA(2);
+            if ( (LA5_0==NB) ) {
+                int LA5_1 = input.LA(2);
 
-                if ( (LA6_1==MOIS) ) {
-                    int LA6_2 = input.LA(3);
+                if ( (LA5_1==MOIS) ) {
+                    int LA5_2 = input.LA(3);
 
-                    if ( (LA6_2==NB) ) {
-                        alt6=1;
+                    if ( (LA5_2==NB) ) {
+                        alt5=1;
                     }
-                    else if ( (LA6_2==ET||LA6_2==PARLER||LA6_2==POINT) ) {
-                        alt6=2;
+                    else if ( (LA5_2==ET||LA5_2==PARLER||LA5_2==RUBRIQUE||LA5_2==POINT) ) {
+                        alt5=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 6, 2, input);
+                            new NoViableAltException("", 5, 2, input);
 
                         throw nvae;
                     }
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 6, 1, input);
+                        new NoViableAltException("", 5, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+            switch (alt5) {
                 case 1 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:513:3: j= NB m= MOIS a= NB
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:644:3: j= NB m= MOIS a= NB
                     {
-                    j=(Token)match(input,NB,FOLLOW_NB_in_jour1579); 
-                    m=(Token)match(input,MOIS,FOLLOW_MOIS_in_jour1585); 
-                    a=(Token)match(input,NB,FOLLOW_NB_in_jour1591); 
+                    j=(Token)match(input,NB,FOLLOW_NB_in_jour1866); 
+                    m=(Token)match(input,MOIS,FOLLOW_MOIS_in_jour1872); 
+                    a=(Token)match(input,NB,FOLLOW_NB_in_jour1878); 
 
-                    		les_pars_arbre.ajouteFils(new Arbre("", "'" + j.getText() + m.getText() + a.getText() + "'"));
+                    		les_pars_arbre.ajouteFils(new Arbre("", "'" + j.getText() + m.getText() + a.getText() + "' "));
                     	
 
                     }
                     break;
                 case 2 :
-                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:516:5: j= NB m= MOIS
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:647:5: j= NB m= MOIS
                     {
-                    j=(Token)match(input,NB,FOLLOW_NB_in_jour1603); 
-                    m=(Token)match(input,MOIS,FOLLOW_MOIS_in_jour1609); 
+                    j=(Token)match(input,NB,FOLLOW_NB_in_jour1890); 
+                    m=(Token)match(input,MOIS,FOLLOW_MOIS_in_jour1896); 
 
-                    		les_pars_arbre.ajouteFils(new Arbre("", "'" + j.getText() + m.getText() + "'"));
+                    		les_pars_arbre.ajouteFils(new Arbre("", "'" + j.getText() + m.getText() + "' "));
                     	
 
                     }
@@ -1656,93 +1912,328 @@ public class Tal_projetParser extends Parser {
     }
     // $ANTLR end "jour"
 
+
+    // $ANTLR start "listerequetes"
+    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:651:1: listerequetes returns [String sql = \"\"] : r= requete POINT ;
+    public final String listerequetes() throws RecognitionException {
+        String sql =  "";
+
+        Arbre r = null;
+
+
+
+        		Arbre lr_arbre;
+        	
+        try {
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:654:4: (r= requete POINT )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:655:3: r= requete POINT
+            {
+            pushFollow(FOLLOW_requete_in_listerequetes1922);
+            r=requete();
+
+            state._fsp--;
+
+            match(input,POINT,FOLLOW_POINT_in_listerequetes1924); 
+
+            			lr_arbre = r;
+            			sql = lr_arbre.sortArbre();
+            		
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return sql;
+    }
+    // $ANTLR end "listerequetes"
+
+
+    // $ANTLR start "param"
+    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:660:1: param returns [Arbre lepar_arbre = new Arbre(\"\")] : (a= VAR | a1= VAR a2= VAR | a1= VAR a2= VAR a3= VAR );
+    public final Arbre param() throws RecognitionException {
+        Arbre lepar_arbre =  new Arbre("");
+
+        Token a=null;
+        Token a1=null;
+        Token a2=null;
+        Token a3=null;
+
+        try {
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:660:51: (a= VAR | a1= VAR a2= VAR | a1= VAR a2= VAR a3= VAR )
+            int alt6=3;
+            int LA6_0 = input.LA(1);
+
+            if ( (LA6_0==VAR) ) {
+                int LA6_1 = input.LA(2);
+
+                if ( (LA6_1==VAR) ) {
+                    int LA6_2 = input.LA(3);
+
+                    if ( (LA6_2==VAR) ) {
+                        alt6=3;
+                    }
+                    else if ( ((LA6_2>=ET && LA6_2<=PARLER)||(LA6_2>=AUTEUR && LA6_2<=DATE)||LA6_2==THEME||LA6_2==RUBRIQUE||(LA6_2>=ENTRE && LA6_2<=MOIS)||LA6_2==NB||LA6_2==POINT) ) {
+                        alt6=2;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 6, 2, input);
+
+                        throw nvae;
+                    }
+                }
+                else if ( ((LA6_1>=ET && LA6_1<=PARLER)||(LA6_1>=AUTEUR && LA6_1<=DATE)||LA6_1==THEME||LA6_1==RUBRIQUE||(LA6_1>=ENTRE && LA6_1<=MOIS)||LA6_1==NB||LA6_1==POINT) ) {
+                    alt6=1;
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 6, 1, input);
+
+                    throw nvae;
+                }
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 6, 0, input);
+
+                throw nvae;
+            }
+            switch (alt6) {
+                case 1 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:661:2: a= VAR
+                    {
+                    a=(Token)match(input,VAR,FOLLOW_VAR_in_param1943); 
+
+                    		lepar_arbre.ajouteFils(new Arbre("", a.getText() + "' "));
+                    	
+
+                    }
+                    break;
+                case 2 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:664:4: a1= VAR a2= VAR
+                    {
+                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_param1954); 
+                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_param1960); 
+
+                    		lepar_arbre.ajouteFils(new Arbre("", a1.getText() + "' "));
+                    		lepar_arbre.ajouteFils(new Arbre("", "AND mot = '" + a2.getText() + "' "));
+                    	
+
+                    }
+                    break;
+                case 3 :
+                    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:668:4: a1= VAR a2= VAR a3= VAR
+                    {
+                    a1=(Token)match(input,VAR,FOLLOW_VAR_in_param1971); 
+                    a2=(Token)match(input,VAR,FOLLOW_VAR_in_param1977); 
+                    a3=(Token)match(input,VAR,FOLLOW_VAR_in_param1983); 
+
+                    		lepar_arbre.ajouteFils(new Arbre("", a1.getText() + "' "));
+                    		lepar_arbre.ajouteFils(new Arbre("", "AND mot = '" + a2.getText() + "' "));
+                    		lepar_arbre.ajouteFils(new Arbre("", "AND mot = '" + a3.getText() + "' "));
+                    	
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return lepar_arbre;
+    }
+    // $ANTLR end "param"
+
+
+    // $ANTLR start "params"
+    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:674:1: params returns [Arbre les_pars_arbre = new Arbre(\"\")] : par1= param (c= conj par2= param )* ;
+    public final Arbre params() throws RecognitionException {
+        Arbre les_pars_arbre =  new Arbre("");
+
+        Arbre par1 = null;
+
+        Arbre c = null;
+
+        Arbre par2 = null;
+
+
+
+        		Arbre par1_arbre, par2_arbre, conj_arbre, dat_arbre;
+        	
+        try {
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:677:4: (par1= param (c= conj par2= param )* )
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:678:3: par1= param (c= conj par2= param )*
+            {
+            pushFollow(FOLLOW_param_in_params2009);
+            par1=param();
+
+            state._fsp--;
+
+
+            			par1_arbre = par1;
+            			les_pars_arbre.ajouteFils(par1_arbre);
+            		
+            // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:682:3: (c= conj par2= param )*
+            loop7:
+            do {
+                int alt7=2;
+                int LA7_0 = input.LA(1);
+
+                if ( (LA7_0==ET) ) {
+                    int LA7_2 = input.LA(2);
+
+                    if ( (LA7_2==VAR) ) {
+                        alt7=1;
+                    }
+
+
+                }
+                else if ( (LA7_0==OU) ) {
+                    alt7=1;
+                }
+
+
+                switch (alt7) {
+            	case 1 :
+            	    // /home/jehu/Documents/git/lo17/partie_3/src/antlr/Tal_projet.g:682:4: c= conj par2= param
+            	    {
+            	    pushFollow(FOLLOW_conj_in_params2020);
+            	    c=conj();
+
+            	    state._fsp--;
+
+            	    pushFollow(FOLLOW_param_in_params2026);
+            	    par2=param();
+
+            	    state._fsp--;
+
+
+            	    			conj_arbre = c;
+            	    			par2_arbre = par2;
+            	    			les_pars_arbre.ajouteFils(conj_arbre);
+            	    			les_pars_arbre.ajouteFils(new Arbre("", "mot = '"));
+            	    			les_pars_arbre.ajouteFils(par2_arbre);
+            	    		
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop7;
+                }
+            } while (true);
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return les_pars_arbre;
+    }
+    // $ANTLR end "params"
+
     // Delegated rules
 
 
     protected DFA1 dfa1 = new DFA1(this);
     static final String DFA1_eotS =
-        "\131\uffff";
+        "\u00a8\uffff";
     static final String DFA1_eofS =
-        "\131\uffff";
+        "\u00a8\uffff";
     static final String DFA1_minS =
-        "\1\4\1\uffff\1\4\1\uffff\1\5\2\10\1\uffff\1\10\1\uffff\1\41\2\uffff"+
-        "\2\10\1\uffff\1\10\1\13\12\uffff\1\26\1\10\1\31\1\13\1\41\1\uffff"+
-        "\1\6\1\14\4\uffff\1\14\1\26\4\uffff\1\6\4\uffff\1\10\2\6\1\4\1\41"+
-        "\7\uffff\1\6\2\41\5\uffff\1\6\2\41\2\uffff\1\6\1\uffff\13\6";
+        "\1\4\1\uffff\1\4\2\uffff\1\5\2\10\1\uffff\1\36\4\10\1\6\2\12\1\uffff"+
+        "\1\10\1\uffff\2\6\1\22\1\6\1\12\1\26\1\13\1\6\2\36\2\uffff\1\13"+
+        "\2\uffff\1\13\2\36\1\6\1\uffff\1\10\4\uffff\1\10\11\uffff\2\6\2"+
+        "\36\2\uffff\1\10\1\36\1\26\2\36\1\6\1\4\1\36\1\uffff\2\6\3\uffff"+
+        "\1\6\1\uffff\3\6\2\36\7\uffff\1\6\2\36\2\uffff\2\6\3\uffff\1\35"+
+        "\1\36\1\26\1\35\1\6\1\uffff\2\6\2\36\2\uffff\1\6\2\36\3\uffff\1"+
+        "\6\2\36\2\uffff\1\6\2\36\2\uffff\5\6\1\36\1\35\2\36\14\6\1\10\1"+
+        "\36\1\35\1\10\7\6\2\uffff\1\10\1\36\4\6\1\10";
     static final String DFA1_maxS =
-        "\1\37\1\uffff\1\34\1\uffff\1\30\1\11\1\16\1\uffff\1\41\1\uffff\1"+
-        "\41\2\uffff\1\26\1\32\1\uffff\1\41\1\36\12\uffff\1\41\1\40\1\41"+
-        "\1\13\1\41\1\uffff\1\41\1\26\4\uffff\2\41\4\uffff\1\41\4\uffff\1"+
-        "\35\4\41\7\uffff\3\41\5\uffff\3\41\2\uffff\1\24\1\uffff\1\41\1\40"+
-        "\1\41\1\40\4\41\1\24\2\40";
+        "\1\34\1\uffff\1\31\2\uffff\1\24\2\36\1\uffff\1\36\1\10\1\36\1\22"+
+        "\1\36\1\33\1\24\1\33\1\uffff\1\12\1\uffff\1\27\1\10\2\36\1\12\1"+
+        "\26\4\36\2\uffff\1\22\2\uffff\4\36\1\uffff\1\36\4\uffff\1\24\11"+
+        "\uffff\4\36\2\uffff\1\32\1\36\1\26\5\36\1\uffff\2\36\3\uffff\1\36"+
+        "\1\uffff\5\36\7\uffff\3\36\2\uffff\1\35\1\36\3\uffff\1\35\1\36\1"+
+        "\26\1\35\1\24\1\uffff\4\36\2\uffff\3\36\3\uffff\3\36\2\uffff\3\36"+
+        "\2\uffff\1\22\1\36\1\35\3\36\1\35\3\36\1\35\1\36\1\35\1\36\1\35"+
+        "\1\36\1\35\3\36\2\35\1\36\2\35\1\24\4\36\1\22\1\35\2\uffff\1\35"+
+        "\1\36\5\35";
     static final String DFA1_acceptS =
-        "\1\uffff\1\1\1\uffff\1\34\3\uffff\1\14\1\uffff\1\20\1\uffff\1\23"+
-        "\1\24\2\uffff\1\33\2\uffff\1\44\1\45\1\46\1\47\1\50\1\51\1\52\1"+
-        "\53\1\54\1\55\5\uffff\1\15\2\uffff\1\27\1\30\1\31\1\32\2\uffff\1"+
-        "\41\1\42\1\43\1\4\1\uffff\1\6\1\5\1\7\1\10\5\uffff\1\21\1\25\1\26"+
-        "\1\36\1\35\1\40\1\37\3\uffff\1\2\1\3\1\12\1\13\1\11\3\uffff\1\16"+
-        "\1\17\1\uffff\1\22\13\uffff";
+        "\1\uffff\1\1\1\uffff\1\31\1\32\3\uffff\1\14\10\uffff\1\57\1\uffff"+
+        "\1\62\12\uffff\1\24\1\21\1\uffff\1\27\1\30\4\uffff\1\36\1\uffff"+
+        "\1\47\1\50\1\51\1\52\1\uffff\1\56\1\60\1\61\1\63\1\64\1\65\1\66"+
+        "\1\67\1\5\4\uffff\1\6\1\2\10\uffff\1\15\2\uffff\1\25\1\26\1\35\1"+
+        "\uffff\1\33\5\uffff\1\43\1\41\1\45\1\46\1\53\1\54\1\55\3\uffff\1"+
+        "\4\1\3\2\uffff\1\12\1\13\1\11\5\uffff\1\16\4\uffff\1\17\1\20\3\uffff"+
+        "\1\23\1\22\1\34\3\uffff\1\40\1\37\3\uffff\1\44\1\42\40\uffff\1\7"+
+        "\1\10\7\uffff";
     static final String DFA1_specialS =
-        "\131\uffff}>";
+        "\u00a8\uffff}>";
     static final String[] DFA1_transitionS = {
-            "\1\4\1\2\5\uffff\1\1\23\uffff\1\3",
+            "\1\5\1\2\4\uffff\1\1\14\uffff\1\3\4\uffff\1\4",
             "",
-            "\1\15\6\uffff\1\5\1\6\2\uffff\1\7\1\10\1\11\1\13\1\uffff\1"+
-            "\14\2\uffff\1\16\1\17\3\uffff\1\12",
-            "",
-            "\1\22\5\uffff\1\20\1\21\1\23\1\24\1\25\1\26\1\uffff\1\27\1"+
-            "\uffff\1\30\1\31\1\uffff\1\32\1\33",
-            "\1\34\1\35",
-            "\1\37\5\uffff\1\36",
-            "",
-            "\1\40\30\uffff\1\41",
-            "",
-            "\1\42",
+            "\1\14\5\uffff\1\6\1\7\2\uffff\1\10\1\12\4\uffff\1\13\4\uffff"+
+            "\1\11",
             "",
             "",
-            "\1\44\2\uffff\1\43\12\uffff\1\45",
-            "\1\47\21\uffff\1\46",
+            "\1\17\4\uffff\1\15\1\16\1\20\1\21\1\uffff\1\22\1\uffff\1\23"+
+            "\1\uffff\1\25\1\24",
+            "\1\26\25\uffff\1\27",
+            "\1\30\4\uffff\1\32\20\uffff\1\31",
             "",
-            "\1\51\3\uffff\1\50\24\uffff\1\52",
-            "\1\53\22\uffff\1\54",
+            "\1\33",
+            "\1\34",
+            "\1\35\16\uffff\1\36\6\uffff\1\37",
+            "\1\41\1\uffff\1\40\7\uffff\1\42",
+            "\1\44\2\uffff\1\43\6\uffff\1\45\5\uffff\1\47\1\uffff\1\47\3"+
+            "\uffff\1\46",
+            "\1\51\3\uffff\1\50\20\uffff\1\52",
+            "\1\53\11\uffff\1\54",
+            "\1\55\20\uffff\1\56",
             "",
+            "\1\57\1\uffff\1\60",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\55\12\uffff\1\56",
-            "\1\57\27\uffff\1\60",
-            "\1\62\7\uffff\1\61",
-            "\1\63",
-            "\1\64",
-            "",
-            "\1\66\1\67\14\uffff\1\70\14\uffff\1\65",
-            "\1\71\11\uffff\1\72",
-            "",
-            "",
-            "",
-            "",
-            "\1\73\24\uffff\1\74",
-            "\1\75\12\uffff\1\76",
+            "\1\63\1\uffff\1\62\16\uffff\1\61",
+            "\1\64\1\uffff\1\65",
+            "\1\66\13\uffff\1\67",
+            "\1\71\1\72\1\73\24\uffff\1\74\1\70",
+            "\1\75",
+            "\1\76",
+            "\1\100\12\uffff\1\101\7\uffff\1\77",
+            "\1\103\1\104\14\uffff\1\105\11\uffff\1\102",
+            "\1\106",
+            "\1\107",
             "",
             "",
+            "\1\110\6\uffff\1\111",
             "",
             "",
-            "\1\100\1\101\23\uffff\1\103\1\uffff\1\103\2\uffff\1\102\1\77",
-            "",
-            "",
-            "",
-            "",
-            "\1\105\21\uffff\1\104\1\106\1\uffff\1\106",
-            "\1\110\1\111\22\uffff\1\113\5\uffff\1\112\1\107",
-            "\1\66\1\67\14\uffff\1\70\14\uffff\1\114",
-            "\1\115\34\uffff\1\116",
+            "\1\112\1\uffff\1\114\20\uffff\1\113",
+            "\1\115",
             "\1\116",
+            "\1\120\1\121\3\uffff\1\122\6\uffff\1\123\13\uffff\1\117",
+            "",
+            "\1\124\25\uffff\1\125",
+            "",
+            "",
+            "",
+            "",
+            "\1\130\2\uffff\1\126\10\uffff\1\127",
             "",
             "",
             "",
@@ -1750,32 +2241,121 @@ public class Tal_projetParser extends Parser {
             "",
             "",
             "",
-            "\1\100\1\101\23\uffff\1\103\1\uffff\1\103\2\uffff\1\102\1\117",
-            "\1\120",
-            "\1\120",
+            "",
+            "",
+            "\1\132\1\133\20\uffff\1\134\1\uffff\1\134\2\uffff\1\135\1\131",
+            "\1\71\1\72\1\73\24\uffff\1\74\1\136",
+            "\1\137",
+            "\1\137",
+            "",
+            "",
+            "\1\141\16\uffff\1\140\1\142\1\uffff\1\142",
+            "\1\143",
+            "\1\144",
+            "\1\145",
+            "\1\146",
+            "\1\103\1\104\14\uffff\1\105\11\uffff\1\147",
+            "\1\150\31\uffff\1\151",
+            "\1\151",
+            "",
+            "\1\153\1\154\20\uffff\1\156\1\uffff\1\156\2\uffff\1\155\1\152",
+            "\1\160\1\161\17\uffff\1\162\5\uffff\1\163\1\157",
+            "",
+            "",
+            "",
+            "\2\164\16\uffff\1\114\6\uffff\2\164",
+            "",
+            "\1\166\1\167\4\uffff\1\171\20\uffff\1\170\1\165",
+            "\1\173\1\174\17\uffff\1\175\5\uffff\1\176\1\172",
+            "\1\120\1\121\3\uffff\1\122\6\uffff\1\123\13\uffff\1\177",
+            "\1\u0080",
+            "\1\u0080",
             "",
             "",
             "",
             "",
             "",
-            "\1\110\1\111\22\uffff\1\113\5\uffff\1\112\1\121",
-            "\1\122",
-            "\1\122",
             "",
             "",
-            "\1\66\1\67\14\uffff\1\70",
+            "\1\132\1\133\20\uffff\1\134\1\uffff\1\134\2\uffff\1\135\1\u0081",
+            "\1\u0082",
+            "\1\u0082",
             "",
-            "\1\66\1\67\14\uffff\1\70\14\uffff\1\123",
-            "\1\100\1\101\23\uffff\1\103\1\uffff\1\103\2\uffff\1\102",
-            "\1\100\1\101\23\uffff\1\103\1\uffff\1\103\2\uffff\1\102\1\124",
-            "\1\110\1\111\22\uffff\1\113\5\uffff\1\112",
-            "\1\110\1\111\22\uffff\1\113\5\uffff\1\112\1\125",
-            "\1\66\1\67\14\uffff\1\70\14\uffff\1\126",
-            "\1\100\1\101\23\uffff\1\103\1\uffff\1\103\2\uffff\1\102\1\127",
-            "\1\110\1\111\22\uffff\1\113\5\uffff\1\112\1\130",
-            "\1\66\1\67\14\uffff\1\70",
-            "\1\100\1\101\23\uffff\1\103\1\uffff\1\103\2\uffff\1\102",
-            "\1\110\1\111\22\uffff\1\113\5\uffff\1\112"
+            "",
+            "\1\71\1\72\1\73\24\uffff\1\74",
+            "\1\71\1\72\1\73\24\uffff\1\74\1\u0083",
+            "",
+            "",
+            "",
+            "\1\u0084",
+            "\1\u0085",
+            "\1\u0086",
+            "\1\u0087",
+            "\1\103\1\104\14\uffff\1\105",
+            "",
+            "\1\103\1\104\14\uffff\1\105\11\uffff\1\u0088",
+            "\1\153\1\154\20\uffff\1\156\1\uffff\1\156\2\uffff\1\155\1\u0089",
+            "\1\u008a",
+            "\1\u008a",
+            "",
+            "",
+            "\1\160\1\161\17\uffff\1\162\5\uffff\1\163\1\u008b",
+            "\1\u008c",
+            "\1\u008c",
+            "",
+            "",
+            "",
+            "\1\166\1\167\4\uffff\1\171\20\uffff\1\170\1\u008d",
+            "\1\u008e",
+            "\1\u008e",
+            "",
+            "",
+            "\1\173\1\174\17\uffff\1\175\5\uffff\1\176\1\u008f",
+            "\1\u0090",
+            "\1\u0090",
+            "",
+            "",
+            "\1\120\1\121\3\uffff\1\122\6\uffff\1\123",
+            "\1\120\1\121\3\uffff\1\122\6\uffff\1\123\13\uffff\1\u0091",
+            "\1\132\1\133\20\uffff\1\134\1\uffff\1\134\2\uffff\1\135",
+            "\1\132\1\133\20\uffff\1\134\1\uffff\1\134\2\uffff\1\135\1\u0092",
+            "\1\71\1\72\1\73\24\uffff\1\74\1\u0093",
+            "\1\u0094",
+            "\1\u0095",
+            "\1\u0096",
+            "\1\u0097",
+            "\1\103\1\104\14\uffff\1\105\11\uffff\1\u0098",
+            "\1\153\1\154\20\uffff\1\156\1\uffff\1\156\2\uffff\1\155",
+            "\1\153\1\154\20\uffff\1\156\1\uffff\1\156\2\uffff\1\155\1\u0099",
+            "\1\160\1\161\17\uffff\1\162\5\uffff\1\163",
+            "\1\160\1\161\17\uffff\1\162\5\uffff\1\163\1\u009a",
+            "\1\166\1\167\4\uffff\1\171\20\uffff\1\170",
+            "\1\166\1\167\4\uffff\1\171\20\uffff\1\170\1\u009b",
+            "\1\173\1\174\17\uffff\1\175\5\uffff\1\176",
+            "\1\173\1\174\17\uffff\1\175\5\uffff\1\176\1\u009c",
+            "\1\120\1\121\3\uffff\1\122\6\uffff\1\123\13\uffff\1\u009d",
+            "\1\132\1\133\20\uffff\1\134\1\uffff\1\134\2\uffff\1\135\1\u009e",
+            "\1\71\1\72\1\73\24\uffff\1\74",
+            "\1\u009f\24\uffff\1\u00a0",
+            "\1\u00a1",
+            "\1\u00a2",
+            "\1\u009f\24\uffff\1\u00a0",
+            "\1\103\1\104\14\uffff\1\105",
+            "\1\153\1\154\20\uffff\1\156\1\uffff\1\156\2\uffff\1\155\1\u00a3",
+            "\1\160\1\161\17\uffff\1\162\5\uffff\1\163\1\u00a4",
+            "\1\166\1\167\4\uffff\1\171\20\uffff\1\170\1\u00a5",
+            "\1\173\1\174\17\uffff\1\175\5\uffff\1\176\1\u00a6",
+            "\1\120\1\121\3\uffff\1\122\6\uffff\1\123",
+            "\1\132\1\133\20\uffff\1\134\1\uffff\1\134\2\uffff\1\135",
+            "",
+            "",
+            "\1\u009f\24\uffff\1\u00a0",
+            "\1\u00a7",
+            "\1\153\1\154\20\uffff\1\156\1\uffff\1\156\2\uffff\1\155",
+            "\1\160\1\161\17\uffff\1\162\5\uffff\1\163",
+            "\1\166\1\167\4\uffff\1\171\20\uffff\1\170",
+            "\1\173\1\174\17\uffff\1\175\5\uffff\1\176",
+            "\1\u009f\24\uffff\1\u00a0"
     };
 
     static final short[] DFA1_eot = DFA.unpackEncodedString(DFA1_eotS);
@@ -1808,262 +2388,344 @@ public class Tal_projetParser extends Parser {
             this.transition = DFA1_transition;
         }
         public String getDescription() {
-            return "64:1: requete returns [Arbre req_arbre = new Arbre(\"\")] : ( ARTICLE d= dat PARLER a1= NB a2= MOIS | COMBIEN ARTICLE PARLER ps= params | COMBIEN ARTICLE PARLER ps= params d= dat | COMBIEN ARTICLE PARLER THEME ps= params | COMBIEN ARTICLE SOURCE | COMBIEN ARTICLE SOURCE PARLER ps= params | COMBIEN AUTEUR EMAIL a1= VAR AT a2= VAR b= NB c= POINT a3= VAR PARLER ps= params | COMBIEN AUTEUR EMAIL AT a= VAR b= NB c= POINT ps= params | COMBIEN AUTEUR PARLER ARTICLE d= dat | COMBIEN AUTEUR PARLER ARTICLE ENTRE d1= jour ET d2= jour | COMBIEN AUTEUR PARLER ARTICLE PARLER ps= params | COMBIEN FOCUS PARLER ps= params | COMBIEN GROSTITRES ps= params | COMBIEN GROSTITRES PARLER ps= params | COMBIEN GROSTITRES PARLER ps= params ENTRE d1= jour ET d2= jour | COMBIEN JOURS PARLER ps= params | COMBIEN MOT ps= params RAPPELS | COMBIEN MOT ps= params ET SELECT ARTICLE | COMBIEN PAGE PARLER ps= params | COMBIEN RAPPELS PARLER ps= params | COMBIEN SELECT ARTICLE AUTEUR ps= params | COMBIEN SELECT ARTICLE THEME ps1= params PARLER ps2= params | COMBIEN SELECT PARLER ps= params | COMBIEN SELECT THEME | COMBIEN UNE ENTRE d1= jour ET d2= jour PARLER PARLER ps= params | COMBIEN UNE PARLER ps= params | COMBIEN VOIRAUSSI PARLER ps= params | PREMIER SELECT DATE PARLER ps= params | SELECT ARTICLE AUTEUR ps= params | SELECT ARTICLE AUTEUR AUTEUR EMAIL a1= VAR AT a2= VAR POINT ps= params | SELECT ARTICLE PARLER ps= params | SELECT ARTICLE PARLER THEME ps= params d= dat | SELECT ARTICLE a1= VAR a2= VAR THEME ps= params | SELECT AUTEUR ARTICLE ps= params | SELECT AUTEUR PLUS PUBLIE | SELECT COMBIEN ARTICLE ps= params d= dat | SELECT DATE PLUS PARLER ps= params | SELECT EMAIL AUTEUR a1= VAR a2= VAR | SELECT FOCUS PARLER ps= params | SELECT GROSTITRES PARLER ps= params | SELECT PAGE PARLER ps= params | SELECT RAPPELS PARLER ps= params | SELECT RESUME PARLER ps= params | SELECT UNE PARLER ps= params | SELECT VOIRAUSSI PARLER ps= params );";
+            return "61:1: requete returns [Arbre req_arbre = new Arbre(\"\")] : ( ARTICLE d= dat PARLER a1= NB a2= MOIS | COMBIEN ARTICLE ps= params | COMBIEN ARTICLE PARLER ps= params | COMBIEN ARTICLE PARLER ps= params d= dat | COMBIEN ARTICLE PARLER THEME ps= params | COMBIEN ARTICLE ps1= params PARLER ps2= params | COMBIEN AUTEUR e= email PARLER ps= params | COMBIEN AUTEUR e= email | COMBIEN AUTEUR PARLER ARTICLE d= dat | COMBIEN AUTEUR PARLER ARTICLE ENTRE d1= jour ET d2= jour | COMBIEN AUTEUR PARLER ARTICLE PARLER ps= params | COMBIEN JOURS PARLER ps= params | COMBIEN MOT ps= params r= RUBRIQUE | COMBIEN MOT ps= params ET SELECT ARTICLE | COMBIEN PAGE PARLER ps= params | COMBIEN PAGE PARLER ps= params d= dat | COMBIEN r= RUBRIQUE ps= params | COMBIEN r= RUBRIQUE PARLER ps= params | COMBIEN r= RUBRIQUE PARLER ps= params ENTRE d1= jour ET d2= jour | COMBIEN r= RUBRIQUE ENTRE d1= jour ET d2= jour PARLER PARLER ps= params | COMBIEN SELECT ARTICLE AUTEUR ps= params | COMBIEN SELECT ARTICLE THEME ps1= params PARLER ps2= params | COMBIEN SELECT PARLER ps= params | COMBIEN SELECT THEME | ENTRE d1= jour ET d2= jour r= RUBRIQUE COMBIEN ARTICLE PARLER AUTEUR ps1= params ET PARLER ps2= param | PREMIER SELECT DATE PARLER ps= params | SELECT ARTICLE AUTEUR e= email ET PARLER r= RUBRIQUE | SELECT ARTICLE AUTEUR ps= params | SELECT ARTICLE AUTEUR AUTEUR e= email | SELECT ARTICLE d= dat AUTEUR e= email | SELECT ARTICLE PARLER ps= params DATE d= dat | SELECT ARTICLE PARLER ps= params | SELECT ARTICLE ps1= params THEME ps2= params | SELECT ARTICLE THEME ps= params | SELECT ARTICLE ps1= params AUTEUR ps2= params | SELECT ARTICLE THEME ps= params ENTRE d1= jour ET d2= jour | SELECT AUTEUR ARTICLE PARLER ps= params | SELECT AUTEUR ARTICLE ps= params | SELECT AUTEUR ET EMAIL ARTICLE AUJOURDHUI | SELECT AUTEUR PLUS PUBLIE | SELECT COMBIEN ARTICLE ps= params d= dat | SELECT COMBIEN r= RUBRIQUE ps= params AUTEUR DATE | SELECT DATE ARTICLE AUTEUR ps= params | SELECT DATE ARTICLE RUBRIQUE e= email | SELECT DATE ARTICLE PARLER ps= params | SELECT DATE PLUS PARLER ps= params | SELECT EMAIL AUTEUR a1= VAR a2= VAR | SELECT PAGE PARLER ps= params | SELECT PAGE ARTICLE AUTEUR AUTEUR e= email | SELECT RESUME PARLER ps= params | SELECT r= RUBRIQUE ENTRE d1= jour ET d2= jour | SELECT r= RUBRIQUE PARLER ps= params | SELECT r1= RUBRIQUE ET r2= RUBRIQUE PARLER ps= params | SELECT TITRE ET DATE ARTICLE PARLER ps= params | SELECT TITRE PARLER ps= params );";
         }
     }
  
 
-    public static final BitSet FOLLOW_ARTICLE_in_requete357 = new BitSet(new long[]{0x0000000028000000L});
-    public static final BitSet FOLLOW_dat_in_requete363 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete365 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_NB_in_requete371 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_MOIS_in_requete377 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete385 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete387 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete389 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete403 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete405 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete407 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete413 = new BitSet(new long[]{0x0000000028000000L});
-    public static final BitSet FOLLOW_dat_in_requete419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete427 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete429 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete431 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_THEME_in_requete433 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete447 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete449 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_SOURCE_in_requete451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete459 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete461 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_SOURCE_in_requete463 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete465 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete479 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_AUTEUR_in_requete481 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_EMAIL_in_requete483 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_requete489 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_AT_in_requete491 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_requete497 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_NB_in_requete503 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_POINT_in_requete509 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_requete515 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete517 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete523 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete531 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_AUTEUR_in_requete533 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_EMAIL_in_requete535 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_AT_in_requete537 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_requete543 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_NB_in_requete549 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_POINT_in_requete555 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete561 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete569 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_AUTEUR_in_requete571 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete573 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete575 = new BitSet(new long[]{0x0000000028000000L});
-    public static final BitSet FOLLOW_dat_in_requete581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete589 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_AUTEUR_in_requete591 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete593 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete595 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_ENTRE_in_requete597 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_jour_in_requete603 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ET_in_requete605 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_jour_in_requete611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete619 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_AUTEUR_in_requete621 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete623 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete625 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete627 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete641 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_FOCUS_in_requete643 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete645 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete659 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_GROSTITRES_in_requete661 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete668 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete677 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_GROSTITRES_in_requete679 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete681 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete697 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_GROSTITRES_in_requete699 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete701 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete707 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_ENTRE_in_requete709 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_jour_in_requete715 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ET_in_requete717 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_jour_in_requete723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete731 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_JOURS_in_requete733 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete735 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete749 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_MOT_in_requete751 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete757 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_RAPPELS_in_requete759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete767 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_MOT_in_requete769 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete775 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ET_in_requete777 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SELECT_in_requete779 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete789 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_PAGE_in_requete791 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete793 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete807 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_RAPPELS_in_requete809 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete811 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete825 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SELECT_in_requete827 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete829 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_AUTEUR_in_requete831 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete845 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SELECT_in_requete847 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete849 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_THEME_in_requete851 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete857 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete859 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete873 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SELECT_in_requete875 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete877 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete891 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SELECT_in_requete893 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_THEME_in_requete895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete903 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_UNE_in_requete905 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_ENTRE_in_requete907 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_jour_in_requete913 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ET_in_requete915 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_jour_in_requete921 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete923 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete925 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete939 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_UNE_in_requete941 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete943 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete957 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_VOIRAUSSI_in_requete959 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete961 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PREMIER_in_requete975 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_SELECT_in_requete977 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_DATE_in_requete979 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete981 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete995 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete997 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_AUTEUR_in_requete999 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1013 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete1015 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_AUTEUR_in_requete1017 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_AUTEUR_in_requete1019 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_EMAIL_in_requete1021 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_requete1027 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_AT_in_requete1029 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_requete1035 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_POINT_in_requete1037 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1043 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1051 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete1053 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete1055 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1069 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete1071 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete1073 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_THEME_in_requete1075 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1081 = new BitSet(new long[]{0x0000000028000000L});
-    public static final BitSet FOLLOW_dat_in_requete1087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1095 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete1097 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_requete1103 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_requete1109 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_THEME_in_requete1112 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1126 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_AUTEUR_in_requete1128 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete1130 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1144 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_AUTEUR_in_requete1146 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_PLUS_in_requete1148 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_PUBLIE_in_requete1150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1158 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_COMBIEN_in_requete1160 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_ARTICLE_in_requete1162 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1168 = new BitSet(new long[]{0x0000000028000000L});
-    public static final BitSet FOLLOW_dat_in_requete1174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1182 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_DATE_in_requete1184 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_PLUS_in_requete1186 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete1188 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1202 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_EMAIL_in_requete1204 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_AUTEUR_in_requete1206 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_requete1212 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_requete1218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1226 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_FOCUS_in_requete1228 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete1230 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1236 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1244 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_GROSTITRES_in_requete1246 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete1248 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1262 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_PAGE_in_requete1264 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete1266 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1280 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_RAPPELS_in_requete1282 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete1284 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1298 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_RESUME_in_requete1300 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete1302 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1316 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_UNE_in_requete1318 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete1320 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1326 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SELECT_in_requete1334 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_VOIRAUSSI_in_requete1336 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_PARLER_in_requete1338 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_params_in_requete1344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_requete_in_listerequetes1370 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_POINT_in_listerequetes1372 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_param_in_params1400 = new BitSet(new long[]{0x00000000000000C2L});
-    public static final BitSet FOLLOW_conj_in_params1411 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_param_in_params1417 = new BitSet(new long[]{0x00000000000000C2L});
-    public static final BitSet FOLLOW_VAR_in_param1438 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_param1449 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_param1455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_VAR_in_param1466 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_param1472 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_VAR_in_param1478 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ET_in_conj1493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_OU_in_conj1500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NB_in_dat1519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_MOIS_in_dat1530 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_NB_in_dat1536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NB_in_dat1547 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_MOIS_in_dat1553 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_NB_in_dat1559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NB_in_jour1579 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_MOIS_in_jour1585 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_NB_in_jour1591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NB_in_jour1603 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_MOIS_in_jour1609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete367 = new BitSet(new long[]{0x0000000005000000L});
+    public static final BitSet FOLLOW_dat_in_requete373 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete375 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_NB_in_requete381 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_MOIS_in_requete387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete395 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete397 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete403 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete411 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete413 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete415 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete429 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete431 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete433 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete439 = new BitSet(new long[]{0x0000000005000000L});
+    public static final BitSet FOLLOW_dat_in_requete445 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete453 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete455 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete457 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_THEME_in_requete459 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete473 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete475 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete481 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete483 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete497 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete499 = new BitSet(new long[]{0x0000000040002000L});
+    public static final BitSet FOLLOW_email_in_requete505 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete507 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete521 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete523 = new BitSet(new long[]{0x0000000040002000L});
+    public static final BitSet FOLLOW_email_in_requete529 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete537 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete539 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete541 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete543 = new BitSet(new long[]{0x0000000005000000L});
+    public static final BitSet FOLLOW_dat_in_requete549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete557 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete559 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete561 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete563 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_ENTRE_in_requete565 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_jour_in_requete571 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ET_in_requete573 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_jour_in_requete579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete587 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete589 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete591 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete593 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete595 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete609 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_JOURS_in_requete611 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete613 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete627 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_MOT_in_requete629 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete635 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete649 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_MOT_in_requete651 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete657 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ET_in_requete659 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SELECT_in_requete661 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete671 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_PAGE_in_requete673 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete675 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete689 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_PAGE_in_requete691 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete693 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete699 = new BitSet(new long[]{0x0000000005000000L});
+    public static final BitSet FOLLOW_dat_in_requete705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete713 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete719 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete733 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete739 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete741 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete755 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete761 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete763 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete769 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_ENTRE_in_requete771 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_jour_in_requete777 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ET_in_requete779 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_jour_in_requete785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete793 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete799 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_ENTRE_in_requete801 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_jour_in_requete807 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ET_in_requete809 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_jour_in_requete815 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete817 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete819 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete825 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete833 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SELECT_in_requete835 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete837 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete839 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete853 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SELECT_in_requete855 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete857 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_THEME_in_requete859 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete865 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete867 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete881 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SELECT_in_requete883 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete885 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete899 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SELECT_in_requete901 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_THEME_in_requete903 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ENTRE_in_requete911 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_jour_in_requete917 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ET_in_requete919 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_jour_in_requete925 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete931 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete933 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete935 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete937 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete939 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete945 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ET_in_requete947 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete949 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_param_in_requete955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PREMIER_in_requete963 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_SELECT_in_requete965 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_DATE_in_requete967 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete969 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete975 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete983 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete985 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete987 = new BitSet(new long[]{0x0000000040002000L});
+    public static final BitSet FOLLOW_email_in_requete993 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ET_in_requete995 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete997 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete1003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1011 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1013 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1015 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1029 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1031 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1033 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1035 = new BitSet(new long[]{0x0000000040002000L});
+    public static final BitSet FOLLOW_email_in_requete1041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1049 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1051 = new BitSet(new long[]{0x0000000005000000L});
+    public static final BitSet FOLLOW_dat_in_requete1057 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1059 = new BitSet(new long[]{0x0000000040002000L});
+    public static final BitSet FOLLOW_email_in_requete1065 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1073 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1075 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete1077 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1083 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_DATE_in_requete1085 = new BitSet(new long[]{0x0000000005000000L});
+    public static final BitSet FOLLOW_dat_in_requete1091 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1098 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1100 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete1102 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1116 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1118 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1124 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_THEME_in_requete1126 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1132 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1140 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1142 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_THEME_in_requete1144 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1158 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1160 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1166 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1168 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1182 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1184 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_THEME_in_requete1186 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1192 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_ENTRE_in_requete1194 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_jour_in_requete1200 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ET_in_requete1202 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_jour_in_requete1208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1216 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1218 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1220 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete1222 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1236 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1238 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1240 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1254 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1256 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ET_in_requete1258 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_EMAIL_in_requete1260 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1262 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_AUJOURDHUI_in_requete1264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1272 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1274 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_PLUS_in_requete1276 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_PUBLIE_in_requete1278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1286 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete1288 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1290 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1296 = new BitSet(new long[]{0x0000000005000000L});
+    public static final BitSet FOLLOW_dat_in_requete1302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1310 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_COMBIEN_in_requete1312 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete1318 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1324 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1326 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_DATE_in_requete1328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1336 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_DATE_in_requete1338 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1340 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1342 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1348 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1356 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_DATE_in_requete1358 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1360 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete1362 = new BitSet(new long[]{0x0000000040002000L});
+    public static final BitSet FOLLOW_email_in_requete1368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1376 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_DATE_in_requete1378 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1380 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete1382 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1396 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_DATE_in_requete1398 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_PLUS_in_requete1400 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete1402 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1416 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_EMAIL_in_requete1418 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1420 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_requete1426 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_requete1432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1440 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_PAGE_in_requete1442 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete1444 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1458 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_PAGE_in_requete1460 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1462 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1464 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_requete1466 = new BitSet(new long[]{0x0000000040002000L});
+    public static final BitSet FOLLOW_email_in_requete1472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1480 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_RESUME_in_requete1482 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete1484 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1498 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete1504 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_ENTRE_in_requete1506 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_jour_in_requete1512 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ET_in_requete1514 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_jour_in_requete1520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1528 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete1534 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete1536 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1550 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete1556 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ET_in_requete1558 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RUBRIQUE_in_requete1564 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete1566 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1580 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_TITRE_in_requete1582 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ET_in_requete1584 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_DATE_in_requete1586 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_ARTICLE_in_requete1588 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete1590 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SELECT_in_requete1604 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_TITRE_in_requete1606 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_PARLER_in_requete1608 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_params_in_requete1615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ET_in_conj1630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_OU_in_conj1637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NB_in_dat1656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_MOIS_in_dat1667 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_NB_in_dat1673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NB_in_dat1684 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_MOIS_in_dat1690 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_NB_in_dat1696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_email1715 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_AT_in_email1721 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_email1727 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_POINT_in_email1733 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_email1739 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_EMAIL_in_email1746 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_email1752 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_AT_in_email1758 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_email1764 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_POINT_in_email1770 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_email1776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_EMAIL_in_email1783 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_AUTEUR_in_email1785 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_email1791 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_AT_in_email1797 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_email1803 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_POINT_in_email1809 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_email1815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_EMAIL_in_email1822 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_AT_in_email1828 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_email1834 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_POINT_in_email1840 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_email1846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NB_in_jour1866 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_MOIS_in_jour1872 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_NB_in_jour1878 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NB_in_jour1890 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_MOIS_in_jour1896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_requete_in_listerequetes1922 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_POINT_in_listerequetes1924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_param1943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_param1954 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_param1960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_VAR_in_param1971 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_param1977 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_VAR_in_param1983 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_param_in_params2009 = new BitSet(new long[]{0x00000000000000C2L});
+    public static final BitSet FOLLOW_conj_in_params2020 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_param_in_params2026 = new BitSet(new long[]{0x00000000000000C2L});
 
 }

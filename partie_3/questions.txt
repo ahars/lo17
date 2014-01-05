@@ -1,4 +1,27 @@
-Combien de pqges traitent du procs de Mickael Jackson pour le mois d'avril 2005 ?
 Combien de rappels y-a-t-il par page en moyenne ?
+Dans quelle rubrique apparaissent le plus grands nombre d'articles parlant des Etats-Unis ?
+Dans quelle rubrique parle-t-on le plus de Michael Jackson ?
+De quand date la dernière Une à propos de Mickael Jackson ?
+De quoi parlait-on le plus du 27 mars au 4 avril 2005 ?
+De quoi parlait-on le plus du 27 mars au 4 avril 2005 ?
+Donner le théme le plus récurrent dans la rubrique Focus parmi ces thémes : " La guerre en Irak ", " les attentats ", " les actions humanitaires " et " les visites du Pape "?
+Donne-moi la liste des articules où l'on a parlé du président des états Unis depuis 3 semaines.
+Donne moi la liste des auteurs ayant écris au moins de 5 articles sur le théme de la Russie
+J'aimerais consulter les articles liés à la Belgique.Je voudrais toutes les pages qui parlent de George W.Bush.
+Entre quelle date de début et quelle date de fin sont parrus les articles sur Katrina?
+Dans quelles sections (grostitre,breve...) les articles sur Téhéran apparraissent-ils le plus souvent?
+Existe-t-il un article parlant du Sénégal (apparition improbable d'un sujet donné)?
+Je veux les unes de chaque début de mois.
+
+
+je veux la liste des pages dont l'email de l'auteur est dstrauss@tf1
+je veux la liste des pages dont l'email de l'auteur est dstrauss@tf et qui parlent de Bush ou de la France
+je veux la liste des pages dont les email des auteurs sont faubert@tf1.fr ou dstrauss@tf1
+Je veux la liste de toutes les unes de février 2005
+Je veux la Une du 3 Mars 2005.
+Je veux les 10 derniers articles qui traitent de la crise économique.
+Je veux les 5 derniers articles qui traitent de cyclones.
+Je veux les articles datant de Février et traitant de la capture d'Ingrid Betancourt ?
+
 
 
